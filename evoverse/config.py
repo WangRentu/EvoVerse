@@ -29,10 +29,24 @@ class DatabaseConfig(BaseSettings):
         "extra": "ignore"
     }
 
+class MemoryConfig(BaseSettings):
+    """记忆系统配置"""
+    max_memories: int = Field(default=1000, description="最大记忆条数")
+    prune_after_days: int = Field(default=30, description="记忆过期天数")
+    min_importance_to_keep: float = Field(default=0.3, description="保留最小重要性")
+    enable_persistence: bool = Field(default=True, description="启用记忆持久化")
+
+    model_config = {
+        "env_prefix": "MEMORY_",
+        "env_file": ".env",
+        "env_nested_delimiter": "__",
+        "extra": "ignore"
+    }
 
 class EvoVerseConfig(BaseSettings):
     llm: LLMConfig = LLMConfig()
     db: DatabaseConfig = DatabaseConfig()
+    memory: MemoryConfig = MemoryConfig()
 
     model_config = {
         "env_file": ".env",

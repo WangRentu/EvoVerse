@@ -1,0 +1,28 @@
+{
+  "session_id": "session_1763024584",
+  "metadata": {
+    "created_at": "2025-11-13T09:03:04.045472",
+    "last_accessed": "2025-11-13T09:03:04.045517",
+    "message_count": 3,
+    "max_history": 5
+  },
+  "messages": [
+    {
+      "role": "user",
+      "content": "你好",
+      "timestamp": "2025-11-13T09:03:04.045499"
+    },
+    {
+      "role": "assistant",
+      "content": "你好！很高兴见到你。",
+      "timestamp": "2025-11-13T09:03:04.045506"
+    },
+    {
+      "role": "user",
+      "content": "今天天气怎么样？",
+      "timestamp": "2025-11-13T09:03:04.045512"
+    }
+  ],
+  "created_at": "2025-11-13T09:03:04.045470",
+  "last_accessed": "2025-11-13T09:03:04.045515"
+}
