@@ -97,3 +97,32 @@ EvoVerse 还处于早期阶段，专注于：
 - 实验设计与分析引擎  
 
 ---
+## 📄 文献系统（已迁移自 Kosmos）
+
+- arXiv / Semantic Scholar / PubMed 三源并行检索，统一 `PaperMetadata` 结构
+- PDF 下载与 PyMuPDF 文本抽取，支持磁盘缓存与全文拼接
+- BibTeX / RIS 解析与导出、引用网络分析、参考文献管理
+- 统一搜索器 `UnifiedLiteratureSearch` 自动去重、排序、可选全文抽取
+
+### 运行依赖
+
+```bash
+pip install arxiv semanticscholar biopython pymupdf httpx bibtexparser networkx tenacity
+```
+
+（还需要 `requests`, `beautifulsoup4` 等常规依赖，如果环境缺失请一并安装。）
+
+### 配置项（.env）
+
+| 变量 | 作用 |
+| --- | --- |
+| `LITERATURE_SEMANTIC_SCHOLAR_API_KEY` | Semantic Scholar API Key，提升配额 |
+| `LITERATURE_PUBMED_API_KEY` | PubMed API Key（可选） |
+| `LITERATURE_PUBMED_EMAIL` | PubMed 要求的联系邮箱 |
+| `LITERATURE_CACHE_DIR` | 文献 API 缓存目录（默认 `.literature_cache`） |
+| `LITERATURE_CACHE_TTL_HOURS` | 缓存过期时间（默认 48 小时） |
+| `LITERATURE_MAX_CACHE_SIZE_MB` | 缓存最大体积（默认 1GB） |
+| `LITERATURE_MAX_RESULTS_PER_QUERY` | 每源最大返回条数（默认 100） |
+| `LITERATURE_PDF_DOWNLOAD_TIMEOUT` | PDF 下载超时，秒（默认 30） |
+
+配置加载后即可直接通过 `from evoverse.literature import UnifiedLiteratureSearch` 使用完整功能。

@@ -1,0 +1,178 @@
+[
+  {
+    "id": "1a877a4d8d142262",
+    "category": "success_patterns",
+    "content": "使用向量数据库进行语义搜索",
+    "importance": 0.76,
+    "tags": [
+      "search",
+      "vector_db",
+      "semantic"
+    ],
+    "access_count": 2,
+    "created_at": "2025-11-14T06:01:18.028091",
+    "data": {
+      "success_rate": 0.95
+    }
+  },
+  {
+    "id": "79395fd85e987220",
+    "category": "success_patterns",
+    "content": "使用分治法解决复杂问题",
+    "importance": 0.7200000000000001,
+    "tags": [
+      "algorithm",
+      "problem_solving",
+      "divide_conquer"
+    ],
+    "access_count": 2,
+    "created_at": "2025-11-14T06:01:18.028017",
+    "data": {
+      "success_rate": 0.9
+    }
+  },
+  {
+    "id": "52c93f6ccfa4bbe0",
+    "category": "success_patterns",
+    "content": "使用缓存机制优化重复计算",
+    "importance": 0.68,
+    "tags": [
+      "optimization",
+      "cache",
+      "performance"
+    ],
+    "access_count": 3,
+    "created_at": "2025-11-14T06:01:18.028059",
+    "data": {
+      "success_rate": 0.85
+    }
+  },
+  {
+    "id": "b1712af328ef565b",
+    "category": "failure_patterns",
+    "content": "Failure: 尝试暴力枚举大数据集\nLesson: 导致内存溢出和性能问题，应该使用流式处理或分批处理",
+    "importance": 0.7,
+    "tags": [
+      "performance",
+      "mistake",
+      "memory"
+    ],
+    "access_count": 3,
+    "created_at": "2025-11-14T06:01:18.028128",
+    "data": {
+      "failure": "尝试暴力枚举大数据集",
+      "lesson": "导致内存溢出和性能问题，应该使用流式处理或分批处理"
+    }
+  },
+  {
+    "id": "501db3d4f5f89e02",
+    "category": "failure_patterns",
+    "content": "Failure: 在循环中频繁调用 LLM API\nLesson: 导致API限流和成本过高，应该批量处理或使用缓存",
+    "importance": 0.7,
+    "tags": [
+      "api",
+      "cost",
+      "rate_limit"
+    ],
+    "access_count": 2,
+    "created_at": "2025-11-14T06:01:18.028152",
+    "data": {
+      "failure": "在循环中频繁调用 LLM API",
+      "lesson": "导致API限流和成本过高，应该批量处理或使用缓存"
+    }
+  },
+  {
+    "id": "b7d2cb33e1555e11",
+    "category": "dead_ends",
+    "content": "Dead End: 尝试用线性模型拟合非线性关系\nReason: 多次实验证明效果很差，应该使用非线性模型或神经网络",
+    "importance": 0.9,
+    "tags": [
+      "modeling",
+      "linear",
+      "avoid"
+    ],
+    "access_count": 3,
+    "created_at": "2025-11-14T06:01:18.028184",
+    "data": {
+      "dead_end": "尝试用线性模型拟合非线性关系",
+      "reason": "多次实验证明效果很差，应该使用非线性模型或神经网络"
+    }
+  },
+  {
+    "id": "598a0711deeb9f44",
+    "category": "dead_ends",
+    "content": "Dead End: 使用单一特征进行预测\nReason: 准确率始终低于50%，需要特征工程和多特征组合",
+    "importance": 0.9,
+    "tags": [
+      "feature",
+      "prediction",
+      "avoid"
+    ],
+    "access_count": 3,
+    "created_at": "2025-11-14T06:01:18.028202",
+    "data": {
+      "dead_end": "使用单一特征进行预测",
+      "reason": "准确率始终低于50%，需要特征工程和多特征组合"
+    }
+  },
+  {
+    "id": "767aa0af408fb1bc",
+    "category": "insights",
+    "content": "神经网络的深度比宽度更重要，在相同参数量下，深层网络通常表现更好",
+    "importance": 0.95,
+    "tags": [
+      "insight",
+      "literature_review"
+    ],
+    "access_count": 7,
+    "created_at": "2025-11-14T06:01:18.028237",
+    "data": {
+      "source": "literature_review",
+      "related_items": [
+        "deep_learning",
+        "architecture",
+        "neural_network"
+      ]
+    }
+  },
+  {
+    "id": "6bb646dbd2a7723c",
+    "category": "insights",
+    "content": "注意力机制可以显著提升序列模型的性能，特别是在长序列任务中",
+    "importance": 0.95,
+    "tags": [
+      "insight",
+      "experiment"
+    ],
+    "access_count": 4,
+    "created_at": "2025-11-14T06:01:18.028260",
+    "data": {
+      "source": "experiment",
+      "related_items": [
+        "attention",
+        "transformer",
+        "sequence"
+      ]
+    }
+  },
+  {
+    "id": "57640f9639c51c8f",
+    "category": "insights",
+    "content": "数据质量比数据量更重要，高质量的小数据集往往优于低质量的大数据集",
+    "importance": 0.95,
+    "tags": [
+      "insight",
+      "research"
+    ],
+    "access_count": 4,
+    "created_at": "2025-11-14T06:01:18.028277",
+    "data": {
+      "source": "research",
+      "related_items": [
+        "data",
+        "quality",
+        "dataset"
+      ]
+    }
+  }
+]

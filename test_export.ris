@@ -1,0 +1,32 @@
+TY  - JOUR
+TI  - Large Language Models Lack Understanding of Character Composition of Words
+AU  - Andrew Shin
+AU  - Kunitake Kaneko
+PY  - 2024
+UR  - http://arxiv.org/abs/2405.11357v3
+AB  - Large language models (LLMs) have demonstrated remarkable performances on a wide range of natural language tasks. Yet, LLMs' successes have been largely restricted to tasks concerning words, sentences, or documents, and it remains questionable how much they understand the minimal units of text, namely characters. In this paper, we examine contemporary LLMs regarding their ability to understand character composition of words, and show that most of them fail to reliably carry out even the simple tasks that can be handled by humans with perfection. We analyze their behaviors with comparison to token level performances, and discuss the potential directions for future research.
+ER  - 
+
+TY  - JOUR
+TI  - Unmasking the Shadows of AI: Investigating Deceptive Capabilities in Large Language Models
+AU  - Linge Guo
+PY  - 2024
+UR  - http://arxiv.org/abs/2403.09676v1
+AB  - This research critically navigates the intricate landscape of AI deception, concentrating on deceptive behaviours of Large Language Models (LLMs). My objective is to elucidate this issue, examine the discourse surrounding it, and subsequently delve into its categorization and ramifications. The essay initiates with an evaluation of the AI Safety Summit 2023 (ASS) and introduction of LLMs, emphasising multidimensional biases that underlie their deceptive behaviours.The literature review covers four types of deception categorised: Strategic deception, Imitation, Sycophancy, and Unfaithful Reasoning, along with the social implications and risks they entail. Lastly, I take an evaluative stance on various aspects related to navigating the persistent challenges of the deceptive AI. This encompasses considerations of international collaborative governance, the reconfigured engagement of individuals with AI, proposal of practical adjustments, and specific elements of digital education.
+ER  - 
+
+TY  - JOUR
+TI  - Is Self-knowledge and Action Consistent or Not: Investigating Large Language Model's Personality
+AU  - Yiming Ai
+AU  - Zhiwei He
+AU  - Ziyin Zhang
+AU  - Wenhong Zhu
+AU  - Hongkun Hao
+AU  - Kai Yu
+AU  - Lingjun Chen
+AU  - Rui Wang
+PY  - 2024
+UR  - http://arxiv.org/abs/2402.14679v2
+AB  - In this study, we delve into the validity of conventional personality questionnaires in capturing the human-like personality traits of Large Language Models (LLMs). Our objective is to assess the congruence between the personality traits LLMs claim to possess and their demonstrated tendencies in real-world scenarios. By conducting an extensive examination of LLM outputs against observed human response patterns, we aim to understand the disjunction between self-knowledge and action in LLMs.
+ER  - 
+
