@@ -28,7 +28,7 @@ def init_database():
     
     cfg = get_config().db
     _engine = create_engine(cfg.url, echo=cfg.echo)
-    _SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=_engine)
+    _SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=_engine, expire_on_commit=False)
     
     # 创建所有表
     Base.metadata.create_all(bind=_engine)
@@ -40,8 +40,8 @@ def get_session() -> Session:
     """获取数据库会话"""
     if _SessionLocal is None:
         init_database()
-    
-    return _SessionLocal()
+
+    return _SessionLocal()  # type: ignore
 
 
 class AgentRecord(Base):

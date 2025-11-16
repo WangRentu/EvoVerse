@@ -1,6 +1,10 @@
-"""Neuroscience domain module - connectomics, neurodegeneration, and brain network analysis"""
+"""Neuroscience domain module - connectomics, neurodegeneration, and brain network analysis
 
-from kosmos.domains.neuroscience.apis import (
+原始版本依赖外部 `kosmos.domains.neuroscience.*`，在 EvoVerse 中已经有对应实现，
+此处改为本地导入，消除对 kosmos 的硬依赖。
+"""
+
+from .apis import (
     FlyWireClient,
     AllenBrainClient,
     MICrONSClient,
@@ -14,7 +18,7 @@ from kosmos.domains.neuroscience.apis import (
     DifferentialExpressionResult as APIDifferentialExpressionResult,
 )
 
-from kosmos.domains.neuroscience.connectomics import (
+from .connectomics import (
     ConnectomicsAnalyzer,
     ConnectomicsResult,
     ScalingRelationship,
@@ -22,7 +26,7 @@ from kosmos.domains.neuroscience.connectomics import (
     CrossSpeciesComparison,
 )
 
-from kosmos.domains.neuroscience.neurodegeneration import (
+from .neurodegeneration import (
     NeurodegenerationAnalyzer,
     NeurodegenerationResult,
     DifferentialExpressionResult,
@@ -31,7 +35,7 @@ from kosmos.domains.neuroscience.neurodegeneration import (
     TemporalStage,
 )
 
-from kosmos.domains.neuroscience.ontology import (
+from .ontology import (
     NeuroscienceOntology,
 )
 

@@ -49,7 +49,7 @@ class PaperMetadata:
     # Core metadata
     title: str = ""
     abstract: str = ""
-    authors: List[Author] = None
+    authors: Optional[List[Author]] = None
 
     # Publication info
     publication_date: Optional[datetime] = None
@@ -67,8 +67,8 @@ class PaperMetadata:
     influential_citation_count: int = 0
 
     # Fields & Keywords
-    fields: List[str] = None  # Research fields/domains
-    keywords: List[str] = None
+    fields: Optional[List[str]] = None  # Research fields/domains
+    keywords: Optional[List[str]] = None
 
     # Full text (if downloaded)
     full_text: Optional[str] = None
@@ -93,9 +93,10 @@ class PaperMetadata:
     @property
     def author_names(self) -> List[str]:
         """Get list of author names."""
-        return [author.name for author in self.authors]
+        return [author.name for author in self.authors] if self.authors else []
 
     def to_dict(self) -> Dict[str, Any]:
+        authors = self.authors or []
         """Convert to dictionary for database storage."""
         return {
             "id": self.id,
@@ -105,7 +106,7 @@ class PaperMetadata:
             "pubmed_id": self.pubmed_id,
             "title": self.title,
             "abstract": self.abstract,
-            "authors": [{"name": a.name, "affiliation": a.affiliation} for a in self.authors],
+            "authors": [{"name": a.name, "affiliation": a.affiliation} for a in authors],
             "publication_date": self.publication_date.isoformat() if self.publication_date else None,
             "journal": self.journal,
             "venue": self.venue,

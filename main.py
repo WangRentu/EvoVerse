@@ -1,61 +1,77 @@
-# main.py
-from evoverse.core.llm_client import LLMClient
-from evoverse.config import get_config
-from evoverse.memory import ConversationManager
-from evoverse.agents import BaseAgent
+"""
+EvoVerse MVP CLI
 
+提供一个最小可行的命令行入口：
+- 从标准输入读取科研问题
+- 调用 ResearchDirectorAgent 执行完整流水线
+- 在控制台打印结构化结果摘要
+""" 
+from __future__ import annotations
 
-def main():
-    cfg = get_config()
-    print("EvoVerse starting with config:")
-    print(f"  LLM base_url: {cfg.llm.base_url}")
-    print(f"  LLM model   : {cfg.llm.model}")
-    print(f"  DB url      : {cfg.db.url}")
+import json
+from typing import Any, Dict
 
-    # 创建带记忆的 LLM 客户端
-    llm = LLMClient(max_history=20)
-    
-    # 创建对话管理器
-    conversation_manager = ConversationManager()
-    
-    # 创建会话
-    session_id = conversation_manager.create_session("demo_session")
-    
-    print(f"\n创建对话会话: {session_id}")
-    
-    # 设置系统提示
-    system_prompt = "你是一个科研助手大模型，记住用户的偏好和之前的对话内容。"
-    llm.set_system_prompt(system_prompt)
-    
-    # 演示连续对话
-    questions = [
-        "我是 EvoVerse 的开发者，专注于多智能体科研系统。",
-        "你还记得我是谁吗？",
-        "我最喜欢的编程语言是什么？",
-        "请总结一下我们刚才的对话。"
-    ]
-    
-    print("\n>>> 开始连续对话演示...")
-    
-    for i, question in enumerate(questions, 1):
-        print(f"\n问题 {i}: {question}")
-        
-        # 使用记忆对话接口
-        reply = llm.chat_with_memory(question)
-        print(f"助手: {reply}")
-        
-        # 保存到对话管理器
-        conversation_manager.add_message(session_id, "user", question)
-        conversation_manager.add_message(session_id, "assistant", reply)
-    
-    # 显示记忆统计
-    memory_stats = llm.get_memory_stats()
-    print(f"\n记忆统计: {memory_stats}")
-    
-    # 保存会话
-    conversation_manager.save_session(session_id)
-    print(f"\n会话已保存: {session_id}")
+from evoverse.db.relational import init_database
+from evoverse.agents.research_director import ResearchDirectorAgent
+
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    handlers=[
+        logging.StreamHandler(),                     # 打到终端
+        logging.FileHandler("evoverse.log", encoding="utf-8"),  # 写到文件
+    ],
+)
+
+def run_cli() -> None:
+    """简单的命令行交互入口。"""
+    init_database()
+
+    print("🔬 EvoVerse MVP - ResearchDirector CLI")
+    print("请输入一个科研问题（按回车确认，空行退出）：")
+
+    try:
+        # question = input("> ").strip()
+        question = "早睡习惯与白天认知表现的关系"
+        print(f"> {question}")
+    except EOFError:
+        return
+
+    if not question:
+        print("未输入问题，退出。")
+        return
+
+    director = ResearchDirectorAgent()
+    result: Dict[str, Any] = director.run_task(question)
+
+    print("\n=== 任务摘要 ===")
+    print(f"Task ID: {result.get('task_id')}")
+    print(f"问题：{result.get('question')}")
+
+    print("\n子问题：")
+    for i, sq in enumerate(result.get("sub_questions", []), start=1):
+        print(f"  {i}. {sq}")
+
+    print("\n关键词：", ", ".join(result.get("keywords", [])))
+
+    papers = result.get("papers", [])
+    print(f"\n检索到的文献数量：{len(papers)}")
+    for i, p in enumerate(papers[:5], start=1):
+        print(f"  [{i}] {p.get('title', '')}")
+
+    print("\n知识图谱增量：")
+    print(json.dumps(result.get("graph_stats", {}), ensure_ascii=False, indent=2))
+
+    print("\n候选假设与方案（JSON 摘要）：")
+    summary_obj = {
+        "hypotheses": result.get("hypotheses", []),
+        "plan": result.get("plan", []),
+    }
+    print(json.dumps(summary_obj, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
-    main()
+    run_cli()
+

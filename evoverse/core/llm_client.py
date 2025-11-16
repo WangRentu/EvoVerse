@@ -62,6 +62,7 @@ class LLMClient:
         )
         self.temperature = cfg.temperature
         self.max_tokens = cfg.max_tokens
+        self.timeout = cfg.request_timeout
         
         # 对话记忆
         self.conversation_memory = ConversationMemory(max_history)
@@ -78,8 +79,11 @@ class LLMClient:
             messages=messages,
             temperature=self.temperature,
             max_tokens=self.max_tokens,
+            timeout=self.timeout,
         )
         
+        # print(resp)
+
         reply = resp.choices[0].message.content
         self.total_requests += 1
         

@@ -1,6 +1,10 @@
-"""Materials Science domain module - materials optimization and parameter analysis"""
+"""Materials Science domain module - materials optimization and parameter analysis
 
-from kosmos.domains.materials.apis import (
+原始实现依赖 `kosmos.domains.materials.*`，在 EvoVerse 中已经提供了本地版本，
+这里改为从当前包的子模块导入，去掉对外部 kosmos 包的依赖。
+"""
+
+from .apis import (
     MaterialsProjectClient,
     NOMADClient,
     AflowClient,
@@ -13,7 +17,7 @@ from kosmos.domains.materials.apis import (
     PerovskiteExperiment,
 )
 
-from kosmos.domains.materials.optimization import (
+from .optimization import (
     MaterialsOptimizer,
     CorrelationResult,
     SHAPResult,
@@ -21,7 +25,7 @@ from kosmos.domains.materials.optimization import (
     DOEResult,
 )
 
-from kosmos.domains.materials.ontology import (
+from .ontology import (
     MaterialsOntology,
     MaterialsConcept,
     MaterialsRelation,

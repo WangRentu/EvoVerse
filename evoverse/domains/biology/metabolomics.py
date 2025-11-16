@@ -34,7 +34,7 @@ import pandas as pd
 from scipy import stats
 from pydantic import BaseModel, Field
 
-from kosmos.domains.biology.apis import KEGGClient
+from .apis import KEGGClient
 
 
 # Enums for metabolite classification

@@ -70,7 +70,8 @@ class PaperVectorDB:
 
         # Set persist directory
         if persist_directory is None:
-            persist_directory = config.vector_db.chroma_persist_directory
+            # Use knowledge config for vector DB persistence
+            persist_directory = config.knowledge.chroma_persist_directory
 
         persist_path = Path(persist_directory)
         persist_path.mkdir(parents=True, exist_ok=True)

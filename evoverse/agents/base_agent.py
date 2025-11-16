@@ -202,13 +202,13 @@ class BaseAgent:
                 
                 if existing:
                     # 更新现有记录
-                    existing.status = self.status.value
-                    existing.state_data = self.state_data
-                    existing.messages_sent = self.messages_sent
-                    existing.messages_received = self.messages_received
-                    existing.tasks_completed = self.tasks_completed
-                    existing.errors_encountered = self.errors_encountered
-                    existing.updated_at = datetime.utcnow()
+                    existing.status = self.status.value                    # type: ignore
+                    existing.state_data = self.state_data                  # type: ignore   
+                    existing.messages_sent = self.messages_sent            # type: ignore
+                    existing.messages_received = self.messages_received    # type: ignore
+                    existing.tasks_completed = self.tasks_completed        # type: ignore
+                    existing.errors_encountered = self.errors_encountered  # type: ignore
+                    existing.updated_at = datetime.utcnow()                # type: ignore
                 else:
                     # 创建新记录
                     record = AgentRecord(
@@ -238,7 +238,7 @@ class BaseAgent:
                 
                 if record:
                     self.status = AgentStatus(record.status)
-                    self.state_data = record.state_data or {}
+                    self.state_data = record.state_data or {} # type: ignore
                     self.messages_sent = record.messages_sent
                     self.messages_received = record.messages_received
                     self.tasks_completed = record.tasks_completed

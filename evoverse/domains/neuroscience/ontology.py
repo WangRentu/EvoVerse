@@ -26,8 +26,8 @@ from typing import Dict, List, Optional, Set, Any
 from enum import Enum
 from pydantic import BaseModel, Field
 
-# Import from biology ontology for shared types
-from kosmos.domains.biology.ontology import (
+# Import from biology ontology for shared types (use local EvoVerse implementation)
+from ..biology.ontology import (
     BiologicalRelationType,
     BiologicalConcept,
     BiologicalRelation

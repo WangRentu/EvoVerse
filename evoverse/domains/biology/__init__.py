@@ -1,6 +1,11 @@
-"""Biology domain module - metabolomics, genomics, and multi-modal integration"""
+"""Biology domain module - metabolomics, genomics, and multi-modal integration
 
-from kosmos.domains.biology.apis import (
+本模块原本依赖外部 `kosmos.domains.biology.*`，在 EvoVerse 中已经有等价实现，
+因此这里改为从本地 `evoverse.domains.biology` 子模块中导入，避免对外部
+`kosmos` 包的硬依赖。
+"""
+
+from .apis import (
     KEGGClient,
     GWASCatalogClient,
     GTExClient,
@@ -13,7 +18,7 @@ from kosmos.domains.biology.apis import (
     PDBClient,
 )
 
-from kosmos.domains.biology.metabolomics import (
+from .metabolomics import (
     MetabolomicsAnalyzer,
     MetabolomicsResult,
     PathwayPattern,
@@ -22,7 +27,7 @@ from kosmos.domains.biology.metabolomics import (
     MetaboliteType,
 )
 
-from kosmos.domains.biology.genomics import (
+from .genomics import (
     GenomicsAnalyzer,
     GenomicsResult,
     CompositeScore,
@@ -31,7 +36,7 @@ from kosmos.domains.biology.genomics import (
     EffectDirection,
 )
 
-from kosmos.domains.biology.ontology import (
+from .ontology import (
     BiologyOntology,
     BiologicalConcept,
     BiologicalRelation,

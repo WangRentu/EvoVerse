@@ -7,9 +7,13 @@ from typing import Optional
 class LLMConfig(BaseSettings):
     base_url: str = Field(default="http://localhost:11434/v1")
     api_key: str = Field(default="ollama")
-    model: str = Field(default="qwen3-vl:32b")
+    model: str = Field(default="qwen3:30b-a3b-thinking-2507-fp16")
     temperature: float = 0.2
     max_tokens: int = 2048
+    request_timeout: float = Field(
+        default=30.0,
+        description="LLM 请求超时时间（秒），避免长时间无响应"
+    )
 
     model_config = {
         "env_prefix": "LLM_",

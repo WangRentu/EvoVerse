@@ -37,7 +37,7 @@ import pandas as pd
 from scipy import stats
 from pydantic import BaseModel, Field
 
-from kosmos.domains.biology.apis import (
+from .apis import (
     GWASCatalogClient,
     GTExClient,
     ENCODEClient,
