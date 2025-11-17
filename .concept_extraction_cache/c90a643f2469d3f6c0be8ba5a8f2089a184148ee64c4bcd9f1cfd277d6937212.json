@@ -1,0 +1,77 @@
+{
+  "paper_id": "1002.3035",
+  "concepts": [
+    {
+      "name": "Emotional Diffusive Control",
+      "description": "Emotional diffusive control involves interaction effects between emotional arousal and reward signaling, contrasting with neutral diffusive control in decision-making systems.",
+      "domain": "cognitive_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Neuromodulator-Mediated Homeostasis",
+      "description": "Neuromodulators (e.g., dopamine, serotonin) mediate the brain's diffusive homeostatic control system, linking emotional states to physiological regulation.",
+      "domain": "neuroscience",
+      "relevance": 0.9
+    },
+    {
+      "name": "Complexity Reduction via Emotions",
+      "description": "Emotions act as an intermediate layer to reduce policy space dimensionality, enabling efficient decision-making under real-world time constraints.",
+      "domain": "cognitive_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Life-Long Utility Maximization",
+      "description": "The goal of cognitive systems to maximize long-term fitness (e.g., reproductive success), computationally infeasible without emotional intermediaries.",
+      "domain": "computational_biology",
+      "relevance": 0.8
+    },
+    {
+      "name": "Synthetic Emotions",
+      "description": "Proposed artificial implementations of emotional processes in computational systems to mimic biological emotional functions.",
+      "domain": "artificial_intelligence",
+      "relevance": 0.7
+    },
+    {
+      "name": "Emotional Motivational Drives",
+      "description": "Emotionally-driven motivational forces that interact with diffusive control mechanisms to influence behavior and decision-making.",
+      "domain": "cognitive_science",
+      "relevance": 0.7
+    },
+    {
+      "name": "Diffusive Homeostatic Control",
+      "description": "A brain-wide regulatory system using diffusive processes to maintain physiological and cognitive homeostasis, mediated by neuromodulators.",
+      "domain": "neuroscience",
+      "relevance": 0.85
+    }
+  ],
+  "methods": [
+    {
+      "name": "Literature Review",
+      "description": "Systematic analysis of existing research to synthesize current understanding of emotions' functional roles in cognitive systems.",
+      "category": "theoretical",
+      "confidence": 0.95
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Neuromodulator-Mediated Homeostasis",
+      "concept2": "Diffusive Homeostatic Control",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.9
+    },
+    {
+      "concept1": "Complexity Reduction via Emotions",
+      "concept2": "Life-Long Utility Maximization",
+      "relationship_type": "ENABLES",
+      "strength": 0.9
+    },
+    {
+      "concept1": "Emotional Motivational Drives",
+      "concept2": "Life-Long Utility Maximization",
+      "relationship_type": "ENABLES",
+      "strength": 0.9
+    }
+  ],
+  "extraction_time": 44.95981311798096,
+  "model_used": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+}

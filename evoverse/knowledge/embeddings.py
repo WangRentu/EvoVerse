@@ -75,7 +75,7 @@ class PaperEmbedder:
                 model_name,
                 cache_folder=cache_dir,
                 device=device
-            )
+            ) # pyright: ignore[reportOptionalCall]
             self.embedding_dim = self.model.get_sentence_embedding_dimension()
 
             logger.info(

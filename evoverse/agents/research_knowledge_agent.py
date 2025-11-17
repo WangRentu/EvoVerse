@@ -9,7 +9,7 @@ import logging
 
 from evoverse.agents.base_agent import BaseAgent
 from evoverse.knowledge.graph_builder import GraphBuilder
-from evoverse.literature.base_client import PaperMetadata, PaperSource
+from evoverse.literature.base_client import PaperMetadata, PaperSource, Author
 
 
 logger = logging.getLogger(__name__)
@@ -63,19 +63,62 @@ class KnowledgeAgent(BaseAgent):
 
                 # 2. source 现在已经是字符串（arxiv/pubmed/unknown）
                 source_str = (p.get("source") or "unknown")
-                source_enum = PaperSource(source_str) if source_str in PaperSource._value2member_map_ else PaperSource.UNKNOWN
+                source_enum = (
+                    PaperSource(source_str)
+                    if source_str in PaperSource._value2member_map_
+                    else PaperSource.UNKNOWN
+                )
 
-                # 3. 构造最小 PaperMetadata（和 Kosmos 一样：id + source + 基本元数据）
+                primary_id = p.get("primary_id")
+
+                # 3. 规范作者列表为 Author 对象列表（GraphBuilder 需要 .name/.affiliation）
+                raw_authors = p.get("authors") or []
+                authors: List[Author] = []
+                for a in raw_authors:
+                    if isinstance(a, str):
+                        name = a.strip()
+                    elif isinstance(a, dict):
+                        name = (a.get("name") or "").strip()
+                    else:
+                        name = str(a).strip()
+
+                    if not name:
+                        continue
+
+                    affiliation = None
+                    if isinstance(a, dict):
+                        affiliation = a.get("affiliation")
+
+                    authors.append(Author(name=name, affiliation=affiliation))
+
+                # 4. 映射主 ID 到具体字段，尽量贴合底层 schema
+                doi = None
+                arxiv_id = None
+                pubmed_id = None
+
+                if primary_id:
+                    pid_str = str(primary_id).strip()
+                    if source_enum == PaperSource.ARXIV:
+                        arxiv_id = pid_str
+                    elif source_enum == PaperSource.PUBMED:
+                        pubmed_id = pid_str
+                    else:
+                        # 其他来源先只保留在 id 里，后续需要可以扩展
+                        pass
+
+                # 5. 构造 PaperMetadata（包含标题、摘要、作者、年份等）
                 meta = PaperMetadata(
                     id=paper_id,
+                    source=source_enum,
+                    doi=doi,
+                    arxiv_id=arxiv_id,
+                    pubmed_id=pubmed_id,
                     title=p.get("title", "") or "",
                     abstract=p.get("abstract") or p.get("summary") or "",
-                    authors=p.get("authors") or [],
+                    authors=authors,
                     year=p.get("year", None),
-                    source=source_enum,
-                    # 如果 PaperMetadata 里还有 primary_id 之类字段，可以顺手加上：
-                    # primary_id=p.get("primary_id"),
                 )
+
                 minimal_papers.append(meta)
 
             except Exception as exc:  # noqa: BLE001
@@ -96,13 +139,23 @@ class KnowledgeAgent(BaseAgent):
             len(minimal_papers),
         )
 
-        # 写入知识图谱和向量库（先关掉复杂关系，MVP 只塞 paper 节点）
+        # 从配置中读取开关，默认打开完整建图流程
+        cfg = self.config or {}
+        extract_concepts = cfg.get("extract_concepts", True)
+        add_authors = cfg.get("add_authors", True)
+        add_citations = cfg.get("add_citations", True)
+        add_semantic_relationships = cfg.get(
+            "add_semantic_relationships",
+            True,
+        )
+
+        # 写入知识图谱和向量库（默认启用概念/方法/作者/引文/语义关系）
         self.builder.build_from_papers(
             minimal_papers,
-            extract_concepts=False,
-            add_authors=False,
-            add_citations=False,
-            add_semantic_relationships=False,
+            extract_concepts=extract_concepts,
+            add_authors=add_authors,
+            add_citations=add_citations,
+            add_semantic_relationships=add_semantic_relationships,
             show_progress=False,
         )
 
@@ -113,4 +166,3 @@ class KnowledgeAgent(BaseAgent):
 
         logger.info("KnowledgeAgent ingestion stats: %s", stats)
         return stats
-

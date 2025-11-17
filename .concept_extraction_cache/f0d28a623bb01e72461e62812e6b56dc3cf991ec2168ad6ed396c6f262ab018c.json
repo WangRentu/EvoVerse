@@ -1,0 +1,100 @@
+{
+  "paper_id": "2510.19269",
+  "concepts": [
+    {
+      "name": "Sleep Quality",
+      "description": "A metric indicating the restorative nature of sleep, measured through physiological parameters and self-assessment.",
+      "domain": "biomedical_engineering",
+      "relevance": 1.0
+    },
+    {
+      "name": "Cognitive Function",
+      "description": "Mental processes including attention, memory, and decision-making, assessed as a key indicator of teacher performance.",
+      "domain": "neuroscience",
+      "relevance": 1.0
+    },
+    {
+      "name": "IoT Technology",
+      "description": "Networked devices enabling real-time data collection from wearables for health monitoring applications.",
+      "domain": "computer_science",
+      "relevance": 1.0
+    },
+    {
+      "name": "Teacher Well-Being",
+      "description": "Overall health and psychological state of educators, influenced by sleep and cognitive factors.",
+      "domain": "educational_psychology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Workload Impact",
+      "description": "The negative effect of high job demands and multi-tasking on sleep and cognitive outcomes.",
+      "domain": "occupational_health",
+      "relevance": 0.9
+    },
+    {
+      "name": "SpO2 Monitoring",
+      "description": "Measurement of blood oxygen saturation levels using wearable sensors to assess sleep physiology.",
+      "domain": "biomedical_engineering",
+      "relevance": 0.85
+    },
+    {
+      "name": "Pulse Rate Monitoring",
+      "description": "Tracking heart rate variability during sleep to infer sleep quality and physiological stress.",
+      "domain": "biomedical_engineering",
+      "relevance": 0.85
+    },
+    {
+      "name": "Cognitive Assessment Questionnaire",
+      "description": "A standardized self-report tool for evaluating teachers' cognitive function and mental state.",
+      "domain": "psychology",
+      "relevance": 0.95
+    },
+    {
+      "name": "High School Teachers",
+      "description": "The target demographic studied, facing unique stressors affecting sleep and cognition.",
+      "domain": "education",
+      "relevance": 0.9
+    },
+    {
+      "name": "Multi-Tasking Stress",
+      "description": "Job-related pressure from handling multiple responsibilities, linked to impaired sleep and cognition.",
+      "domain": "occupational_health",
+      "relevance": 0.85
+    }
+  ],
+  "methods": [
+    {
+      "name": "IoT Sensor Deployment",
+      "description": "Use of smartwatches with pulse and SpO2 sensors to collect physiological sleep data in real-world settings.",
+      "category": "experimental",
+      "confidence": 1.0
+    },
+    {
+      "name": "Cognitive Assessment Questionnaire",
+      "description": "Self-administered psychological tool for quantifying cognitive function through structured questions.",
+      "category": "analytical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Cross-Sectional Survey",
+      "description": "Data collection from a large sample (208 teachers) at a single time point to assess current sleep and cognitive states.",
+      "category": "experimental",
+      "confidence": 0.95
+    },
+    {
+      "name": "Correlation Analysis",
+      "description": "Statistical method to identify relationships between sleep quality categories and cognitive assessment scores.",
+      "category": "analytical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Sleep Quality Categorization",
+      "description": "Classification of sleep data into 'poor', 'fair', or 'good' based on sensor-derived metrics.",
+      "category": "analytical",
+      "confidence": 0.95
+    }
+  ],
+  "relationships": [],
+  "extraction_time": 39.37428021430969,
+  "model_used": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+}

@@ -7,6 +7,7 @@ Uses EvoVerse LLM (Qwen via vLLM) to extract structured information including:
 - Relevance scores and context
 """
 
+from email.mime import text
 import json
 import logging
 import hashlib
@@ -516,6 +517,8 @@ If no clear relationships exist, return {{"relationships": []}}"""
         """
         # Remove markdown code blocks if present
         text = response_text.strip()
+        if "</think>" in text:
+            text = text.split("</think>", 1)[1].strip()
 
         if text.startswith("```json"):
             text = text[7:]  # Remove ```json
@@ -527,12 +530,30 @@ If no clear relationships exist, return {{"relationships": []}}"""
 
         text = text.strip()
 
+        print(f"Parsing JSON response: {text!r}")
+
+        # 1. 尝试整段直接解析
         try:
-            return json.loads(text)
-        except json.JSONDecodeError as e:
-            logger.error(f"Failed to parse JSON response: {e}")
-            logger.debug(f"Response text: {text}")
-            return {"concepts": [], "methods": [], "relationships": []}
+            if text:
+                return json.loads(text)
+        except json.JSONDecodeError:
+            pass
+
+        # 2. 从中间截取第一个 '{' 到最后一个 '}' 再解析
+        start = text.find("{")
+        end = text.rfind("}")
+        if start != -1 and end != -1 and end > start:
+            candidate = text[start:end + 1]
+            try:
+                return json.loads(candidate)
+            except json.JSONDecodeError as e:
+                logger.error(f"Failed to parse JSON candidate: {e}")
+                logger.debug(f"JSON candidate text: {candidate}")
+
+        # 3. 彻底失败：返回空结构，避免中断流程
+        logger.error("Failed to parse JSON response after cleanup")
+        logger.debug(f"Raw response text: {response_text!r}")
+        return {"concepts": [], "methods": [], "relationships": []}
 
     def _rate_limit(self):
         """Apply rate limiting to API requests."""

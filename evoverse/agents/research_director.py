@@ -85,7 +85,7 @@ class ResearchDirectorAgent(BaseAgent):
                 max_results=planning.get("max_papers", 20),
             )
 
-            # 3. 写入知识图谱（只做 Paper 节点及基础关系）
+            # 3. 写入知识图谱
             graph_stats = self.knowledge_agent.ingest_papers(papers)
 
             # 4. 基于「问题 + 文献摘要 + 图谱增量信息」生成假设与方案
@@ -254,7 +254,7 @@ class ResearchDirectorAgent(BaseAgent):
             f"子问题列表：\n{planning['sub_questions']}\n\n"
             f"知识图谱增量统计：\n{graph_stats}\n\n"
             f"相关文献（截断版）：\n{context}\n\n"
-            "请直接输出 JSON，不要带多余文字。"
+            "请直接输出 JSON，用```json```包裹，不要带多余文字。"
         )
 
         raw = self.llm.chat(
@@ -264,10 +264,24 @@ class ResearchDirectorAgent(BaseAgent):
             ]
         )
 
+        text = raw.strip()
+        if "</think>" in text:
+            text = text.split("</think>", 1)[1].strip()
+
+        if text.startswith("```json"):
+            text = text[7:]  # Remove ```json
+        elif text.startswith("```"):
+            text = text[3:]  # Remove ```
+
+        if text.endswith("```"):
+            text = text[:-3]  # Remove closing ```
+
+        text = text.strip()
+
         import json
 
         try:
-            data = json.loads(raw)
+            data = json.loads(text)
         except Exception:
             logger.warning("Failed to parse hypotheses JSON, fallback to simple structure")
             data = {

@@ -1,0 +1,100 @@
+{
+  "paper_id": "1701.07083",
+  "concepts": [
+    {
+      "name": "Real-world sleep monitoring",
+      "description": "Tracking sleep patterns in natural environments rather than controlled laboratories, capturing variability from real-life factors.",
+      "domain": "physiology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Circadian rhythms",
+      "description": "Intrinsic 24-hour biological cycles regulating cognitive performance, influencing daily performance fluctuations.",
+      "domain": "neuroscience",
+      "relevance": 0.9
+    },
+    {
+      "name": "Chronotype",
+      "description": "Individual differences in morning/evening preference affecting how circadian rhythms impact performance.",
+      "domain": "psychology",
+      "relevance": 0.85
+    },
+    {
+      "name": "Sleep inertia",
+      "description": "Transient cognitive impairment following sleep, modeled as a key factor in performance decline after insufficient sleep.",
+      "domain": "sleep science",
+      "relevance": 0.8
+    },
+    {
+      "name": "Homeostatic sleep drive",
+      "description": "The physiological need for sleep that accumulates with wakefulness, quantified in the study's statistical model.",
+      "domain": "physiology",
+      "relevance": 0.85
+    },
+    {
+      "name": "Insufficient sleep impact",
+      "description": "Performance decrements from inadequate sleep, specifically showing two nights <6 hours of sleep causing 6-day performance decline.",
+      "domain": "cognitive science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Population-scale physiological sensing",
+      "description": "Using large-scale digital interactions (e.g., web searches) to measure physiological states like sleep and performance.",
+      "domain": "computational biology",
+      "relevance": 1.0
+    },
+    {
+      "name": "Keystroke speed",
+      "description": "Performance metric derived from web interaction speed (typing/clicking), used as a proxy for cognitive function.",
+      "domain": "human-computer interaction",
+      "relevance": 0.9
+    },
+    {
+      "name": "Wearable device sleep measures",
+      "description": "Objective sleep data (duration, timing) collected via wearables, correlated with performance metrics.",
+      "domain": "biomedical engineering",
+      "relevance": 0.9
+    },
+    {
+      "name": "In situ monitoring",
+      "description": "Real-time data collection in natural settings, addressing limitations of traditional lab-based sleep studies.",
+      "domain": "epidemiology",
+      "relevance": 0.85
+    }
+  ],
+  "methods": [
+    {
+      "name": "Web interaction analysis",
+      "description": "Using keystroke and click speed from web search engine interactions as a continuous performance metric.",
+      "category": "computational",
+      "confidence": 0.95
+    },
+    {
+      "name": "Statistical modeling",
+      "description": "Developing a model integrating circadian rhythms, homeostatic sleep drive, and sleep inertia to predict performance.",
+      "category": "analytical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Wearable device integration",
+      "description": "Correlating objective sleep data from wearables with web interaction performance metrics across large populations.",
+      "category": "computational",
+      "confidence": 0.9
+    },
+    {
+      "name": "Population-scale data collection",
+      "description": "Aggregating 3 million nights of sleep and 75 million interaction tasks from real-world user behavior.",
+      "category": "experimental",
+      "confidence": 0.95
+    },
+    {
+      "name": "Longitudinal correlation",
+      "description": "Analyzing temporal relationships between prior sleep patterns and subsequent performance over extended periods.",
+      "category": "analytical",
+      "confidence": 0.9
+    }
+  ],
+  "relationships": [],
+  "extraction_time": 38.54569482803345,
+  "model_used": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+}

@@ -1,0 +1,100 @@
+{
+  "paper_id": "2202.09283",
+  "concepts": [
+    {
+      "name": "Poor sleep habits",
+      "description": "Inadequate sleep patterns leading to mental and physical health issues, prevalent among college students due to academic and social pressures.",
+      "domain": "sleep_science",
+      "relevance": 1.0
+    },
+    {
+      "name": "Bedtime patterns",
+      "description": "Distribution and consistency of students' sleep schedules, used as a key variable to identify late-night behavior clusters.",
+      "domain": "sleep_science",
+      "relevance": 1.0
+    },
+    {
+      "name": "Internet access patterns",
+      "description": "Digital footprints from education management systems reflecting students' online activity timing, used as proxy data for sleep behavior analysis.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Behavioral characteristics",
+      "description": "Multi-dimensional campus behavior profiles (e.g., study, social, dining patterns) used to correlate with sleep habits.",
+      "domain": "behavioral_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Bayesian networks",
+      "description": "Probabilistic graphical models used to explore causal relationships between behavioral dimensions and sleep patterns.",
+      "domain": "statistics",
+      "relevance": 0.95
+    },
+    {
+      "name": "Data-driven approach",
+      "description": "Methodology leveraging institutional data (e.g., access logs) instead of self-reported surveys to avoid biases and scale analysis.",
+      "domain": "data_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Probabilistic mixture model",
+      "description": "Statistical framework modeling bedtime distributions as mixtures of latent clusters to identify late-night students.",
+      "domain": "statistics",
+      "relevance": 0.9
+    },
+    {
+      "name": "Social desirability bias",
+      "description": "Tendency for survey respondents to report socially acceptable behaviors (e.g., 'good' sleep habits) rather than actual patterns.",
+      "domain": "psychology",
+      "relevance": 0.7
+    },
+    {
+      "name": "Campus-behavior data",
+      "description": "Multi-source behavioral data (e.g., library, dining, Wi-Fi usage) from educational management systems for holistic student profiling.",
+      "domain": "educational_data_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Predictability testing",
+      "description": "Validation process assessing the ability to forecast sleep patterns using behavioral and digital footprint data.",
+      "domain": "machine_learning",
+      "relevance": 0.8
+    }
+  ],
+  "methods": [
+    {
+      "name": "Poisson-based mixture model",
+      "description": "Clustering algorithm using Poisson distributions to model bedtime frequency and identify late-night student clusters.",
+      "category": "computational",
+      "confidence": 0.95
+    },
+    {
+      "name": "Bayesian networks",
+      "description": "Probabilistic modeling technique to infer relationships between behavioral dimensions and sleep habits from campus data.",
+      "category": "computational",
+      "confidence": 0.95
+    },
+    {
+      "name": "Behavioral profiling",
+      "description": "Multi-dimensional analysis of campus activity data across eight behavioral dimensions to characterize student routines.",
+      "category": "analytical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Predictability testing",
+      "description": "Statistical validation of sleep pattern prediction accuracy using behavioral and digital footprint features.",
+      "category": "computational",
+      "confidence": 0.9
+    },
+    {
+      "name": "Data-driven identification",
+      "description": "Methodology leveraging institutional system logs (e.g., Internet access) to infer sleep patterns without self-reporting.",
+      "category": "computational",
+      "confidence": 0.95
+    }
+  ],
+  "relationships": [],
+  "extraction_time": 38.5359411239624,
+  "model_used": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+}
