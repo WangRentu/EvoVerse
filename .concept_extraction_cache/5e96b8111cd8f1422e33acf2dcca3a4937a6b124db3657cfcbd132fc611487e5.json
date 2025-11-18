@@ -1,0 +1,70 @@
+{
+  "paper_id": "2111.07211",
+  "concepts": [
+    {
+      "name": "Sleep-wake flip-flop model",
+      "description": "A mathematical model representing sleep-wake regulation as a bistable system with mutual inhibition between sleep-promoting and wake-promoting neural populations. This framework is foundational for analyzing transitions between sleep and wake states through bifurcation dynamics.",
+      "domain": "biology",
+      "relevance": 1.0
+    },
+    {
+      "name": "Homeostatic regulation",
+      "description": "The physiological process governing sleep need accumulation and dissipation, modeled as a time-dependent variable in the sleep-wake system. It directly influences sleep duration and pattern transitions through its time constant in the bifurcation analysis.",
+      "domain": "biology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Circadian rhythm",
+      "description": "The endogenous 24-hour biological clock regulating sleep-wake cycles, represented as a periodic forcing function in the model. Its temporal profile critically determines the number and stability of sleep-wake solutions through phase interactions.",
+      "domain": "biology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Period adding sequence",
+      "description": "A bifurcation phenomenon where sleep pattern transitions occur through a sequence of periodic solutions with increasing periods. This mechanism explains how decreasing homeostatic time constants lead to stepwise increases in daily sleep episodes.",
+      "domain": "mathematics",
+      "relevance": 0.9
+    },
+    {
+      "name": "Saddle-node bifurcation",
+      "description": "A critical point where two equilibrium solutions collide and annihilate, driving sleep-wake pattern transitions. This bifurcation type is central to the model's explanation of how parameter changes (e.g., circadian steepness) eliminate certain sleep states.",
+      "domain": "mathematics",
+      "relevance": 0.9
+    },
+    {
+      "name": "Boundary collision bifurcation",
+      "description": "A non-smooth bifurcation occurring when a trajectory collides with a discontinuity boundary in the model. This mechanism explains abrupt transitions in sleep patterns, particularly under steep circadian profiles where some solutions vanish.",
+      "domain": "mathematics",
+      "relevance": 0.85
+    },
+    {
+      "name": "Developmental sleep transition",
+      "description": "The shift from polyphasic to monophasic sleep patterns during maturation (e.g., infant to adult sleep behavior). The model provides a theoretical basis for this transition via bifurcation mechanisms in circadian-homeostatic interactions.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Non-smooth dynamical systems",
+      "description": "Mathematical systems with discontinuous vector fields, such as the circadian hard-switch model. The paper addresses analytical challenges in these systems where standard bifurcation theory fails.",
+      "domain": "mathematics",
+      "relevance": 0.85
+    }
+  ],
+  "methods": [
+    {
+      "name": "Circle map with fast-slow decomposition",
+      "description": "A novel analytical technique combining circle map reduction for periodic forcing with fast-slow decomposition to handle high-dimensional non-smooth dynamics. Applied to separate slow homeostatic processes from fast circadian transitions, enabling bifurcation analysis of the sleep-wake model.",
+      "category": "theoretical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Bifurcation analysis",
+      "description": "Systematic examination of solution changes as model parameters vary, using numerical continuation to trace equilibrium branches and identify bifurcation points. Implemented to map how homeostatic time constants and circadian profiles alter sleep pattern stability and multiplicity.",
+      "category": "analytical",
+      "confidence": 0.9
+    }
+  ],
+  "relationships": [],
+  "extraction_time": 40.028786182403564,
+  "model_used": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+}

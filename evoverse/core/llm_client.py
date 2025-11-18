@@ -2,8 +2,11 @@
 from typing import List, Dict, Any, Optional
 from openai import OpenAI
 from datetime import datetime
-
+import logging
+import json
+import re
 from evoverse.config import get_config
+logger = logging.getLogger(__name__)
 
 class ConversationMemory:
     """对话记忆管理器"""
@@ -81,13 +84,72 @@ class LLMClient:
             max_tokens=self.max_tokens,
             timeout=self.timeout,
         )
-        
+
         # print(resp)
 
         reply = resp.choices[0].message.content
+        reply = re.sub(r".*?</think>", "", reply, flags=re.DOTALL).strip()
         self.total_requests += 1
-        
+
         return reply
+
+    def generate_structured(
+        self,
+        prompt: str,
+        output_schema: Dict[str, Any],
+        system: Optional[str] = None,
+        max_tokens: Optional[int] = None
+    ) -> Dict[str, Any]:
+        """
+        生成结构化输出 (JSON)
+
+        Args:
+            prompt: 用户提示
+            output_schema: 输出结构模式
+            system: 系统提示
+            max_tokens: 最大token数
+
+        Returns:
+            dict: 解析后的JSON响应
+        """
+        # 添加JSON指令到系统提示
+        json_instruction = "\n\n你必须返回符合以下JSON格式的有效响应：\n" + json.dumps(output_schema, indent=2, ensure_ascii=False) + "\n\n必须用 ```json ... ``` 代码块包裹着JSON结果。"
+        json_system = (system or "") + json_instruction
+
+        # 构建消息
+        messages = []
+        if json_system:
+            messages.append({"role": "system", "content": json_system})
+        messages.append({"role": "user", "content": prompt})
+
+        # 生成响应
+        response_text = self.chat(messages)
+        origin_response = response_text
+
+        # 解析JSON
+        try:
+            # 尝试从markdown代码块中提取JSON（如果存在）
+            if "```json" in response_text:
+                json_start = response_text.find("```json") + 7
+                json_end = response_text.find("```", json_start)
+                if json_end == -1:
+                    json_end = len(response_text)
+                response_text = response_text[json_start:json_end].strip()
+            elif "```" in response_text:
+                json_start = response_text.find("```") + 3
+                json_end = response_text.find("```", json_start)
+                if json_end == -1:
+                    json_end = len(response_text)
+                response_text = response_text[json_start:json_end].strip()
+
+            # 解析JSON
+            return json.loads(response_text)
+
+        except json.JSONDecodeError as e:
+            # 如果解析失败，返回基本结构
+            logger.error(f"JSON解析失败: {e}, \n\n响应内容: {origin_response}")
+            # 返回schema中的默认值
+            return self._get_default_from_schema(output_schema)
     
     def chat_with_memory(self, user_message: str, system_prompt: Optional[str] = None) -> str:
         """
@@ -135,3 +197,27 @@ class LLMClient:
             "conversation": self.conversation_memory.get_stats(),
             "total_requests": self.total_requests
         }
+
+    def _get_default_from_schema(self, schema: Dict[str, Any]) -> Dict[str, Any]:
+        """从JSON schema生成默认值"""
+        if schema.get("type") == "object":
+            result = {}
+            properties = schema.get("properties", {})
+            for prop_name, prop_schema in properties.items():
+                if prop_schema.get("type") == "string":
+                    result[prop_name] = ""
+                elif prop_schema.get("type") == "number":
+                    result[prop_name] = 0.0
+                elif prop_schema.get("type") == "integer":
+                    result[prop_name] = 0
+                elif prop_schema.get("type") == "boolean":
+                    result[prop_name] = False
+                elif prop_schema.get("type") == "array":
+                    result[prop_name] = []
+                else:
+                    result[prop_name] = None
+            return result
+        elif schema.get("type") == "array":
+            return []
+        else:
+            return {}

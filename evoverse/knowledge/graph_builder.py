@@ -35,7 +35,8 @@ class GraphBuilder:
         graph: Optional[KnowledgeGraph] = None,
         concept_extractor: Optional[ConceptExtractor] = None,
         add_semantic_edges: bool = True,
-        similarity_threshold: float = 0.8
+        similarity_threshold: float = 0.8,
+        max_semantic_neighbors: Optional[int] = None,
     ):
         """
         Initialize graph builder.
@@ -64,6 +65,9 @@ class GraphBuilder:
         self.concept_extractor = concept_extractor or get_concept_extractor()
         self.add_semantic_edges = add_semantic_edges
         self.similarity_threshold = similarity_threshold
+        # 每篇论文在语义图里最多连接多少邻居；
+        # 默认 None 表示使用“所有历史论文”，尽量构成密集网络。
+        self.max_semantic_neighbors = max_semantic_neighbors
 
         # For semantic similarity
         if add_semantic_edges:
@@ -359,8 +363,9 @@ class GraphBuilder:
         """
         Add semantic similarity edges between papers.
 
-        Uses vector database to find similar papers and creates
-        RELATED_TO relationships.
+        Uses vector database to find similar papers (including all
+        historically ingested papers in the vector DB) and creates
+        SEMANTICALLY_SIMILAR relationships.
 
         Args:
             papers: List of papers to analyze
@@ -385,10 +390,26 @@ class GraphBuilder:
                 logger.info(f"Processing semantic edges for paper {i + 1}/{len(papers)}")
 
             try:
+                # Determine how many neighbors to retrieve.
+                # 默认使用向量库中的“所有历史论文”作为候选，
+                # 如设置了 max_semantic_neighbors，则进行上限截断。
+                try:
+                    total_in_db = self.vector_db.count()
+                except Exception:
+                    total_in_db = 0
+
+                if total_in_db <= 0:
+                    continue
+
+                if self.max_semantic_neighbors is not None:
+                    top_k = min(total_in_db, self.max_semantic_neighbors)
+                else:
+                    top_k = total_in_db
+
                 # Find similar papers
                 similar = self.vector_db.search_by_paper(
                     paper,
-                    top_k=5,
+                    top_k=top_k,
                     filters=None
                 )
 
@@ -400,12 +421,27 @@ class GraphBuilder:
                         # Get paper ID from result
                         similar_paper_id = result["id"]
 
-                        # Create relationship (undirected - only create once)
-                        if paper.primary_identifier < similar_paper_id:
-                            # Create RELATED_TO as concept relationship
-                            # (could also create custom paper-paper relationship)
-                            added_edges += 1
 
+                        # Check if the similar paper exists in the graph database
+                        # Vector DB may contain papers from previous runs that aren't in current graph
+                        similar_paper_node = self.graph.get_paper(similar_paper_id)
+                        if not similar_paper_node:
+                            logger.debug(f"Skipping semantic edge to {similar_paper_id}: paper not in graph")
+                            continue
+
+                        # Create relationship (undirected - create_semantically_similar handles deduplication)
+                        relationship = self.graph.create_semantically_similar(
+                            paper1_id=paper.primary_identifier,
+                            paper2_id=similar_paper_id,
+                            similarity_score=similarity,
+                            source="vector_similarity",
+                            merge=True
+                        )
+
+                        if relationship:
+                            added_edges += 1
+                            self.stats["relationships_added"] += 1
+                                
             except Exception as e:
                 logger.error(f"Error adding semantic edges for {paper.primary_identifier}: {e}")
 

@@ -252,7 +252,7 @@ class KnowledgeGraph:
         Get a Paper node by ID.
 
         Args:
-            paper_id: Paper identifier (DOI, arXiv ID, or PubMed ID)
+            paper_id: Paper identifier (DOI, arXiv ID, PubMed ID, or vector DB format like "arxiv:1234.5678")
 
         Returns:
             Paper node or None if not found
@@ -274,7 +274,36 @@ class KnowledgeGraph:
 
         # Try by PubMed ID
         node = self.node_matcher.match("Paper", pubmed_id=paper_id).first()
-        return node
+        if node:
+            return node
+
+        # Handle vector DB format IDs like "arxiv:1234.5678" or "pubmed:12345678"
+        if ":" in paper_id:
+            try:
+                source_part, id_part = paper_id.split(":", 1)
+                # Try to find by the extracted ID part
+                node = self.node_matcher.match("Paper", id=id_part).first()
+                if node:
+                    return node
+
+                # Also try as DOI, arXiv ID, or PubMed ID
+                node = self.node_matcher.match("Paper", doi=paper_id).first()
+                if node:
+                    return node
+
+                node = self.node_matcher.match("Paper", arxiv_id=id_part).first()
+                if node:
+                    return node
+
+                node = self.node_matcher.match("Paper", pubmed_id=id_part).first()
+                if node:
+                    return node
+
+            except ValueError:
+                # If split fails, continue with other attempts
+                pass
+
+        return None
 
     def update_paper(self, paper_id: str, properties: Dict[str, Any]) -> Optional[Node]:
         """
@@ -732,6 +761,65 @@ class KnowledgeGraph:
 
         return rel
 
+    # ==================== Relationship CRUD ====================
+    def create_semantically_similar(
+        self,
+        paper1_id: str,
+        paper2_id: str,
+        similarity_score: float,
+        source: str = "vector_similarity",
+        merge: bool = True
+    ) -> Optional[Relationship]:
+        """
+        Create a SEMANTICALLY_SIMILAR relationship between papers.
+
+        Args:
+            paper1_id: First paper ID
+            paper2_id: Second paper ID
+            similarity_score: Semantic similarity score (0-1)
+            source: Source of similarity calculation (vector_similarity, etc.)
+            merge: If True, merge with existing
+
+        Returns:
+            Created relationship or None if papers not found
+        """
+        paper1 = self.get_paper(paper1_id)
+        paper2 = self.get_paper(paper2_id)
+
+        if not paper1 or not paper2:
+            logger.warning(f"Cannot create SEMANTICALLY_SIMILAR: papers not found")
+            return None
+
+        properties = {
+            "similarity_score": similarity_score,
+            "source": source,
+            "created_at": datetime.now().isoformat()
+        }
+
+        # Create undirected relationship (only store once)
+        # Normalize IDs for consistent comparison
+        def normalize_paper_id(paper_id: str) -> str:
+            """Normalize paper ID for consistent comparison."""
+            if ":" in paper_id:
+                try:
+                    _, id_part = paper_id.split(":", 1)
+                    return id_part
+                except ValueError:
+                    return paper_id
+            return paper_id
+
+        paper1_normalized = normalize_paper_id(paper1_id)
+        paper2_normalized = normalize_paper_id(paper2_id)
+
+        if paper1_normalized < paper2_normalized:
+            rel = Relationship(paper1, "SEMANTICALLY_SIMILAR", paper2, **properties)
+        else:
+            rel = Relationship(paper2, "SEMANTICALLY_SIMILAR", paper1, **properties)
+        
+        self.graph.merge(rel) if merge else self.graph.create(rel)
+
+        return rel
+
     # ==================== Graph Queries ====================
 
     def get_citations(self, paper_id: str, depth: int = 1) -> List[Dict[str, Any]]:
@@ -773,7 +861,7 @@ class KnowledgeGraph:
         """
 
         results = self.graph.run(query, paper_id=paper_id, limit=limit).data()
-        return [dict(r["citing"]) for r in results]
+        return [dict(r["citing"]) for r in results] # type: ignore
 
     def get_author_papers(self, author_name: str) -> List[Dict[str, Any]]:
         """
@@ -970,7 +1058,7 @@ class KnowledgeGraph:
             stats[f"{label.lower()}_count"] = count
 
         # Relationship counts
-        for rel_type in ["CITES", "AUTHORED", "DISCUSSES", "USES_METHOD", "RELATED_TO"]:
+        for rel_type in ["CITES", "AUTHORED", "DISCUSSES", "USES_METHOD", "RELATED_TO", "SEMANTICALLY_SIMILAR"]:
             count = self.graph.run(
                 f"MATCH ()-[r:{rel_type}]->() RETURN count(r) as count"
             ).data()[0]["count"]

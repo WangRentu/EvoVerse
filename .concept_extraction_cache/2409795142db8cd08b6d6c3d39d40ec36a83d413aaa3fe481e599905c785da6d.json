@@ -1,0 +1,118 @@
+{
+  "paper_id": "2503.12330",
+  "concepts": [
+    {
+      "name": "Ketone metabolism",
+      "description": "The biochemical process involving ketone body production and utilization, identified as a central regulator of sleep stability and circadian rhythms. This concept challenges traditional views by demonstrating its time-dependent influence on sleep architecture.",
+      "domain": "biology",
+      "relevance": 1.0
+    },
+    {
+      "name": "Sleep stability",
+      "description": "The maintenance of uninterrupted sleep periods without frequent awakenings, directly modulated by ketone metabolism. This concept is foundational to the paper's discovery of metabolic regulation of sleep architecture.",
+      "domain": "medicine",
+      "relevance": 0.95
+    },
+    {
+      "name": "Circadian dynamics",
+      "description": "The temporal patterns of sleep-wake cycles governed by biological clocks, shown to be specifically disrupted by ketone metabolism alterations. This concept underpins the paper's focus on time-dependent metabolic effects.",
+      "domain": "biology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Time-dependent metabolic effects",
+      "description": "The phenomenon where metabolic influences on sleep vary significantly across specific time points, demonstrated through peak impact analysis. This novel concept redefines how sleep-metabolism interactions are understood.",
+      "domain": "biology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Metabolic intervention",
+      "description": "Targeted metabolic manipulations (e.g., \u03b2-hydroxybutyrate supplementation, intermittent fasting) to modulate sleep and circadian parameters. This concept provides the therapeutic framework for sleep disorders and neurodegenerative diseases.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Ketone transporter 2",
+      "description": "A specific membrane protein (KetT2) responsible for ketone body transport, whose expression changes directly cause sleep instability and circadian disruption. This molecular target is central to the paper's mechanistic findings.",
+      "domain": "biology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Sleep structure",
+      "description": "The organization of sleep stages and transitions, shown to be impaired by KetT2 expression changes. This concept quantifies the functional impact of metabolic dysregulation on sleep quality.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "\u03b2-hydroxybutyrate",
+      "description": "The primary ketone body used as an intervention in Alzheimer's disease models, selectively affecting circadian timing without altering total sleep duration. This specific metabolite is key to the paper's therapeutic insights.",
+      "domain": "chemistry",
+      "relevance": 0.9
+    },
+    {
+      "name": "Intermittent fasting",
+      "description": "A dietary intervention protocol tested for its metabolic effects on sleep, shown to selectively modulate circadian transition timing in disease models. This concept links lifestyle interventions to metabolic-sleep interactions.",
+      "domain": "medicine",
+      "relevance": 0.85
+    },
+    {
+      "name": "Temporal specificity",
+      "description": "The precise timing of metabolic effects on sleep, identified through peak analysis in time-series data. This concept is critical to the paper's novel framework for sleep-metabolism relationships.",
+      "domain": "biology",
+      "relevance": 0.9
+    }
+  ],
+  "methods": [
+    {
+      "name": "Real-time metabolic profiling",
+      "description": "Continuous tracking of metabolic changes during sleep-wake cycles using mass spectrometry or similar techniques, enabling direct correlation of metabolic states with sleep dynamics in live fruit flies.",
+      "category": "experimental",
+      "confidence": 1.0
+    },
+    {
+      "name": "Gradient boosting",
+      "description": "A machine learning algorithm used to model complex sleep-metabolism relationships, optimized for high predictive accuracy in time-series metabolic data analysis.",
+      "category": "machine_learning",
+      "confidence": 0.95
+    },
+    {
+      "name": "Explainable AI",
+      "description": "Techniques applied to interpret gradient boosting model decisions, revealing which metabolic features most significantly influence sleep stability and circadian timing.",
+      "category": "machine_learning",
+      "confidence": 0.9
+    },
+    {
+      "name": "Causal inference",
+      "description": "Statistical methods to establish directional relationships between ketone metabolism changes and sleep outcomes, distinguishing correlation from causation in the fruit fly model.",
+      "category": "statistical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Autoencoder similarity scoring",
+      "description": "A dimensionality reduction technique using neural networks to quantify metabolic state similarity across time points, identifying critical windows of sleep-metabolism interaction.",
+      "category": "computational",
+      "confidence": 0.95
+    },
+    {
+      "name": "Wavelet analysis",
+      "description": "Time-frequency decomposition method applied to sleep-metabolism data to detect transient peaks of metabolic influence on sleep stability at specific circadian phases.",
+      "category": "analytical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Ketone transporter 2 knockout",
+      "description": "Genetic model where KetT2 expression is silenced in fruit flies, used to validate causal roles of ketone transport in sleep stability and circadian disruption.",
+      "category": "experimental",
+      "confidence": 1.0
+    },
+    {
+      "name": "Alzheimer's disease model",
+      "description": "Transgenic fruit fly model expressing human Alzheimer's-related proteins, employed to test metabolic interventions' effects on sleep-circadian phenotypes.",
+      "category": "experimental",
+      "confidence": 0.95
+    }
+  ],
+  "relationships": [],
+  "extraction_time": 42.823649168014526,
+  "model_used": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+}

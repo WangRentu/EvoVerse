@@ -1,0 +1,52 @@
+{
+  "paper_id": "1510.01100",
+  "concepts": [
+    {
+      "name": "MHb-IPN-MRN circuit",
+      "description": "A proposed neural pathway where medial habenula (MHb) activates interpeduncular nucleus (IPN), which stimulates median raphe nucleus (MRN) to release serotonin. This circuit promotes slow wave sleep (SWS) and suppresses theta oscillations, forming a core mechanism for sleep-wake regulation and memory processing.",
+      "domain": "neuroscience",
+      "relevance": 1.0
+    },
+    {
+      "name": "theta-promoting circuit",
+      "description": "A neural pathway involving supramammillary area (SUM) projections to medial septum (MS), inducing hippocampal theta rhythm during active wakefulness. This circuit supports memory encoding through spatio-temporal context binding and is antagonized by the SWS-promoting MHb-IPN-MRN circuit.",
+      "domain": "neuroscience",
+      "relevance": 0.95
+    },
+    {
+      "name": "slow wave sleep (SWS)",
+      "description": "A sleep stage characterized by high-amplitude, low-frequency brain waves, associated with memory consolidation and cortical reactivation. The paper posits the MHb-IPN-MRN circuit as a key promoter of SWS through serotonin release and acetylcholine suppression.",
+      "domain": "neuroscience",
+      "relevance": 0.95
+    },
+    {
+      "name": "serotonin release",
+      "description": "The release of serotonin from the median raphe nucleus (MRN) triggered by the MHb-IPN-MRN circuit. This mediates the SWS-promoting state (high serotonin, low acetylcholine) and contrasts with the acetylcholine-dominant theta state during wakefulness.",
+      "domain": "neuroscience",
+      "relevance": 0.9
+    },
+    {
+      "name": "acetylcholine modulation",
+      "description": "The regulation of acetylcholine levels as a key state determinant: high during theta-promoting wake/REM states (for memory encoding), low during SWS (promoted by MHb-IPN-MRN). This modulation underpins the reciprocal suppression between sleep-wake circuits.",
+      "domain": "neuroscience",
+      "relevance": 0.9
+    },
+    {
+      "name": "hippocampal theta rhythm",
+      "description": "A 4-12 Hz oscillation in the hippocampus during active wakefulness, linked to memory encoding and contextual binding. The paper positions it as the functional output of the theta-promoting circuit that is suppressed by the SWS-promoting MHb-IPN-MRN pathway.",
+      "domain": "neuroscience",
+      "relevance": 0.85
+    }
+  ],
+  "methods": [
+    {
+      "name": "Diffusion Tensor Imaging (DTI)",
+      "description": "Used to map multisynaptic axonal tracts connecting the hippocampus to the medial habenula (MHb) via the septum and amygdala to BNST. This technique provided the structural connectivity evidence supporting the proposed circuit architecture.",
+      "category": "observational",
+      "confidence": 1.0
+    }
+  ],
+  "relationships": [],
+  "extraction_time": 38.376461029052734,
+  "model_used": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+}

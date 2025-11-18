@@ -152,12 +152,13 @@ class ConceptExtractor:
 
         logger.info(f"Initialized ConceptExtractor (model={self.model})")
 
+    # 从单篇论文中提取概念和方法
     def extract_from_paper(
         self,
         paper: PaperMetadata,
         include_relationships: bool = True,
-        max_concepts: int = 10,
-        max_methods: int = 5
+        max_concepts: int = 50,
+        max_methods: int = 20
     ) -> ExtractionResult:
         """
         Extract concepts and methods from a paper.
@@ -268,6 +269,7 @@ class ConceptExtractor:
 
         return results
 
+    # 提取概念和方法，详细方法
     def _extract_concepts_and_methods(
         self,
         paper: PaperMetadata,
@@ -426,37 +428,52 @@ class ConceptExtractor:
         else:
             text += "Abstract: Not available"
 
-        prompt = f"""You are a scientific literature analyst. Extract key concepts and methods from the following paper.
+        prompt = f"""You are an expert scientific literature analyst. Extract and analyze key concepts and research methods from the following academic paper.
 
 {text}
 
-Extract up to {max_concepts} key scientific concepts and up to {max_methods} methods/techniques.
+Your task is to identify up to {max_concepts} most important scientific concepts and up to {max_methods} research methods/techniques used in this paper.
 
-For each concept, provide:
-- name: Concept name (concise, 2-5 words)
-- description: Brief explanation (1-2 sentences)
-- domain: Scientific domain (e.g., biology, physics, computer_science)
-- relevance: Relevance score 0-1 (how central is this concept to the paper?)
+For CONCEPTS, extract:
+- name: Concise concept name (2-5 words, use precise scientific terminology)
+- description: Clear explanation of the concept (2-3 sentences, include context and significance)
+- domain: Primary scientific domain (biology, chemistry, physics, computer_science, mathematics, engineering, medicine, etc.)
+- relevance: Importance score 0-1 (how central/foundational is this concept to the paper's contributions?)
 
-For each method, provide:
-- name: Method name (concise, 2-5 words)
-- description: Brief explanation (1-2 sentences)
-- category: One of [experimental, computational, analytical, theoretical]
-- confidence: Confidence score 0-1 (how certain are you this method is used?)
+For METHODS, identify:
+- name: Specific method/technique name (2-5 words, use standard terminology)
+- description: Detailed explanation of how the method is applied (2-3 sentences, include purpose and implementation details)
+- category: Method type - choose from: [experimental, computational, analytical, theoretical, observational, simulation, statistical, machine_learning]
+- confidence: Certainty score 0-1 (how confident are you that this method is actually used in the research?)
 
-Return ONLY a JSON object in this exact format (no additional text):
+Guidelines:
+- Focus on concepts that are central to the paper's main contributions
+- Include both established concepts and novel ones introduced by the authors
+- Prioritize specificity over generality (e.g., "deep convolutional neural networks" over "neural networks")
+- Only include methods that are explicitly used or referenced in the research
+- Consider both methodological innovations and standard techniques that are crucial to results
+
+Return ONLY a valid JSON object with this exact structure:
 {{
   "concepts": [
-    {{"name": "...", "description": "...", "domain": "...", "relevance": 0.9}},
-    ...
+    {{
+      "name": "specific_concept_name",
+      "description": "detailed explanation of the concept and its role",
+      "domain": "scientific_domain",
+      "relevance": 0.95
+    }}
   ],
   "methods": [
-    {{"name": "...", "description": "...", "category": "...", "confidence": 0.9}},
-    ...
+    {{
+      "name": "specific_method_name",
+      "description": "detailed description of method application",
+      "category": "method_category",
+      "confidence": 0.9
+    }}
   ]
 }}
 
-Be specific and focus on the most important concepts and methods. Prioritize clarity and relevance."""
+Ensure all extracted information is directly supported by the paper's content."""
 
         return prompt
 
@@ -477,29 +494,45 @@ Be specific and focus on the most important concepts and methods. Prioritize cla
         """
         concept_list = "\n".join([f"- {c.name}: {c.description}" for c in concepts])
 
-        prompt = f"""Given these scientific concepts extracted from a paper:
+        prompt = f"""Analyze the relationships between these scientific concepts extracted from an academic paper:
 
 {concept_list}
 
-Identify relationships between these concepts. For each relationship, specify:
-- concept1: First concept name (exactly as listed above)
-- concept2: Second concept name (exactly as listed above)
-- type: Relationship type - one of:
-  - SUBTOPIC_OF: concept1 is a subtopic/specialization of concept2
-  - PREREQUISITE_FOR: concept1 is required to understand concept2
-  - RELATED_TO: concepts are related but neither is more specific
-  - ENABLES: concept1 enables or makes concept2 possible
-- strength: Relationship strength 0-1
+Your task is to identify meaningful relationships between the concepts, focusing on how they interconnect within the research context.
 
-Only include strong, clear relationships. Return ONLY a JSON object:
+For each relationship, specify:
+- concept1: First concept name (must exactly match one from the list above)
+- concept2: Second concept name (must exactly match one from the list above, different from concept1)
+- type: Relationship type - choose from:
+  - SUBTOPIC_OF: concept1 is a specific subtopic or specialization of concept2
+  - PREREQUISITE_FOR: concept1 is foundational knowledge required to understand concept2
+  - RELATED_TO: concepts are thematically connected but neither is more specific/foundational
+  - ENABLES: concept1 provides the foundation or technology that makes concept2 possible
+  - INSTANTIATES: concept1 is a concrete implementation or example of the more general concept2
+  - EXTENDS: concept1 builds upon or extends concept2 with additional capabilities
+- strength: Relationship confidence and strength (0-1), where 1.0 = definitive relationship clearly supported by the paper
+
+Guidelines for relationship identification:
+- Only include relationships that are directly evident from the paper's content
+- Prioritize relationships that explain how concepts work together in the research
+- Consider both hierarchical relationships (subtopic_of, prerequisite_for) and associative relationships (related_to, enables)
+- Avoid generic "related_to" when more specific relationship types apply
+- Focus on the top 3-5 strongest relationships to avoid noise
+- Bidirectional relationships should be represented only once (e.g., if A enables B, don't also include B enables A)
+
+Return ONLY a valid JSON object with this exact structure:
 {{
   "relationships": [
-    {{"concept1": "...", "concept2": "...", "type": "...", "strength": 0.9}},
-    ...
+    {{
+      "concept1": "exact_concept_name_from_list",
+      "concept2": "exact_concept_name_from_list",
+      "type": "SUBTOPIC_OF",
+      "strength": 0.95
+    }}
   ]
 }}
 
-If no clear relationships exist, return {{"relationships": []}}"""
+If no meaningful relationships can be identified between these specific concepts, return {{"relationships": []}}"""
 
         return prompt
 

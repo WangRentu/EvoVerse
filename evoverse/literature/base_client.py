@@ -6,7 +6,7 @@ Provides common interface and functionality for arXiv, Semantic Scholar, PubMed,
 
 from abc import ABC, abstractmethod
 from typing import List, Dict, Any, Optional
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from datetime import datetime
 from enum import Enum
 import logging
@@ -65,6 +65,7 @@ class PaperMetadata:
     citation_count: int = 0
     reference_count: int = 0
     influential_citation_count: int = 0
+    references: Optional[List[str]] = None  # Primary identifiers (DOI/arXiv/PMID) of referenced papers
 
     # Fields & Keywords
     fields: Optional[List[str]] = None  # Research fields/domains
@@ -84,6 +85,8 @@ class PaperMetadata:
             self.fields = []
         if self.keywords is None:
             self.keywords = []
+        if self.references is None:
+            self.references = []
 
     @property
     def primary_identifier(self) -> str:
@@ -118,7 +121,8 @@ class PaperMetadata:
             "influential_citation_count": self.influential_citation_count,
             "fields": self.fields,
             "keywords": self.keywords,
-            "full_text": self.full_text
+            "full_text": self.full_text,
+            "references": self.references,
         }
 
 
@@ -266,3 +270,25 @@ class BaseLiteratureClient(ABC):
             Standardized PaperMetadata object
         """
         raise NotImplementedError("Subclasses must implement _normalize_paper_metadata")
+
+
+@dataclass
+class PaperAnalysis:
+    """
+    Complete paper analysis result.
+
+    Provides comprehensive analysis of a scientific paper including
+    executive summary, key findings, methodology, significance, and limitations.
+    """
+    paper_id: str
+    executive_summary: str
+    key_findings: List[Dict[str, Any]]
+    methodology: Dict[str, Any]
+    significance: str
+    limitations: List[str]
+    confidence_score: float
+    analysis_time: float
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary representation."""
+        return asdict(self)

@@ -85,8 +85,11 @@ class ResearchDirectorAgent(BaseAgent):
                 max_results=planning.get("max_papers", 20),
             )
 
-            # 3. 写入知识图谱
-            graph_stats = self.knowledge_agent.ingest_papers(papers)
+            # 3. 智能分析并写入知识图谱
+            enable_deep_analysis = self.config.get("enable_deep_analysis", True)
+            graph_stats = self.knowledge_agent.analyze_and_ingest(
+                papers, enable_deep_analysis=enable_deep_analysis
+            )
 
             # 4. 基于「问题 + 文献摘要 + 图谱增量信息」生成假设与方案
             reasoning = self._synthesize_hypotheses(
@@ -160,7 +163,7 @@ class ResearchDirectorAgent(BaseAgent):
 
         # 去掉 <think> ... </think> 这种思维噪声，避免干扰 JSON 提取
         raw_text_no_think = re.sub(
-            r"<think>.*?</think>", "", raw_text, flags=re.S | re.I
+            r".*?</think>", "", raw_text, flags=re.S | re.I
         ).strip()
 
         data: Dict[str, Any] | None = None
@@ -312,7 +315,7 @@ class ResearchDirectorAgent(BaseAgent):
             record = TaskRecord(
                 id=task_id,
                 agent_id=self.agent_id,
-                task_type="research_mvp",
+                task_type="research",
                 input_data={"question": question},
                 status="running",
                 created_at=datetime.utcnow(),

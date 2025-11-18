@@ -46,7 +46,8 @@ class SemanticScholarClient(BaseLiteratureClient):
 
         # Initialize API client
         self.api_key = api_key or config.literature.semantic_scholar_api_key
-        self.client = SemanticScholar(api_key=self.api_key, timeout=30)
+        self.api_url = config.literature.semantic_scholar_api_url
+        self.client = SemanticScholar(api_key=self.api_key, api_url=self.api_url, timeout=30)
 
         # Initialize cache if enabled
         self.cache = get_cache() if cache_enabled else None

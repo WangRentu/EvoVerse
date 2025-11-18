@@ -70,6 +70,7 @@ class Neo4jConfig(BaseSettings):
 class LiteratureConfig(BaseSettings):
     """文献检索配置"""
     semantic_scholar_api_key: Optional[str] = Field(default=None, description="Semantic Scholar API Key")
+    semantic_scholar_api_url: Optional[str] = Field(default=None, description="Semantic Scholar API URL")
     pubmed_api_key: Optional[str] = Field(default=None, description="PubMed API Key")
     pubmed_email: Optional[str] = Field(default=None, description="PubMed 联系邮箱")
     cache_dir: str = Field(default=".literature_cache", description="缓存目录")
