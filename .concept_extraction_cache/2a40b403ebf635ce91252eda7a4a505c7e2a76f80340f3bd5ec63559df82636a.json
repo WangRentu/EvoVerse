@@ -1,0 +1,383 @@
+{
+  "paper_id": "10.1103/PhysRevE.109.054104",
+  "concepts": [
+    {
+      "name": "Permutation Time Irreversibility",
+      "description": "A nonlinear time series analysis method that quantifies the asymmetry of temporal dynamics in EEG signals by comparing the probabilities of forward and reverse order patterns. It captures the intrinsic time-irreversible nature of brain activity, which is crucial for understanding neural system non-equilibrium dynamics during sleep.",
+      "domain": "medicine",
+      "relevance": 0.98
+    },
+    {
+      "name": "Sleep Stage Dynamics",
+      "description": "The changing patterns of brain activity across different stages of sleep (wake, N1, N2, N3, REM), reflecting distinct neurophysiological states. The study reveals that pTIR varies significantly across these stages, indicating stage-dependent neural irreversibility.",
+      "domain": "medicine",
+      "relevance": 0.97
+    },
+    {
+      "name": "EEG Signal Nonlinearity",
+      "description": "The presence of complex, non-linear dynamics in electroencephalographic signals that cannot be captured by linear models. pTIR is sensitive to such nonlinearity, making it a valuable tool for probing the underlying neural mechanisms of sleep.",
+      "domain": "biology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Time Irreversibility",
+      "description": "The property of a system where the forward and reverse temporal evolution are statistically distinguishable, indicating a direction of time. In EEG, this reflects the brain's inherent asymmetry in information processing during sleep stages.",
+      "domain": "physics",
+      "relevance": 0.94
+    },
+    {
+      "name": "Equal Values in Permutation",
+      "description": "The presence of identical amplitude values in time series segments, which affects the assignment of order patterns in permutation entropy and pTIR. The paper shows that ignoring equal values leads to biased results and misinterpretations.",
+      "domain": "computer_science",
+      "relevance": 0.96
+    },
+    {
+      "name": "Order Pattern Asymmetry",
+      "description": "The difference in frequency between ascending and descending order patterns in a time series, used as a measure of time irreversibility. This asymmetry is central to pTIR computation and reflects the directionality of neural dynamics.",
+      "domain": "mathematics",
+      "relevance": 0.93
+    },
+    {
+      "name": "Amplitude Arrangement",
+      "description": "A variant of permutation analysis where the order of values is based on their amplitude rather than their original temporal sequence. Used in pTIR to assess how signal magnitude influences irreversibility metrics.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Symmetric Permutation Patterns",
+      "description": "Permutation patterns that are invariant under reversal of order, used to test the sensitivity of pTIR to symmetry. The study finds that symmetric patterns yield different results depending on whether ascending or descending order is used.",
+      "domain": "mathematics",
+      "relevance": 0.92
+    },
+    {
+      "name": "Sleep EEG Classification",
+      "description": "The process of assigning EEG recordings to specific sleep stages based on physiological markers. pTIR is proposed as a novel, objective feature for improving automated sleep staging algorithms.",
+      "domain": "medicine",
+      "relevance": 0.91
+    },
+    {
+      "name": "Non-Equilibrium Dynamics",
+      "description": "The behavior of systems far from thermodynamic equilibrium, characterized by irreversible processes. The brain during sleep exhibits such dynamics, which pTIR quantifies through temporal asymmetry.",
+      "domain": "physics",
+      "relevance": 0.9
+    },
+    {
+      "name": "Embedding Dimension",
+      "description": "A parameter in time series analysis that determines the number of past values used to reconstruct the phase space. It influences the sensitivity of pTIR to temporal structure and must be carefully chosen.",
+      "domain": "mathematics",
+      "relevance": 0.88
+    },
+    {
+      "name": "Delay Time",
+      "description": "The time lag between successive values in a reconstructed phase space. It affects the independence of embedded vectors and is critical for accurate pTIR estimation.",
+      "domain": "mathematics",
+      "relevance": 0.87
+    },
+    {
+      "name": "Phase Space Reconstruction",
+      "description": "A technique to embed a time series into a higher-dimensional space to reveal underlying dynamics. Used in permutation analysis to generate order patterns for pTIR computation.",
+      "domain": "mathematics",
+      "relevance": 0.89
+    },
+    {
+      "name": "Statistical Significance",
+      "description": "The assessment of whether observed differences in pTIR across sleep stages are unlikely due to chance. The study uses p < 0.001 to validate stage-dependent changes.",
+      "domain": "statistics",
+      "relevance": 0.9
+    },
+    {
+      "name": "Numerical Simulation",
+      "description": "Computer-based modeling of EEG-like signals to test the robustness of pTIR under controlled conditions. Used to validate the impact of equal values and permutation order.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Signal Noise and Artifacts",
+      "description": "Distortions in EEG recordings from physiological or technical sources. The study acknowledges that simulation did not fully account for all noise and artifact types, limiting generalizability.",
+      "domain": "engineering",
+      "relevance": 0.85
+    },
+    {
+      "name": "PhysioNet Database",
+      "description": "A public repository of physiological signals, including polysomnography data used in this study. Provides standardized, open-access EEG data for sleep research.",
+      "domain": "computer_science",
+      "relevance": 0.86
+    },
+    {
+      "name": "Multimodal Integration",
+      "description": "The combination of multiple types of data (e.g., EEG power, coherence, pTIR) to enhance analysis. The study notes the lack of such integration as a limitation.",
+      "domain": "medicine",
+      "relevance": 0.84
+    },
+    {
+      "name": "Individual Variability",
+      "description": "Differences in EEG patterns across individuals due to age, sex, or pathology. The study did not account for these factors, which may confound results.",
+      "domain": "medicine",
+      "relevance": 0.83
+    },
+    {
+      "name": "pTIR Robustness",
+      "description": "The stability of pTIR values under variations in data processing, such as equal value handling or permutation order. The study demonstrates that pTIR is sensitive to these choices.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Directional Asymmetry",
+      "description": "The statistical difference between forward and reverse temporal sequences in a signal, a core principle of pTIR. It reflects the brain\u2019s irreversible information flow during sleep.",
+      "domain": "physics",
+      "relevance": 0.92
+    },
+    {
+      "name": "Neural Dynamics Modeling",
+      "description": "The use of mathematical and computational models to simulate brain activity. pTIR provides a new metric for validating such models in sleep research.",
+      "domain": "biology",
+      "relevance": 0.89
+    },
+    {
+      "name": "Permutation Entropy",
+      "description": "A measure of complexity based on the frequency of order patterns in a time series. pTIR extends this by assessing asymmetry between forward and reverse patterns.",
+      "domain": "mathematics",
+      "relevance": 0.87
+    },
+    {
+      "name": "Temporal Order Analysis",
+      "description": "The study of the sequence of events in time series data, particularly how order patterns evolve. Central to pTIR\u2019s ability to detect time irreversibility.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "EEG Signal Processing",
+      "description": "The application of algorithms to extract meaningful features from raw EEG data. Includes filtering, segmentation, and permutation-based analysis used in this study.",
+      "domain": "engineering",
+      "relevance": 0.86
+    },
+    {
+      "name": "Sleep Staging",
+      "description": "The classification of sleep into stages based on EEG, EOG, and EMG signals. pTIR is proposed as a potential objective biomarker for improving this process.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Nonlinear Time Series Analysis",
+      "description": "A set of methods to analyze complex, non-linear dynamics in time series data. pTIR is a key technique within this domain, especially for physiological signals.",
+      "domain": "mathematics",
+      "relevance": 0.93
+    },
+    {
+      "name": "Phase Space Symmetry",
+      "description": "The property of a reconstructed phase space to remain unchanged under time reversal. pTIR detects deviations from this symmetry in EEG signals.",
+      "domain": "physics",
+      "relevance": 0.89
+    },
+    {
+      "name": "Data Preprocessing",
+      "description": "The initial steps of cleaning and preparing EEG data for analysis, including artifact removal and normalization. Critical for reliable pTIR computation.",
+      "domain": "engineering",
+      "relevance": 0.85
+    },
+    {
+      "name": "Statistical Validation",
+      "description": "The process of confirming that results are not due to random variation. The study uses significance testing and simulation to validate pTIR findings.",
+      "domain": "statistics",
+      "relevance": 0.88
+    },
+    {
+      "name": "Computational Reproducibility",
+      "description": "The ability to replicate results using the same data and methods. The use of open databases and clear methodology supports reproducibility.",
+      "domain": "computer_science",
+      "relevance": 0.84
+    },
+    {
+      "name": "Signal Reconstruction",
+      "description": "The process of rebuilding a time series from embedded vectors. Used in permutation analysis to generate order patterns for pTIR.",
+      "domain": "mathematics",
+      "relevance": 0.87
+    },
+    {
+      "name": "Temporal Irreversibility Metric",
+      "description": "A quantitative measure of the asymmetry in time evolution of a system. pTIR is introduced as a robust metric for this purpose in sleep EEG.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "EEG Power Spectrum",
+      "description": "The distribution of signal power across frequency bands, a standard EEG feature. The study notes its absence in multimodal analysis as a limitation.",
+      "domain": "medicine",
+      "relevance": 0.82
+    },
+    {
+      "name": "Coherence Analysis",
+      "description": "A measure of functional connectivity between brain regions. The study suggests combining pTIR with coherence could enhance clinical insights.",
+      "domain": "biology",
+      "relevance": 0.81
+    },
+    {
+      "name": "Clinical Translation",
+      "description": "The application of research findings to real-world medical settings. The study highlights pTIR\u2019s potential for objective sleep staging and diagnostics.",
+      "domain": "medicine",
+      "relevance": 0.86
+    },
+    {
+      "name": "Methodological Sensitivity",
+      "description": "The degree to which results depend on specific analytical choices, such as equal value handling or permutation order. The study emphasizes this sensitivity as a key finding.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    }
+  ],
+  "methods": [
+    {
+      "name": "Permutation Time Irreversibility",
+      "description": "A computational method that calculates the asymmetry between forward and reverse order patterns in EEG time series. It uses permutation entropy principles but extends them to quantify time-irreversible dynamics by comparing ascending and descending order probabilities.",
+      "category": "computational",
+      "confidence": 0.98
+    },
+    {
+      "name": "Phase Space Reconstruction",
+      "description": "A technique to embed a time series into a higher-dimensional space using embedding dimension and delay time. This reconstructed space is used to generate order patterns for pTIR analysis.",
+      "category": "computational",
+      "confidence": 0.97
+    },
+    {
+      "name": "Equal Value Handling",
+      "description": "A preprocessing strategy that determines how to treat identical values in time series segments during permutation analysis. The study compares two approaches: ignoring equal values versus including them in order assignment.",
+      "category": "computational",
+      "confidence": 0.96
+    },
+    {
+      "name": "Statistical Significance Testing",
+      "description": "Used to assess whether differences in pTIR across sleep stages are statistically significant. The study applies p < 0.001 threshold to validate stage-dependent changes.",
+      "category": "statistical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Numerical Simulation",
+      "description": "A computational experiment where synthetic EEG-like signals are generated to test the robustness of pTIR under controlled conditions, particularly regarding equal values and permutation order.",
+      "category": "simulation",
+      "confidence": 0.94
+    },
+    {
+      "name": "Data Segmentation",
+      "description": "The process of dividing continuous EEG signals into shorter, non-overlapping windows for analysis. This is essential for computing pTIR on a per-stage basis.",
+      "category": "computational",
+      "confidence": 0.93
+    },
+    {
+      "name": "Sleep Stage Labeling",
+      "description": "The use of expert-annotated polysomnography data to assign each EEG segment to a specific sleep stage (wake, N1, N2, N3, REM), enabling comparative analysis.",
+      "category": "observational",
+      "confidence": 0.96
+    },
+    {
+      "name": "Amplitude-Based Permutation",
+      "description": "A variant of permutation analysis where the order of values is determined by their amplitude rather than their original temporal sequence, used to assess the impact of signal magnitude on pTIR.",
+      "category": "computational",
+      "confidence": 0.92
+    },
+    {
+      "name": "Original Permutation",
+      "description": "A standard permutation method that uses the original temporal order of values in a time series segment to generate order patterns, serving as a baseline for pTIR computation.",
+      "category": "computational",
+      "confidence": 0.95
+    },
+    {
+      "name": "Significance Thresholding",
+      "description": "The application of a p-value cutoff (p < 0.001) to determine whether observed differences in pTIR between sleep stages are statistically meaningful.",
+      "category": "statistical",
+      "confidence": 0.94
+    },
+    {
+      "name": "Open-Source Data Utilization",
+      "description": "The use of publicly available datasets from PhysioNet, enabling reproducibility and transparency in the analysis of sleep EEG data.",
+      "category": "observational",
+      "confidence": 0.93
+    },
+    {
+      "name": "Cross-Stage Comparison",
+      "description": "A method to compare pTIR values across different sleep stages (e.g., wake vs. REM) to identify stage-specific patterns of time irreversibility.",
+      "category": "analytical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Robustness Validation",
+      "description": "A procedure to test whether pTIR results remain consistent under different analytical choices, such as equal value handling or permutation order, using simulation and comparison.",
+      "category": "computational",
+      "confidence": 0.94
+    },
+    {
+      "name": "Signal Filtering",
+      "description": "The application of bandpass filters to EEG data to remove noise and isolate relevant frequency components before pTIR analysis.",
+      "category": "computational",
+      "confidence": 0.9
+    },
+    {
+      "name": "Permutation Order Selection",
+      "description": "The decision to use ascending or descending order patterns in permutation analysis, which the study shows significantly affects pTIR outcomes.",
+      "category": "computational",
+      "confidence": 0.96
+    },
+    {
+      "name": "Time Series Embedding",
+      "description": "The process of reconstructing a dynamical system\u2019s state space from a single time series using embedding dimension and delay time, foundational for permutation-based methods.",
+      "category": "computational",
+      "confidence": 0.95
+    },
+    {
+      "name": "Data Curation",
+      "description": "The process of organizing and preparing raw polysomnography data for analysis, including alignment of EEG channels and sleep stage annotations.",
+      "category": "computational",
+      "confidence": 0.92
+    },
+    {
+      "name": "Pattern Frequency Analysis",
+      "description": "A method to count the occurrence of different order patterns in time series segments, used to compute permutation probabilities for pTIR.",
+      "category": "computational",
+      "confidence": 0.94
+    },
+    {
+      "name": "Parameter Sensitivity Test",
+      "description": "An evaluation of how pTIR results change with variations in embedding dimension and delay time, though not systematically explored in the study.",
+      "category": "analytical",
+      "confidence": 0.88
+    },
+    {
+      "name": "Comparative Analysis",
+      "description": "A method to contrast pTIR values under different conditions (e.g., with/without equal values, different permutation orders) to assess methodological impact.",
+      "category": "analytical",
+      "confidence": 0.95
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Permutation Time Irreversibility",
+      "concept2": "Nonlinear Time Series Analysis",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Permutation Time Irreversibility",
+      "concept2": "Temporal Irreversibility Metric",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Permutation Time Irreversibility",
+      "concept2": "Order Pattern Asymmetry",
+      "relationship_type": "EXTENDS",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Phase Space Reconstruction",
+      "concept2": "Permutation Time Irreversibility",
+      "relationship_type": "PREREQUISITE_FOR",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Sleep Stage Dynamics",
+      "concept2": "Sleep Staging",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.94
+    }
+  ],
+  "extraction_time": 29.128496885299683,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

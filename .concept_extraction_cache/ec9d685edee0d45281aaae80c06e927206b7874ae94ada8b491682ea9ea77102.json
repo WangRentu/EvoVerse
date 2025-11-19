@@ -1,0 +1,401 @@
+{
+  "paper_id": "10.1093/SLEEP/ZSAB072.044",
+  "concepts": [
+    {
+      "name": "Actigraphic Sleep",
+      "description": "Objective measurement of sleep-wake patterns using wearable actigraphy devices that record movement as a proxy for activity and rest. In this study, it provided continuous, non-invasive data on sleep efficiency, duration, and timing in older adults.",
+      "domain": "medicine",
+      "relevance": 0.98
+    },
+    {
+      "name": "Circadian Rest/Activity Rhythms",
+      "description": "Endogenous biological rhythms that regulate daily cycles of activity and rest, synchronized with the light-dark cycle. The study assessed their integrity in early Alzheimer\u2019s disease using actigraphy-derived metrics.",
+      "domain": "biology",
+      "relevance": 0.97
+    },
+    {
+      "name": "Light-Dependent Phase Delay",
+      "description": "A shift in the timing of circadian rhythms toward later hours, often observed in neurodegenerative conditions. MCI patients showed phase delay, suggesting disrupted synchronization with environmental cues.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Sleep Efficiency (SE)",
+      "description": "The ratio of total sleep time to time in bed, reflecting sleep quality. Lower SE in MCI patients indicates fragmented or poor-quality sleep, a key early marker of neurodegeneration.",
+      "domain": "medicine",
+      "relevance": 0.96
+    },
+    {
+      "name": "Relative Amplitude (RA)",
+      "description": "A non-parametric measure of circadian rhythm strength, calculated as the difference between average daytime and nighttime activity divided by their sum. Reduced RA in MCI reflects weakened circadian output.",
+      "domain": "mathematics",
+      "relevance": 0.95
+    },
+    {
+      "name": "fPC3 (Functional Principal Component 3)",
+      "description": "A novel functional principal component derived from actigraphy data that captures reduced nighttime and morning activity, low amplitude, and phase delay. It emerged as a sensitive discriminator between MCI and cognitively normal individuals.",
+      "domain": "computer_science",
+      "relevance": 0.99
+    },
+    {
+      "name": "Functional Principal Component Analysis",
+      "description": "A statistical technique that decomposes time-series activity data into orthogonal components explaining variance in rhythmic patterns. Used here to extract fPC1\u2013fPC3 from actigraphy signals.",
+      "domain": "mathematics",
+      "relevance": 0.98
+    },
+    {
+      "name": "Daytime Activity Patterns",
+      "description": "The distribution and intensity of physical activity during waking hours, which can reflect cognitive and motor function. Altered patterns in MCI suggest early neurobehavioral disruption.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Cognitive Normality",
+      "description": "The absence of measurable cognitive impairment as defined by standardized neuropsychological testing. Served as the control group in this study for comparison with MCI.",
+      "domain": "medicine",
+      "relevance": 0.92
+    },
+    {
+      "name": "Mild Cognitive Impairment (MCI)",
+      "description": "A transitional stage between normal aging and dementia, characterized by subtle but measurable cognitive decline. The study focused on MCI as a marker of early Alzheimer\u2019s disease.",
+      "domain": "medicine",
+      "relevance": 0.99
+    },
+    {
+      "name": "Alzheimer\u2019s Disease (AD) Early Phase",
+      "description": "The pre-dementia stage of Alzheimer\u2019s disease where pathological changes are underway but clinical symptoms are mild. This study targeted this phase to identify early biomarkers.",
+      "domain": "medicine",
+      "relevance": 0.98
+    },
+    {
+      "name": "fPC1 (Functional Principal Component 1)",
+      "description": "A functional component representing high daytime activity and strong circadian amplitude. Lower fPC1 scores were associated with better executive function, indicating its role in activity pattern integrity.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "fPC2 (Functional Principal Component 2)",
+      "description": "A derived component capturing intermediate rhythmic features not fully explained by fPC1 or fPC3. Its role was less prominent but contributed to overall variance explanation.",
+      "domain": "computer_science",
+      "relevance": 0.8
+    },
+    {
+      "name": "WASO (Wake After Sleep Onset)",
+      "description": "The total time spent awake after initially falling asleep, used as a measure of sleep continuity. Lower WASO in MCI was linked to better executive function.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "IV (Intra-daily Variability)",
+      "description": "A measure of fragmentation in activity patterns, reflecting how frequently activity levels change throughout the day. Lower IV was associated with better cognitive performance.",
+      "domain": "mathematics",
+      "relevance": 0.88
+    },
+    {
+      "name": "IS (Inter-daily Stability)",
+      "description": "A metric quantifying the consistency of daily activity patterns across days. Higher IS indicates stable circadian rhythms, which correlated with better memory and executive function.",
+      "domain": "mathematics",
+      "relevance": 0.92
+    },
+    {
+      "name": "Daytime Activity Peak",
+      "description": "The highest level of activity during the day, typically occurring in the morning or midday. Reduced peak activity in MCI reflects circadian disruption and neurodegeneration.",
+      "domain": "medicine",
+      "relevance": 0.85
+    },
+    {
+      "name": "Nighttime Activity Suppression",
+      "description": "The normal reduction in activity during sleep hours. Impaired suppression in MCI indicates poor sleep consolidation and circadian dysregulation.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Circadian Amplitude Reduction",
+      "description": "A decline in the difference between peak daytime and trough nighttime activity, indicating weakened circadian output. A core finding in MCI patients.",
+      "domain": "biology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Neurobehavioral Biomarker",
+      "description": "A measurable biological indicator of neurological or behavioral changes. The study proposes circadian metrics as potential non-invasive biomarkers for early AD.",
+      "domain": "medicine",
+      "relevance": 0.97
+    },
+    {
+      "name": "Non-Invasive Monitoring",
+      "description": "The use of wearable devices like actigraphy to collect physiological data without requiring invasive procedures. Key to the study\u2019s translational potential.",
+      "domain": "engineering",
+      "relevance": 0.9
+    },
+    {
+      "name": "Cognitive Function Composite Scores",
+      "description": "Derived metrics combining multiple neuropsychological tests into single indices. Used here to create factor-based scores for episodic memory and executive function.",
+      "domain": "medicine",
+      "relevance": 0.93
+    },
+    {
+      "name": "Factor Analysis",
+      "description": "A statistical method used to identify underlying latent variables from multiple cognitive test scores. Applied to derive composite memory and executive function scores.",
+      "domain": "statistics",
+      "relevance": 0.92
+    },
+    {
+      "name": "Multivariate Regression",
+      "description": "A statistical model adjusting for multiple covariates (age, sex, education, APOE-4) to assess independent associations between circadian metrics and cognition.",
+      "domain": "statistics",
+      "relevance": 0.96
+    },
+    {
+      "name": "APOE-4 Gene Variant",
+      "description": "A major genetic risk factor for late-onset Alzheimer\u2019s disease. The study adjusted for this variable to isolate the effect of circadian rhythms on cognition.",
+      "domain": "biology",
+      "relevance": 0.9
+    },
+    {
+      "name": "Causal Inference Limitation",
+      "description": "The inability of cross-sectional designs to determine whether circadian disruption precedes or follows cognitive decline. A key limitation acknowledged in the paper.",
+      "domain": "medicine",
+      "relevance": 0.85
+    },
+    {
+      "name": "Temporal Dynamics of Disease",
+      "description": "The progression of pathological changes over time. The study\u2019s cross-sectional nature limits understanding of how circadian rhythms evolve during early AD.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Clinical Translation Potential",
+      "description": "The feasibility of applying research findings to real-world clinical settings. The study highlights actigraphy\u2019s potential for early detection and monitoring.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Light Exposure Influence",
+      "description": "Environmental factor that can modulate circadian rhythms. The study notes its absence as a confounder, highlighting a gap in current data.",
+      "domain": "medicine",
+      "relevance": 0.75
+    },
+    {
+      "name": "Medication Confounding",
+      "description": "The potential impact of drugs (e.g., sedatives, antidepressants) on sleep and activity patterns. Not accounted for in the analysis, limiting interpretation.",
+      "domain": "medicine",
+      "relevance": 0.7
+    },
+    {
+      "name": "Sleep Architecture Limitation",
+      "description": "Actigraphy cannot distinguish between sleep stages (e.g., REM, NREM), limiting insight into deeper sleep physiology. A noted technical constraint.",
+      "domain": "medicine",
+      "relevance": 0.85
+    },
+    {
+      "name": "Statistical Power",
+      "description": "The ability to detect true effects given sample size. The small MCI group (n=26) raises concerns about power and generalizability.",
+      "domain": "statistics",
+      "relevance": 0.88
+    },
+    {
+      "name": "Generalizability Concerns",
+      "description": "The extent to which findings apply to broader populations. Limited by age, sex, and cohort-specific characteristics of the BIOCARD sample.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Biological Plausibility",
+      "description": "The theoretical support for circadian disruption as a mechanism in neurodegeneration, based on known roles of the suprachiasmatic nucleus and melatonin.",
+      "domain": "biology",
+      "relevance": 0.9
+    },
+    {
+      "name": "Neurodegenerative Pathophysiology",
+      "description": "The underlying biological processes of brain degeneration in Alzheimer\u2019s disease. Circadian disruption is proposed as an early manifestation of this process.",
+      "domain": "biology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Early Diagnostic Biomarker",
+      "description": "A measurable indicator detectable before clinical symptoms appear. The study positions circadian metrics as promising candidates for early AD detection.",
+      "domain": "medicine",
+      "relevance": 0.98
+    },
+    {
+      "name": "Non-Parametric Rhythm Metrics",
+      "description": "Circadian measures that do not assume a specific waveform (e.g., RA, IS, IV). Used in this study to avoid model bias in rhythm analysis.",
+      "domain": "mathematics",
+      "relevance": 0.9
+    },
+    {
+      "name": "Variance Explained by fPCs",
+      "description": "The proportion of total rhythmic variation captured by the first three functional principal components. fPC1\u2013fPC3 together explained 69% of the data variance.",
+      "domain": "mathematics",
+      "relevance": 0.92
+    },
+    {
+      "name": "Activity Pattern Fragmentation",
+      "description": "Disruption in the continuity of daily activity, reflected in high IV and low IS. Associated with cognitive decline in MCI.",
+      "domain": "medicine",
+      "relevance": 0.88
+    },
+    {
+      "name": "Circadian Phase Delay",
+      "description": "A shift in the timing of peak activity to later in the day, observed in MCI patients. Indicates misalignment with environmental light cues.",
+      "domain": "biology",
+      "relevance": 0.93
+    }
+  ],
+  "methods": [
+    {
+      "name": "Actigraphy Monitoring",
+      "description": "Continuous recording of movement using wearable accelerometers to infer sleep-wake cycles and activity patterns. Used to collect objective, long-term data on rest/activity rhythms.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Functional Principal Component Analysis",
+      "description": "A computational method applied to time-series actigraphy data to extract orthogonal components (fPC1\u2013fPC3) that capture dominant patterns of variation in circadian activity.",
+      "category": "computational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Factor Analysis",
+      "description": "A statistical technique used to reduce multiple cognitive test scores into two composite variables: episodic memory and executive function, based on shared variance.",
+      "category": "analytical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Multivariate Regression",
+      "description": "A statistical model that simultaneously evaluates the association between multiple circadian metrics and cognitive scores while adjusting for confounders (age, sex, education, APOE-4).",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Cross-Sectional Design",
+      "description": "A study design that collects data at a single time point to compare groups (MCI vs. controls). Used here to assess associations but not causality.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Non-Parametric Rhythm Metrics",
+      "description": "Calculation of circadian indices (RA, IV, IS) without assuming a specific waveform, providing robust measures of rhythm strength and stability.",
+      "category": "analytical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Cognitive Composite Scoring",
+      "description": "A method to combine individual neuropsychological test results into single, interpretable scores using factor analysis, enabling group-level cognitive assessment.",
+      "category": "analytical",
+      "confidence": 1.0
+    },
+    {
+      "name": "BIOCARD Cohort Data",
+      "description": "Use of longitudinal, well-characterized data from the Biomarkers for Alzheimer\u2019s Disease (BIOCARD) study, providing standardized clinical and biological measures.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Sleep Parameter Extraction",
+      "description": "Automated computation of standard sleep metrics (TST, SE, WASO, WBL) from actigraphy data using validated algorithms.",
+      "category": "computational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Adjustment for Covariates",
+      "description": "Statistical control for potential confounders (age, sex, education, APOE-4) in regression models to isolate the effect of circadian variables on cognition.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Variance Decomposition",
+      "description": "Quantification of how much of the total variation in actigraphy data is explained by the first three fPCs, used to validate the effectiveness of the functional analysis.",
+      "category": "analytical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Group Comparison Analysis",
+      "description": "Statistical testing (e.g., t-tests or ANCOVAs) to compare mean values of circadian and cognitive variables between MCI and cognitively normal groups.",
+      "category": "analytical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Data Preprocessing",
+      "description": "Cleaning and normalization of raw actigraphy data, including handling missing values and aligning time series for functional analysis.",
+      "category": "computational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Time-Series Analysis",
+      "description": "Application of statistical methods to analyze patterns in longitudinal activity data, forming the basis for functional principal component extraction.",
+      "category": "computational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Statistical Significance Testing",
+      "description": "Use of p-values and confidence intervals to determine whether observed differences in group means or associations were likely not due to chance.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Covariate Adjustment",
+      "description": "Inclusion of demographic and genetic variables as covariates in regression models to reduce bias and improve validity of associations.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Composite Score Construction",
+      "description": "Creation of summary cognitive scores by combining factor loadings from multiple tests, enabling multivariate analysis of cognitive performance.",
+      "category": "analytical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Exploratory Data Analysis",
+      "description": "Initial examination of actigraphy and cognitive data to identify patterns, outliers, and potential relationships before formal modeling.",
+      "category": "analytical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Model Validation",
+      "description": "Assessment of the robustness of fPCs and regression models through variance explained and sensitivity checks, though not explicitly detailed beyond 69%.",
+      "category": "analytical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Standardized Cognitive Testing",
+      "description": "Use of validated neuropsychological batteries to assess memory and executive function, ensuring reliability and comparability across participants.",
+      "category": "observational",
+      "confidence": 1.0
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "fPC3",
+      "concept2": "Circadian Rest/Activity Rhythms",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.98
+    },
+    {
+      "concept1": "fPC1",
+      "concept2": "Circadian Rest/Activity Rhythms",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Functional Principal Component Analysis",
+      "concept2": "fPC1",
+      "relationship_type": "ENABLES",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Actigraphic Sleep",
+      "concept2": "Non-Invasive Monitoring",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Circadian Amplitude Reduction",
+      "concept2": "Relative Amplitude (RA)",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.94
+    }
+  ],
+  "extraction_time": 29.588696241378784,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

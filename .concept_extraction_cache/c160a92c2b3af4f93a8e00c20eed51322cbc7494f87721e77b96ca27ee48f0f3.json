@@ -1,0 +1,82 @@
+{
+  "paper_id": "10.55041/ijsrem44748",
+  "concepts": [
+    {
+      "name": "Sleep quality",
+      "description": "A multidimensional measure of sleep depth, continuity, and restoration, serving as the primary independent variable in the study. It directly correlates with cognitive outcomes and is influenced by internal/external factors.",
+      "domain": "medicine",
+      "relevance": 1.0
+    },
+    {
+      "name": "Cognitive functioning",
+      "description": "The collective mental processes including attention, memory, and emotional regulation, measured as the dependent variable. The study establishes its impairment as a key consequence of poor sleep quality.",
+      "domain": "neuroscience",
+      "relevance": 1.0
+    },
+    {
+      "name": "Attention duration",
+      "description": "The sustained focus capacity during cognitive tasks, significantly shortened by poor sleep quality. Represents a core component of executive function affected by sleep disruption.",
+      "domain": "cognitive psychology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Memory consolidation",
+      "description": "The neural process of stabilizing and integrating newly acquired information into long-term memory, impaired by inadequate sleep quality. Critical for learning and knowledge retention.",
+      "domain": "neuroscience",
+      "relevance": 0.95
+    },
+    {
+      "name": "Emotional regulation",
+      "description": "The ability to manage and respond to emotional stimuli, destabilized by poor sleep quality. Linked to increased emotional reactivity and reduced stress resilience.",
+      "domain": "psychology",
+      "relevance": 0.9
+    },
+    {
+      "name": "Confounding variables",
+      "description": "Uncontrolled factors (e.g., diet, exercise) that may influence both sleep quality and cognitive outcomes, limiting causal inference in the study design. Highlighted as a key limitation.",
+      "domain": "epidemiology",
+      "relevance": 0.85
+    },
+    {
+      "name": "Recall bias",
+      "description": "Systematic error in self-reported data due to inaccurate memory of past sleep patterns or cognitive performance. Identified as a limitation affecting data reliability.",
+      "domain": "methodology",
+      "relevance": 0.8
+    },
+    {
+      "name": "Cross-sectional design",
+      "description": "Research approach collecting data at a single timepoint, preventing causal inference between sleep quality and cognitive outcomes. Explicitly noted as a study limitation.",
+      "domain": "epidemiology",
+      "relevance": 0.8
+    }
+  ],
+  "methods": [
+    {
+      "name": "Mixed-methods design",
+      "description": "Integration of quantitative (self-report, physiological data) and qualitative approaches to comprehensively assess sleep-cognition relationships. Combines subjective experiences with objective measurements.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Self-report questionnaires",
+      "description": "Standardized surveys (e.g., Pittsburgh Sleep Quality Index) used to assess subjective sleep quality and daily cognitive experiences. Administered to capture participant-perceived sleep patterns and functional impacts.",
+      "category": "observational",
+      "confidence": 0.95
+    },
+    {
+      "name": "Standardized cognitive testing",
+      "description": "Validated neuropsychological batteries (e.g., Stroop test, Rey Auditory Verbal Learning Test) administered to objectively measure attention, memory, and executive function. Provides quantifiable cognitive performance metrics.",
+      "category": "experimental",
+      "confidence": 0.95
+    },
+    {
+      "name": "Wearable physiological monitoring",
+      "description": "Use of actigraphy or sleep trackers to collect objective sleep data (e.g., sleep duration, fragmentation, REM cycles). Complements self-reports with continuous physiological metrics.",
+      "category": "observational",
+      "confidence": 0.95
+    }
+  ],
+  "relationships": [],
+  "extraction_time": 39.86845278739929,
+  "model_used": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+}

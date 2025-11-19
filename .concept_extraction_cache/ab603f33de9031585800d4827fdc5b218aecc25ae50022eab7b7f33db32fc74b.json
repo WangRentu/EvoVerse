@@ -1,0 +1,401 @@
+{
+  "paper_id": "2412.12024",
+  "concepts": [
+    {
+      "name": "Zero-sample navigation",
+      "description": "The ability of an agent to successfully navigate in unseen environments without any prior interaction or exploration. This is central to the paper's contribution, enabling immediate task execution based solely on abstract map input.",
+      "domain": "computer_science",
+      "relevance": 0.98
+    },
+    {
+      "name": "Hypermodel architecture",
+      "description": "A meta-learning framework where a neural network generates the weights of another network (the transfer network) conditioned on input context (e.g., map and goals). This enables dynamic policy adaptation without retraining.",
+      "domain": "computer_science",
+      "relevance": 0.97
+    },
+    {
+      "name": "Abstract top-down maps",
+      "description": "Simplified 2D\u4fef\u89c6 (bird's-eye view) representations of environments used as input to guide navigation. These maps encode spatial layout without detailed sensory data, enabling generalization across layouts.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Context-aware policy learning",
+      "description": "Learning navigation policies that condition on environmental context such as start/goal positions and map structure. This allows the agent to generate appropriate behaviors without explicit planning modules.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "End-to-end navigation mapping",
+      "description": "A unified framework that maps from abstract visual inputs (maps) directly to continuous motor actions, bypassing intermediate steps like localization or path planning. This enables seamless perception-to-action transformation.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Model-based reinforcement learning",
+      "description": "A reinforcement learning paradigm that uses an internal model of the environment dynamics to plan or predict outcomes. In this work, it enables policy generation without environment interaction.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Cross-layout generalization",
+      "description": "The ability of a model to perform well on novel maze layouts not seen during training. This is a key measure of success in zero-sample navigation and reflects robustness to structural variation.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Dynamic weight prediction",
+      "description": "The process by which the hypermodel generates parameters (weights) for the transfer network based on input context. This allows the model to adapt its behavior per map configuration.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Multi-task training",
+      "description": "Training on diverse maze layouts simultaneously to improve generalization. This enables the agent to learn a flexible policy that adapts to new configurations without retraining.",
+      "domain": "computer_science",
+      "relevance": 0.89
+    },
+    {
+      "name": "Robustness to map noise",
+      "description": "The model\u2019s ability to maintain performance despite imperfections in the abstract map input, such as distortions or missing features. This is critical for real-world applicability.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Scale invariance",
+      "description": "The property of the model to handle maps at different spatial scales without degradation in performance. This supports generalization across environments with varying dimensions.",
+      "domain": "computer_science",
+      "relevance": 0.87
+    },
+    {
+      "name": "State-action space mapping",
+      "description": "The transformation from discrete abstract map representations to continuous physical actions in a 3D environment. This is achieved end-to-end via learned function approximation.",
+      "domain": "computer_science",
+      "relevance": 0.86
+    },
+    {
+      "name": "No-exploration navigation",
+      "description": "Navigation strategy that does not require trial-and-error interaction with the environment. The agent computes a path directly from the map, enabling rapid task completion.",
+      "domain": "computer_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Programmatically generated mazes",
+      "description": "Maze layouts created algorithmically with controlled variability, used to simulate diverse environments during training and evaluation. This enables reproducible and scalable testing.",
+      "domain": "computer_science",
+      "relevance": 0.84
+    },
+    {
+      "name": "DeepMind Lab environment",
+      "description": "A simulation platform for evaluating agent navigation in 3D environments with continuous state and action spaces. Used here to validate performance under realistic dynamics.",
+      "domain": "computer_science",
+      "relevance": 0.83
+    },
+    {
+      "name": "Transfer network",
+      "description": "A neural network whose parameters are dynamically generated by the hypermodel. It encodes the navigation policy and maps map context to actions.",
+      "domain": "computer_science",
+      "relevance": 0.82
+    },
+    {
+      "name": "Meta-learned policy",
+      "description": "A policy that learns to adapt quickly to new tasks (mazes) by leveraging prior experience across multiple tasks. This enables zero-shot performance on unseen layouts.",
+      "domain": "computer_science",
+      "relevance": 0.81
+    },
+    {
+      "name": "Implicit planning",
+      "description": "The absence of explicit path planning modules; instead, the agent generates actions directly from map context. This reduces computational overhead and complexity.",
+      "domain": "computer_science",
+      "relevance": 0.8
+    },
+    {
+      "name": "Map abstraction fidelity",
+      "description": "The degree to which the abstract map preserves essential structural information (e.g., walls, corridors, goals). High fidelity is crucial for accurate navigation.",
+      "domain": "computer_science",
+      "relevance": 0.79
+    },
+    {
+      "name": "End-to-end learning",
+      "description": "A training paradigm where input (map) is directly mapped to output (actions) without intermediate representations. This simplifies the architecture and improves generalization.",
+      "domain": "computer_science",
+      "relevance": 0.78
+    },
+    {
+      "name": "Continuous action space",
+      "description": "A control space where actions are real-valued (e.g., movement direction and speed), as opposed to discrete choices. This reflects realistic robot control dynamics.",
+      "domain": "computer_science",
+      "relevance": 0.77
+    },
+    {
+      "name": "High-level spatial reasoning",
+      "description": "The ability to interpret abstract spatial layouts and infer navigational strategies without low-level sensory processing. This mimics human-like map reading.",
+      "domain": "computer_science",
+      "relevance": 0.76
+    },
+    {
+      "name": "Zero-shot generalization",
+      "description": "Performance on unseen tasks without any adaptation or fine-tuning. This is a hallmark of the proposed method\u2019s success in novel maze navigation.",
+      "domain": "computer_science",
+      "relevance": 0.75
+    },
+    {
+      "name": "Non-iterative planning",
+      "description": "Generating a complete navigation path in a single forward pass, without iterative refinement or exploration. This enables fast decision-making.",
+      "domain": "computer_science",
+      "relevance": 0.74
+    },
+    {
+      "name": "Contextual parameter generation",
+      "description": "The mechanism by which the hypermodel produces model parameters based on input context (map + goals), enabling adaptive behavior across environments.",
+      "domain": "computer_science",
+      "relevance": 0.73
+    },
+    {
+      "name": "Robustness to structural variation",
+      "description": "The model\u2019s ability to maintain performance across mazes with different topologies, sizes, and configurations, indicating strong generalization capability.",
+      "domain": "computer_science",
+      "relevance": 0.72
+    },
+    {
+      "name": "Map-to-action transformation",
+      "description": "The core function of the model: converting a 2D abstract map into a sequence of physical actions. This is achieved via learned function approximation.",
+      "domain": "computer_science",
+      "relevance": 0.71
+    },
+    {
+      "name": "Implicit localization",
+      "description": "The agent does not explicitly estimate its position in the environment; instead, it infers location implicitly through map context and goal alignment.",
+      "domain": "computer_science",
+      "relevance": 0.7
+    },
+    {
+      "name": "Task-conditional policy",
+      "description": "A policy that conditions its behavior on task-specific inputs such as start and goal positions, enabling flexible navigation across different objectives.",
+      "domain": "computer_science",
+      "relevance": 0.69
+    },
+    {
+      "name": "Non-episodic learning",
+      "description": "Learning that does not rely on episode-based training or reset cycles. The model learns continuously across diverse mazes without episodic boundaries.",
+      "domain": "computer_science",
+      "relevance": 0.68
+    },
+    {
+      "name": "Structural invariance",
+      "description": "The model\u2019s ability to recognize and utilize consistent topological features (e.g., dead ends, junctions) across different maze layouts, enabling robust navigation.",
+      "domain": "computer_science",
+      "relevance": 0.67
+    },
+    {
+      "name": "High-level representation learning",
+      "description": "Learning to extract and utilize abstract spatial features from maps that are invariant to low-level variations, supporting generalization.",
+      "domain": "computer_science",
+      "relevance": 0.66
+    },
+    {
+      "name": "No retraining requirement",
+      "description": "The model can be deployed in new environments without fine-tuning or additional training, a key advantage for real-world deployment.",
+      "domain": "computer_science",
+      "relevance": 0.65
+    },
+    {
+      "name": "Map-based decision making",
+      "description": "Using abstract map information as the sole basis for navigation decisions, bypassing real-time sensor fusion or SLAM.",
+      "domain": "computer_science",
+      "relevance": 0.64
+    },
+    {
+      "name": "Action sequence generation",
+      "description": "The output of the model is a sequence of actions (e.g., move forward, turn left) that guide the agent to the goal, generated directly from the map.",
+      "domain": "computer_science",
+      "relevance": 0.63
+    },
+    {
+      "name": "Spatial context encoding",
+      "description": "The process of embedding map structure and goal location into a latent representation that guides policy decisions.",
+      "domain": "computer_science",
+      "relevance": 0.62
+    },
+    {
+      "name": "Non-sequential planning",
+      "description": "Generating a full path without iterative refinement, relying on a single inference pass. This contrasts with traditional planning algorithms.",
+      "domain": "computer_science",
+      "relevance": 0.61
+    },
+    {
+      "name": "Generalized policy learning",
+      "description": "Learning a policy that performs well across a wide distribution of environments, rather than optimizing for a single layout.",
+      "domain": "computer_science",
+      "relevance": 0.6
+    },
+    {
+      "name": "Map distortion tolerance",
+      "description": "The model\u2019s resilience to inaccuracies or simplifications in the abstract map, such as missing walls or misaligned corridors.",
+      "domain": "computer_science",
+      "relevance": 0.59
+    },
+    {
+      "name": "High-level task specification",
+      "description": "The use of abstract inputs (map + goals) to define navigation tasks, enabling human-in-the-loop or automated task setup without low-level details.",
+      "domain": "computer_science",
+      "relevance": 0.58
+    }
+  ],
+  "methods": [
+    {
+      "name": "Hypermodel training",
+      "description": "A meta-learning approach where a hypernetwork generates the weights of a transfer network based on input context (map and goals). The entire system is trained end-to-end on multiple maze layouts to enable zero-shot generalization.",
+      "category": "machine_learning",
+      "confidence": 0.98
+    },
+    {
+      "name": "Multi-task reinforcement learning",
+      "description": "The agent is trained on a diverse set of programmatically generated mazes simultaneously, learning a shared policy that generalizes across layouts. This supports zero-sample performance on unseen mazes.",
+      "category": "machine_learning",
+      "confidence": 0.97
+    },
+    {
+      "name": "End-to-end policy learning",
+      "description": "The navigation policy is trained directly from abstract map inputs to continuous actions, without intermediate modules for localization or path planning. This simplifies the architecture and improves generalization.",
+      "category": "machine_learning",
+      "confidence": 0.96
+    },
+    {
+      "name": "Dynamic weight generation",
+      "description": "The hypermodel computes the parameters of the transfer network in real-time based on the input map and goal positions. This allows the policy to adapt to new layouts without retraining.",
+      "category": "machine_learning",
+      "confidence": 0.95
+    },
+    {
+      "name": "Zero-shot evaluation",
+      "description": "Performance is assessed on maze layouts never seen during training. Success is measured by path efficiency, goal attainment, and robustness, demonstrating true generalization.",
+      "category": "evaluation",
+      "confidence": 0.94
+    },
+    {
+      "name": "DeepMind Lab simulation",
+      "description": "A 3D continuous environment used to simulate realistic navigation tasks. The model is evaluated in this platform to test performance under physical dynamics and continuous state-action spaces.",
+      "category": "simulation",
+      "confidence": 0.93
+    },
+    {
+      "name": "Programmatic maze generation",
+      "description": "Maze layouts are created algorithmically with controlled randomness and structural diversity. This enables scalable, reproducible training and evaluation across varied topologies.",
+      "category": "simulation",
+      "confidence": 0.92
+    },
+    {
+      "name": "Success rate measurement",
+      "description": "A primary evaluation metric that quantifies the percentage of trials in which the agent reaches the goal within a time limit. Used to compare zero-shot performance across models.",
+      "category": "evaluation",
+      "confidence": 0.91
+    },
+    {
+      "name": "Path length optimization",
+      "description": "The model\u2019s ability to generate short, efficient paths to the goal. This is measured as a secondary metric to assess navigation quality beyond mere success.",
+      "category": "evaluation",
+      "confidence": 0.9
+    },
+    {
+      "name": "Robustness testing",
+      "description": "Evaluation under perturbed map inputs (e.g., noise, scale changes) to assess the model\u2019s resilience to real-world imperfections in map data.",
+      "category": "evaluation",
+      "confidence": 0.89
+    },
+    {
+      "name": "Cross-layout generalization test",
+      "description": "A formal evaluation protocol where the model is tested on mazes with topologies not present in the training set, measuring its ability to generalize beyond seen examples.",
+      "category": "evaluation",
+      "confidence": 0.88
+    },
+    {
+      "name": "Continuous action space control",
+      "description": "The agent uses real-valued actions (e.g., direction and speed) in a 3D environment, requiring the policy to output smooth, continuous motor commands.",
+      "category": "computational",
+      "confidence": 0.87
+    },
+    {
+      "name": "Context encoding with CNN",
+      "description": "A convolutional neural network processes the abstract 2D map input, extracting spatial features that are combined with start/goal positions to form a context vector.",
+      "category": "machine_learning",
+      "confidence": 0.86
+    },
+    {
+      "name": "Transfer network architecture",
+      "description": "A neural network whose weights are dynamically generated by the hypermodel. It maps the context vector to a sequence of actions in the physical environment.",
+      "category": "computational",
+      "confidence": 0.85
+    },
+    {
+      "name": "End-to-end training",
+      "description": "The entire system, including the hypermodel and transfer network, is trained jointly using reinforcement learning objectives, optimizing for navigation success and path efficiency.",
+      "category": "machine_learning",
+      "confidence": 0.84
+    },
+    {
+      "name": "Reinforcement learning with rewards",
+      "description": "The agent is trained using a reward signal based on proximity to the goal and path length, encouraging efficient and successful navigation without exploration.",
+      "category": "machine_learning",
+      "confidence": 0.83
+    },
+    {
+      "name": "Map preprocessing",
+      "description": "Abstract 2D maps are normalized and encoded as images, with walls, corridors, and goals represented as pixel-level features for input to the neural network.",
+      "category": "computational",
+      "confidence": 0.82
+    },
+    {
+      "name": "Goal-conditioned input",
+      "description": "The start and goal positions are encoded as additional input features (e.g., via one-hot vectors or coordinate embeddings) to condition the policy on the task.",
+      "category": "machine_learning",
+      "confidence": 0.81
+    },
+    {
+      "name": "Policy gradient optimization",
+      "description": "The model is trained using policy gradient methods (e.g., PPO or REINFORCE) to maximize expected cumulative reward across diverse maze layouts.",
+      "category": "machine_learning",
+      "confidence": 0.8
+    },
+    {
+      "name": "Latent context representation",
+      "description": "A learned vector that encodes the map structure and task context (start/goal), used to condition the transfer network\u2019s behavior without explicit planning.",
+      "category": "machine_learning",
+      "confidence": 0.79
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Zero-sample navigation",
+      "concept2": "Zero-shot generalization",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Hypermodel architecture",
+      "concept2": "Dynamic weight prediction",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Hypermodel architecture",
+      "concept2": "Meta-learned policy",
+      "relationship_type": "ENABLES",
+      "strength": 0.96
+    },
+    {
+      "concept1": "End-to-end navigation mapping",
+      "concept2": "Map-to-action transformation",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Context-aware policy learning",
+      "concept2": "Task-conditional policy",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.94
+    }
+  ],
+  "extraction_time": 29.658206939697266,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

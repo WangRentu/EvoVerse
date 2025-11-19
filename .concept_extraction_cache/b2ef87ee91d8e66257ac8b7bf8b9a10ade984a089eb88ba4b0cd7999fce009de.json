@@ -1,0 +1,58 @@
+{
+  "paper_id": "10.7326/0003-4819-148-1-200801010-01001",
+  "concepts": [
+    {
+      "name": "Chronic insomnia",
+      "description": "Persistent sleep disorder affecting approximately 10% of adults, characterized by difficulty initiating or maintaining sleep despite adequate opportunity. It is strongly associated with comorbid conditions like depression and cognitive decline, necessitating targeted diagnostic and therapeutic approaches.",
+      "domain": "medicine",
+      "relevance": 0.95
+    },
+    {
+      "name": "Sleep hygiene intervention",
+      "description": "Non-pharmacological foundational treatment involving behavioral modifications such as consistent sleep schedules and caffeine avoidance. It serves as the initial management strategy but requires individualized assessment for optimal efficacy in insomnia treatment.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Clinical diagnosis",
+      "description": "Diagnostic process relying on detailed sleep history and sleep diaries rather than routine laboratory tests. This approach is emphasized as critical for identifying insomnia subtypes and excluding underlying causes like sleep apnea or medication effects.",
+      "domain": "medicine",
+      "relevance": 0.95
+    },
+    {
+      "name": "Sleep diary",
+      "description": "Patient-recorded log tracking sleep patterns, duration, and disturbances over multiple days. It is a core diagnostic tool for validating subjective sleep complaints and informing personalized treatment plans in insomnia management.",
+      "domain": "medicine",
+      "relevance": 0.85
+    },
+    {
+      "name": "Screening efficacy evidence gap",
+      "description": "Lack of empirical evidence demonstrating that routine insomnia screening improves patient outcomes. This limitation highlights a critical gap in current clinical practice despite high prevalence rates.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Prevalence disparity",
+      "description": "Significantly elevated insomnia rates in specific populations including elderly (23-34%), shift workers, and those with depression. This demographic variation underscores the need for targeted screening and intervention strategies.",
+      "domain": "medicine",
+      "relevance": 0.85
+    }
+  ],
+  "methods": [
+    {
+      "name": "Systematic literature review",
+      "description": "Comprehensive synthesis of evidence from American Academy of Sleep Medicine guidelines and epidemiological studies. This method integrated clinical data and expert consensus to establish standardized diagnostic and management frameworks for insomnia.",
+      "category": "analytical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Longitudinal cohort study",
+      "description": "Epidemiological methodology exemplified by the 2398-person elderly cohort referenced in the paper. This approach tracked insomnia prevalence and associated health outcomes over time to establish population-level risk factors and comorbidities.",
+      "category": "observational",
+      "confidence": 0.95
+    }
+  ],
+  "relationships": [],
+  "extraction_time": 38.899611949920654,
+  "model_used": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+}

@@ -1,0 +1,64 @@
+{
+  "paper_id": "10.61796/icossh.v2i2.137",
+  "concepts": [
+    {
+      "name": "Sleep deprivation",
+      "description": "A state of insufficient sleep leading to impaired physiological and cognitive functions, directly linked to digital habit disruptions in Gen Z learners. Central to the paper's mechanism explaining academic and mental health impacts.",
+      "domain": "medicine",
+      "relevance": 1.0
+    },
+    {
+      "name": "Digital distraction",
+      "description": "Excessive engagement with digital devices (e.g., nighttime screen exposure) that disrupts circadian rhythms and sleep architecture. Identified as a primary modifiable factor in sleep deprivation among students.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Cognitive function",
+      "description": "Mental processes including memory, attention, and problem-solving abilities, shown to decline significantly with sleep deprivation. Serves as the key cognitive outcome measured in academic performance contexts.",
+      "domain": "neuroscience",
+      "relevance": 0.9
+    },
+    {
+      "name": "Emotional regulation",
+      "description": "The capacity to manage emotional responses and stability, negatively affected by sleep disruption. Explicitly tied to increased stress and mood fluctuations in Gen Z learners per the study.",
+      "domain": "psychology",
+      "relevance": 0.85
+    },
+    {
+      "name": "Gen Z learners",
+      "description": "A demographic cohort (born 1997-2012) characterized by high digital immersion and distinct sleep patterns. The primary subject group for analyzing digital-sleep-academic performance relationships.",
+      "domain": "social_science",
+      "relevance": 0.8
+    },
+    {
+      "name": "Screen time exposure",
+      "description": "Duration and timing of digital device usage, particularly nocturnal, correlating with reduced sleep quality. A critical behavioral variable in the study's causal pathway model.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Academic performance",
+      "description": "Measurable educational outcomes (e.g., grades, cognitive task efficiency) impaired by sleep disruption. The primary dependent variable demonstrating real-world impact of digital habits.",
+      "domain": "education",
+      "relevance": 0.85
+    }
+  ],
+  "methods": [
+    {
+      "name": "Cross-sectional survey",
+      "description": "A single-point-in-time observational design collecting data on sleep patterns, digital habits, and academic metrics from a student cohort. Used to identify correlations between variables without establishing causality.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Questionnaire data collection",
+      "description": "Structured survey instrument administering standardized scales for sleep quality (e.g., Pittsburgh Sleep Quality Index), screen time logs, and academic stress assessment. Enabled multi-dimensional data capture across key variables.",
+      "category": "observational",
+      "confidence": 1.0
+    }
+  ],
+  "relationships": [],
+  "extraction_time": 40.22660565376282,
+  "model_used": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+}

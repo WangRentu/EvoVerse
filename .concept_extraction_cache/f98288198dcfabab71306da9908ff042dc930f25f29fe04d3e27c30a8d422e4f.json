@@ -1,0 +1,503 @@
+{
+  "paper_id": "2506.20039",
+  "concepts": [
+    {
+      "name": "Bilateral Matching",
+      "description": "A framework for pairing agents from two disjoint sets based on mutual preferences, ensuring stability in team formation. In this paper, it is used to model cooperative team structures in multi-agent systems, where stable matchings lead to better policy performance and generalization.",
+      "domain": "computer_science",
+      "relevance": 0.98
+    },
+    {
+      "name": "Stable Matching",
+      "description": "A solution concept in matching theory where no pair of agents can mutually benefit by deviating from their assigned match. The paper leverages this property to generate robust and generalizable team formations in dynamic multi-agent environments.",
+      "domain": "computer_science",
+      "relevance": 0.97
+    },
+    {
+      "name": "Gale-Shapley Algorithm",
+      "description": "A classic algorithm for computing stable matchings in bipartite graphs. In this work, it is applied as the core mechanism to generate team assignments based on learned agent preferences from attention scores.",
+      "domain": "computer_science",
+      "relevance": 0.96
+    },
+    {
+      "name": "Attention-Based Preference",
+      "description": "A method where attention weights in a neural network represent the strength of preference between agents. The paper uses these weights as input to the matching algorithm, enabling dynamic and data-driven team formation.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Value Decomposition",
+      "description": "A technique in multi-agent reinforcement learning that decomposes global value functions into individual agent contributions. The paper introduces an improved version that supports dynamic team formation and variable agent counts.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "Dynamic Team Formation",
+      "description": "The process of forming teams in real-time as agents join or leave the system. This paper addresses it as a key challenge in open environments, using stable matching to maintain performance under changing agent populations.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Generalization in MARL",
+      "description": "The ability of a multi-agent policy to perform well on unseen agent combinations or configurations. The paper demonstrates that stable matching significantly enhances this capability compared to unstable alternatives.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Policy Robustness",
+      "description": "The stability of a learned policy under perturbations such as new agent types or team compositions. The study shows that stable matching improves robustness by reducing sensitivity to environmental changes.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Preference Learning",
+      "description": "The process of inferring agent preferences from interaction data or learned representations. In this work, attention mechanisms are used to learn pairwise preferences for input into the matching algorithm.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Algorithmic Stability",
+      "description": "A property of matching algorithms that ensures no pair of agents has incentive to deviate. The paper identifies this as a critical factor influencing the generalization and learning efficiency of MARL policies.",
+      "domain": "computer_science",
+      "relevance": 0.89
+    },
+    {
+      "name": "Open-World Multi-Agent Systems",
+      "description": "Environments where agents can dynamically join or leave, requiring adaptive team formation. The paper's framework is designed to operate effectively in such settings, overcoming limitations of fixed-group models.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Attention Mechanism",
+      "description": "A neural network component that computes relevance scores between agents. Here, it is used to model pairwise preferences, enabling the system to learn and adapt team formation strategies from data.",
+      "domain": "computer_science",
+      "relevance": 0.87
+    },
+    {
+      "name": "Multi-Agent Reinforcement Learning",
+      "description": "A subfield of AI where multiple agents learn to cooperate or compete in shared environments. The paper advances MARL by integrating matching theory into team formation dynamics.",
+      "domain": "computer_science",
+      "relevance": 0.86
+    },
+    {
+      "name": "Team Structure Optimization",
+      "description": "The process of arranging agents into teams to maximize collective performance. The paper frames this as a bipartite matching problem, using stability as an optimization criterion.",
+      "domain": "computer_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Dynamic Agent Count",
+      "description": "Scenarios where the number of agents varies over time. The proposed framework supports such dynamics, breaking from traditional MARL assumptions of fixed group sizes.",
+      "domain": "computer_science",
+      "relevance": 0.84
+    },
+    {
+      "name": "Unseen Agent Combinations",
+      "description": "New team configurations not present during training. The paper evaluates generalization by testing policies on such combinations, showing superior performance with stable matching.",
+      "domain": "computer_science",
+      "relevance": 0.83
+    },
+    {
+      "name": "Bias in Preference Learning",
+      "description": "The risk that learned attention-based preferences reflect training data biases, especially in sparse or extreme interaction scenarios. The paper acknowledges this as a limitation in real-world deployment.",
+      "domain": "computer_science",
+      "relevance": 0.82
+    },
+    {
+      "name": "Single-Directional Preference",
+      "description": "An assumption in Gale-Shapley where one side of the match has fixed preferences. The paper notes this as a constraint that limits adaptability in highly dynamic environments.",
+      "domain": "computer_science",
+      "relevance": 0.81
+    },
+    {
+      "name": "Computational Complexity",
+      "description": "The resource cost of running the matching algorithm, particularly in large-scale systems. The paper identifies this as an unaddressed concern in practical deployment.",
+      "domain": "computer_science",
+      "relevance": 0.8
+    },
+    {
+      "name": "Communication Overhead",
+      "description": "The cost of exchanging information between agents during team formation. The paper does not model this, which may affect real-world feasibility in resource-constrained systems.",
+      "domain": "computer_science",
+      "relevance": 0.79
+    },
+    {
+      "name": "Causal Interpretability",
+      "description": "The ability to establish cause-effect relationships between attention weights and actual team performance. The paper admits this link remains unclear, limiting explainability.",
+      "domain": "computer_science",
+      "relevance": 0.78
+    },
+    {
+      "name": "Scalability Limitation",
+      "description": "The challenge of applying the framework to large numbers of agents. The paper's experiments are limited to small-to-medium teams, leaving scalability unverified.",
+      "domain": "computer_science",
+      "relevance": 0.77
+    },
+    {
+      "name": "Fixed-Group Assumption",
+      "description": "A common limitation in traditional MARL where agent groups are static. The paper explicitly overcomes this by enabling dynamic team formation via matching theory.",
+      "domain": "computer_science",
+      "relevance": 0.76
+    },
+    {
+      "name": "Bidirectional Preference Evolution",
+      "description": "The dynamic change in mutual preferences between agents over time. The paper notes that current stable matching models do not capture this, limiting adaptability.",
+      "domain": "computer_science",
+      "relevance": 0.75
+    },
+    {
+      "name": "Training Stability",
+      "description": "The consistency of learning progress during policy training. The paper evaluates this as a key metric, showing stable matching leads to more reliable convergence.",
+      "domain": "computer_science",
+      "relevance": 0.74
+    },
+    {
+      "name": "Cumulative Reward",
+      "description": "The total reward accumulated over an episode, used as a primary performance metric. The paper compares stable vs. unstable matching strategies using this measure.",
+      "domain": "computer_science",
+      "relevance": 0.73
+    },
+    {
+      "name": "Matching Stability",
+      "description": "A formal property ensuring no two agents prefer each other over their current matches. The paper uses this as a design principle to improve policy generalization and robustness.",
+      "domain": "computer_science",
+      "relevance": 0.72
+    },
+    {
+      "name": "Preference Representation",
+      "description": "The encoding of agent preferences in a machine-readable form. In this work, attention scores serve as a learned representation of pairwise preferences.",
+      "domain": "computer_science",
+      "relevance": 0.71
+    },
+    {
+      "name": "Adaptive Team Formation",
+      "description": "The ability to reconfigure teams in response to environmental changes. The framework enables this through dynamic matching based on learned preferences.",
+      "domain": "computer_science",
+      "relevance": 0.7
+    },
+    {
+      "name": "Cross-Configuration Generalization",
+      "description": "Performance of a policy on team configurations not seen during training. The paper demonstrates that stable matching significantly improves this metric.",
+      "domain": "computer_science",
+      "relevance": 0.69
+    },
+    {
+      "name": "Non-Stationary Environments",
+      "description": "Settings where agent populations or dynamics change over time. The paper's framework is designed to handle such environments through dynamic matching.",
+      "domain": "computer_science",
+      "relevance": 0.68
+    },
+    {
+      "name": "Learning Efficiency",
+      "description": "The speed and effectiveness with which a policy converges during training. The paper finds that stable matching improves learning efficiency compared to unstable alternatives.",
+      "domain": "computer_science",
+      "relevance": 0.67
+    },
+    {
+      "name": "Bipartite Graph Matching",
+      "description": "A mathematical model where agents are partitioned into two sets and matched across them. The paper uses this to formalize the team formation problem.",
+      "domain": "computer_science",
+      "relevance": 0.66
+    },
+    {
+      "name": "Policy Generalization",
+      "description": "The ability of a trained policy to perform well beyond its training distribution. The paper links this to the stability of the underlying matching algorithm.",
+      "domain": "computer_science",
+      "relevance": 0.65
+    },
+    {
+      "name": "Attention Weight Interpretation",
+      "description": "The process of assigning meaning to attention scores in neural networks. The paper interprets them as agent preferences, enabling integration with matching theory.",
+      "domain": "computer_science",
+      "relevance": 0.64
+    },
+    {
+      "name": "Algorithmic Design in MARL",
+      "description": "The integration of algorithmic principles (e.g., stability) into the architecture of MARL systems. The paper pioneers this by embedding matching theory into team formation.",
+      "domain": "computer_science",
+      "relevance": 0.63
+    },
+    {
+      "name": "Open-Ended Collaboration",
+      "description": "Collaboration in environments with no predefined team structure or agent roles. The framework supports such settings by enabling on-the-fly team formation.",
+      "domain": "computer_science",
+      "relevance": 0.62
+    },
+    {
+      "name": "Structural Robustness",
+      "description": "The resilience of a system's structure (e.g., team composition) to changes in agent availability or behavior. The paper shows stable matching enhances this property.",
+      "domain": "computer_science",
+      "relevance": 0.61
+    },
+    {
+      "name": "Dynamic Grouping",
+      "description": "The formation of teams that can change over time. The paper's method supports this by combining attention with stable matching for real-time adaptation.",
+      "domain": "computer_science",
+      "relevance": 0.6
+    }
+  ],
+  "methods": [
+    {
+      "name": "Gale-Shapley Algorithm",
+      "description": "Used as the core mechanism to compute stable matchings between two disjoint sets of agents. The algorithm takes learned attention-based preferences as input and outputs stable team assignments, ensuring no pair has incentive to deviate.",
+      "category": "computational",
+      "confidence": 0.98
+    },
+    {
+      "name": "Attention-Based Value Decomposition",
+      "description": "An improved value decomposition network where attention weights represent pairwise agent preferences. These weights are used to guide team formation via the Gale-Shapley algorithm, enabling dynamic and adaptive team structures.",
+      "category": "machine_learning",
+      "confidence": 0.97
+    },
+    {
+      "name": "Dynamic Agent Environment",
+      "description": "A simulation setup where the number of agents varies across episodes or during training. Used to evaluate the framework's ability to handle open-world conditions and variable team sizes.",
+      "category": "simulation",
+      "confidence": 0.96
+    },
+    {
+      "name": "Generalization Evaluation",
+      "description": "A testing protocol where policies are evaluated on unseen agent combinations not present in training. This assesses the robustness and adaptability of the team formation strategy.",
+      "category": "experimental",
+      "confidence": 0.95
+    },
+    {
+      "name": "Stable vs. Unstable Matching Comparison",
+      "description": "A controlled experiment comparing policy performance between teams formed via stable (Gale-Shapley) and unstable (e.g., random or greedy) matching strategies, highlighting the impact of algorithmic stability.",
+      "category": "experimental",
+      "confidence": 0.94
+    },
+    {
+      "name": "Multi-Agent Reinforcement Learning Training",
+      "description": "Standard MARL training loop using policy gradient or value-based methods, adapted to incorporate team formation via attention and matching. The framework supports both fixed and dynamic agent counts.",
+      "category": "computational",
+      "confidence": 0.93
+    },
+    {
+      "name": "Preference Learning via Attention",
+      "description": "A method where a neural network learns pairwise agent preferences through attention mechanisms, with the output used as input to the matching algorithm for team formation.",
+      "category": "machine_learning",
+      "confidence": 0.92
+    },
+    {
+      "name": "Fixed-Group Baseline",
+      "description": "A control condition where team compositions are predefined and static. Used to compare against the dynamic team formation framework, demonstrating its advantages in flexibility and performance.",
+      "category": "experimental",
+      "confidence": 0.91
+    },
+    {
+      "name": "Single-Agent Reward Shaping",
+      "description": "A technique where individual agent rewards are shaped based on team performance, integrated with value decomposition to support cooperative learning in dynamic teams.",
+      "category": "computational",
+      "confidence": 0.9
+    },
+    {
+      "name": "Cross-Validation on Team Configurations",
+      "description": "A method to assess generalization by training on some team types and testing on others, ensuring the model is not overfitting to specific configurations.",
+      "category": "statistical",
+      "confidence": 0.89
+    },
+    {
+      "name": "Stability Analysis",
+      "description": "An evaluation of whether the generated team matches are stable under the Gale-Shapley criteria, used to validate the correctness and robustness of the team formation process.",
+      "category": "analytical",
+      "confidence": 0.88
+    },
+    {
+      "name": "Performance Benchmarking",
+      "description": "A systematic comparison of the proposed framework against multiple baselines (e.g., pre-defined teams, single-sided matching) across multiple standard MARL environments.",
+      "category": "experimental",
+      "confidence": 0.87
+    },
+    {
+      "name": "Attention Weight Visualization",
+      "description": "A post-hoc analysis method to inspect learned attention scores, used to interpret agent preferences and assess the plausibility of team formation decisions.",
+      "category": "observational",
+      "confidence": 0.86
+    },
+    {
+      "name": "Episode-Based Training",
+      "description": "A training paradigm where each episode involves a new or varying set of agents, enabling the model to learn generalizable team formation strategies.",
+      "category": "simulation",
+      "confidence": 0.85
+    },
+    {
+      "name": "Reward Aggregation",
+      "description": "A method to combine individual agent rewards into a global reward signal, used in value decomposition to guide team-level learning.",
+      "category": "computational",
+      "confidence": 0.84
+    },
+    {
+      "name": "Policy Evaluation",
+      "description": "A process to measure the average cumulative reward and stability of learned policies across multiple test episodes, used to compare different team formation strategies.",
+      "category": "experimental",
+      "confidence": 0.83
+    },
+    {
+      "name": "Dynamic Matching Integration",
+      "description": "A technique that combines real-time attention-based preference learning with the Gale-Shapley algorithm to generate teams on-the-fly during execution.",
+      "category": "computational",
+      "confidence": 0.82
+    },
+    {
+      "name": "Baseline Comparison",
+      "description": "A method to evaluate the proposed framework against existing approaches (e.g., fixed teams, single-sided matching) to demonstrate its superiority in performance and generalization.",
+      "category": "experimental",
+      "confidence": 0.81
+    },
+    {
+      "name": "Stability Metric",
+      "description": "A quantitative measure to assess whether a team assignment satisfies the stability condition (no blocking pairs), used to validate the correctness of the matching process.",
+      "category": "analytical",
+      "confidence": 0.8
+    },
+    {
+      "name": "Cross-Environment Testing",
+      "description": "A method to evaluate model performance across different multi-agent environments (e.g., cooperative navigation, predator-prey), testing the framework's adaptability.",
+      "category": "experimental",
+      "confidence": 0.79
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Stable Matching",
+      "concept2": "Bilateral Matching",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Gale-Shapley Algorithm",
+      "concept2": "Stable Matching",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Attention-Based Preference",
+      "concept2": "Preference Learning",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.92
+    },
+    {
+      "concept1": "Attention Mechanism",
+      "concept2": "Attention-Based Preference",
+      "relationship_type": "ENABLES",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Dynamic Team Formation",
+      "concept2": "Open-World Multi-Agent Systems",
+      "relationship_type": "RELATED_TO",
+      "strength": 0.9
+    },
+    {
+      "concept1": "Value Decomposition",
+      "concept2": "Multi-Agent Reinforcement Learning",
+      "relationship_type": "EXTENDS",
+      "strength": 0.93
+    },
+    {
+      "concept1": "Dynamic Agent Count",
+      "concept2": "Fixed-Group Assumption",
+      "relationship_type": "EXTENDS",
+      "strength": 0.94
+    },
+    {
+      "concept1": "Matching Stability",
+      "concept2": "Stable Matching",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Algorithmic Stability",
+      "concept2": "Matching Stability",
+      "relationship_type": "RELATED_TO",
+      "strength": 0.91
+    },
+    {
+      "concept1": "Adaptive Team Formation",
+      "concept2": "Dynamic Team Formation",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.93
+    },
+    {
+      "concept1": "Preference Representation",
+      "concept2": "Attention-Based Preference",
+      "relationship_type": "RELATED_TO",
+      "strength": 0.9
+    },
+    {
+      "concept1": "Cross-Configuration Generalization",
+      "concept2": "Policy Generalization",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Generalization in MARL",
+      "concept2": "Policy Generalization",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Policy Robustness",
+      "concept2": "Structural Robustness",
+      "relationship_type": "RELATED_TO",
+      "strength": 0.89
+    },
+    {
+      "concept1": "Learning Efficiency",
+      "concept2": "Training Stability",
+      "relationship_type": "RELATED_TO",
+      "strength": 0.9
+    },
+    {
+      "concept1": "Bipartite Graph Matching",
+      "concept2": "Bilateral Matching",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.94
+    },
+    {
+      "concept1": "Algorithmic Design in MARL",
+      "concept2": "Multi-Agent Reinforcement Learning",
+      "relationship_type": "EXTENDS",
+      "strength": 0.92
+    },
+    {
+      "concept1": "Open-Ended Collaboration",
+      "concept2": "Dynamic Team Formation",
+      "relationship_type": "RELATED_TO",
+      "strength": 0.88
+    },
+    {
+      "concept1": "Bidirectional Preference Evolution",
+      "concept2": "Single-Directional Preference",
+      "relationship_type": "EXTENDS",
+      "strength": 0.87
+    },
+    {
+      "concept1": "Scalability Limitation",
+      "concept2": "Computational Complexity",
+      "relationship_type": "RELATED_TO",
+      "strength": 0.91
+    },
+    {
+      "concept1": "Communication Overhead",
+      "concept2": "Dynamic Team Formation",
+      "relationship_type": "RELATED_TO",
+      "strength": 0.85
+    },
+    {
+      "concept1": "Causal Interpretability",
+      "concept2": "Attention Weight Interpretation",
+      "relationship_type": "RELATED_TO",
+      "strength": 0.86
+    },
+    {
+      "concept1": "Bias in Preference Learning",
+      "concept2": "Attention-Based Preference",
+      "relationship_type": "RELATED_TO",
+      "strength": 0.89
+    }
+  ],
+  "extraction_time": 34.98589897155762,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

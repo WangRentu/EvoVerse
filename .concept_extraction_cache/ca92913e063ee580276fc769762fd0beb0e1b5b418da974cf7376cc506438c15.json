@@ -1,0 +1,100 @@
+{
+  "paper_id": "10.3390/clockssleep7010007",
+  "concepts": [
+    {
+      "name": "Circadian Rhythms",
+      "description": "Biological processes regulating 24-hour physiological cycles, including sleep-wake patterns. Central to the study's investigation of time-of-day effects on cognitive performance in evening chronotypes.",
+      "domain": "biology",
+      "relevance": 1.0
+    },
+    {
+      "name": "Evening Chronotype",
+      "description": "A circadian preference for later sleep and wake times, defining the study's participant group (late sleepers). Critical for understanding why morning exercise interventions were tested.",
+      "domain": "biology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Morning Cognitive Decline",
+      "description": "Reduced cognitive performance (e.g., reaction time) observed in the early morning hours. The core phenomenon the study addresses through exercise intervention.",
+      "domain": "neuroscience",
+      "relevance": 0.95
+    },
+    {
+      "name": "Medium-Intensity Exercise",
+      "description": "Exercise at 40-60% of maximum heart rate, shown to correlate with improved post-exercise cognitive performance. The key intervention variable with practical implications.",
+      "domain": "exercise_physiology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Psychomotor Vigilance Task (PVT)",
+      "description": "Standard cognitive test measuring sustained attention and reaction time via response to visual stimuli. Used to quantify morning cognitive decline in the study.",
+      "domain": "neuroscience",
+      "relevance": 0.9
+    },
+    {
+      "name": "Visual Stroop Task",
+      "description": "Cognitive test assessing executive function and attentional control through color-word interference. Primary measure for exercise-cognition interaction analysis.",
+      "domain": "neuroscience",
+      "relevance": 0.9
+    },
+    {
+      "name": "Weekend Sleep Duration",
+      "description": "Total sleep time on non-training days, correlated with pre-exercise PVT performance. Highlights sleep's role in baseline cognitive function for evening chronotypes.",
+      "domain": "sleep_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Circadian Phase",
+      "description": "Timing of an individual's internal biological clock relative to external cues. Negatively correlated with post-exercise Stroop performance, indicating phase alignment importance.",
+      "domain": "biology",
+      "relevance": 0.85
+    },
+    {
+      "name": "Chronotype-Specific Intervention",
+      "description": "Tailoring exercise timing to individual circadian preferences. The study's novel approach to optimizing cognitive outcomes in evening-oriented populations.",
+      "domain": "exercise_physiology",
+      "relevance": 0.8
+    }
+  ],
+  "methods": [
+    {
+      "name": "Cross-Sectional Study",
+      "description": "Observational design collecting data at a single time point. Used to assess associations between chronotype, exercise, and cognitive performance without longitudinal manipulation.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Actigraphy",
+      "description": "Objective sleep/wake monitoring using wrist-worn accelerometers. Applied to quantify sleep patterns and validate self-reported sleep data in participants.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Self-Report Questionnaires",
+      "description": "Standardized surveys assessing sleep habits and exercise routines. Complemented actigraphy data to capture subjective sleep quality and training patterns.",
+      "category": "observational",
+      "confidence": 0.95
+    },
+    {
+      "name": "Psychomotor Vigilance Task",
+      "description": "Standardized cognitive assessment requiring rapid button presses to visual stimuli. Administered pre- and post-exercise to measure attentional decline and intervention effects.",
+      "category": "experimental",
+      "confidence": 1.0
+    },
+    {
+      "name": "Visual Stroop Task",
+      "description": "Cognitive test measuring interference resolution via color-naming of incongruent words. Used to evaluate executive function changes after exercise interventions.",
+      "category": "experimental",
+      "confidence": 1.0
+    },
+    {
+      "name": "Correlation Analysis",
+      "description": "Statistical method quantifying relationships between variables (e.g., exercise duration vs. Stroop performance). Applied to identify significant associations in the dataset.",
+      "category": "statistical",
+      "confidence": 0.9
+    }
+  ],
+  "relationships": [],
+  "extraction_time": 43.40530586242676,
+  "model_used": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+}

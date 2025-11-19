@@ -35,6 +35,7 @@ class KnowledgeAgent(BaseAgent):
             logger.warning("Failed to initialize literature searcher for references: %s", exc)
             self.reference_searcher = None
         self._reference_cache: Dict[str, List[PaperMetadata]] = {}
+        self._citation_cache: Dict[str, List[PaperMetadata]] = {}
 
     def ingest_papers(self, papers: List[Dict[str, Any]]) -> Dict[str, Any]:
         """
@@ -64,10 +65,12 @@ class KnowledgeAgent(BaseAgent):
         add_citations = cfg.get("add_citations", True)
         add_semantic_relationships = cfg.get("add_semantic_relationships", True)
         fetch_references = cfg.get("fetch_references", True)
+        fetch_citations = cfg.get("fetch_citations", True)
         max_references = cfg.get("max_references_per_paper", 25)
+        max_citations = cfg.get("max_citations_per_paper", 25)
 
         minimal_papers: List[PaperMetadata] = []
-        reference_pool: Dict[str, PaperMetadata] = {}
+        supplemental_pool: Dict[str, PaperMetadata] = {}
         ingested_ids: Set[str] = set()
         errors = 0
 
@@ -133,7 +136,10 @@ class KnowledgeAgent(BaseAgent):
                     add_citations=add_citations,
                     fetch_references=fetch_references,
                     max_refs=max_references,
-                    reference_pool=reference_pool,
+                    reference_pool=supplemental_pool,
+                    fetch_citations=fetch_citations,
+                    max_citations=max_citations,
+                    reference_owner_id=meta.primary_identifier,
                 )
 
                 minimal_papers.append(meta)
@@ -168,7 +174,7 @@ class KnowledgeAgent(BaseAgent):
 
         reference_added = 0
         if add_citations:
-            reference_added = self._ingest_reference_only_papers(reference_pool, ingested_ids)
+            reference_added = self._ingest_reference_only_papers(supplemental_pool, ingested_ids)
 
         stats = {
             "papers_ingested": self.builder.stats.get("papers_added", 0),
@@ -206,7 +212,9 @@ class KnowledgeAgent(BaseAgent):
         add_citations = cfg.get("add_citations", True)
         add_semantic_relationships = cfg.get("add_semantic_relationships", True)
         fetch_references = cfg.get("fetch_references", True)
+        fetch_citations = cfg.get("fetch_citations", True)
         max_references = cfg.get("max_references_per_paper", 25)
+        max_citations = cfg.get("max_citations_per_paper", 25)
 
         # 如果启用深度分析，先进行分析
         analyses = []
@@ -241,7 +249,7 @@ class KnowledgeAgent(BaseAgent):
         # 转换论文格式
         minimal_papers = []
         errors = 0
-        reference_pool: Dict[str, PaperMetadata] = {}
+        supplemental_pool: Dict[str, PaperMetadata] = {}
         ingested_ids: Set[str] = set()
 
         for p in papers:
@@ -266,13 +274,16 @@ class KnowledgeAgent(BaseAgent):
                 for a in raw_authors:
                     if isinstance(a, str):
                         name = a.strip()
+                        affiliation = None
                     elif isinstance(a, dict):
                         name = (a.get("name") or "").strip()
+                        affiliation = a.get("affiliation")
                     else:
                         name = str(a).strip()
+                        affiliation = None
 
                     if name:
-                        authors.append(Author(name=name))
+                        authors.append(Author(name=name, affiliation=affiliation))
 
                 # 映射主ID到具体字段
                 doi = None
@@ -299,20 +310,44 @@ class KnowledgeAgent(BaseAgent):
                     year=p.get("year", None),
                 )
 
-                # 如果有深度分析结果，添加到full_text中
-                if p.get("deep_analysis"):
+                # 如果有深度分析结果，添加到 full_text 中
+                deep_analysis = p.get("deep_analysis")
+                if isinstance(deep_analysis, dict):
+                    exec_summary = deep_analysis.get("executive_summary", "") or ""
+
+                    # 关键发现：兼容字符串列表或 {finding: "..."} 列表
+                    key_findings_items = deep_analysis.get("key_findings", []) or []
+                    key_finding_lines: List[str] = []
+                    for item in key_findings_items:
+                        if isinstance(item, dict):
+                            text = item.get("finding") or item.get("text") or ""
+                        else:
+                            text = str(item)
+                        text = text.strip()
+                        if text:
+                            key_finding_lines.append(f"- {text}")
+                    key_findings_block = chr(10).join(key_finding_lines)
+
+                    methodology = deep_analysis.get("methodology", {})
+                    significance = deep_analysis.get("significance", "") or ""
+
+                    # 局限性：通常是字符串列表
+                    limitations_items = deep_analysis.get("limitations", []) or []
+                    limitation_lines = [str(l).strip() for l in limitations_items if str(l).strip()]
+                    limitations_block = chr(10).join(limitation_lines)
+
                     analysis_text = f"""
-执行摘要：{p['deep_analysis'].get('executive_summary', '')}
+执行摘要：{exec_summary}
 
 关键发现：
-{chr(10).join([f"- {finding.get('finding', '')}" for finding in p['deep_analysis'].get('key_findings', [])])}
+{key_findings_block}
 
-方法论：{p['deep_analysis'].get('methodology', {})}
+方法论：{methodology}
 
-重要性：{p['deep_analysis'].get('significance', '')}
+重要性：{significance}
 
 局限性：
-{chr(10).join(p['deep_analysis'].get('limitations', []))}
+{limitations_block}
                     """.strip()
                     meta.full_text = analysis_text
 
@@ -322,7 +357,10 @@ class KnowledgeAgent(BaseAgent):
                     add_citations=add_citations,
                     fetch_references=fetch_references,
                     max_refs=max_references,
-                    reference_pool=reference_pool,
+                    reference_pool=supplemental_pool,
+                    fetch_citations=fetch_citations,
+                    max_citations=max_citations,
+                    reference_owner_id=meta.primary_identifier,
                 )
 
                 minimal_papers.append(meta)
@@ -350,7 +388,7 @@ class KnowledgeAgent(BaseAgent):
 
         reference_added = 0
         if add_citations:
-            reference_added = self._ingest_reference_only_papers(reference_pool, ingested_ids)
+            reference_added = self._ingest_reference_only_papers(supplemental_pool, ingested_ids)
 
         # 构建详细统计
         stats = {
@@ -385,10 +423,13 @@ class KnowledgeAgent(BaseAgent):
         fetch_references: bool,
         max_refs: int,
         reference_pool: Dict[str, PaperMetadata],
+        fetch_citations: bool,
+        max_citations: int,
+        reference_owner_id: Optional[str],
     ) -> None:
         """
         Ensure PaperMetadata carries a list of referenced paper IDs and
-        collect referenced PaperMetadata objects for later ingestion.
+        collect referenced/citing PaperMetadata objects for later ingestion.
         """
         references: List[str] = []
 
@@ -397,7 +438,11 @@ class KnowledgeAgent(BaseAgent):
                 ref_id = (str(ref).strip()) if ref else ""
                 if ref_id:
                     references.append(ref_id)
-        elif add_citations and fetch_references:
+        elif (
+            add_citations
+            and fetch_references
+            and metadata.source == PaperSource.SEMANTIC_SCHOLAR
+        ):
             fetched = self._fetch_references_for_paper(metadata, max_refs)
             for ref in fetched:
                 ref_id = ref.primary_identifier
@@ -411,6 +456,27 @@ class KnowledgeAgent(BaseAgent):
         if references:
             metadata.references = references
 
+        if (
+            add_citations
+            and fetch_citations
+            and metadata.source == PaperSource.SEMANTIC_SCHOLAR
+            and reference_owner_id
+        ):
+            citing_papers = self._fetch_citations_for_paper(metadata, max_citations)
+            for citing in citing_papers:
+                citing_id = citing.primary_identifier
+                if not citing_id:
+                    continue
+
+                current_refs = citing.references or []
+                if reference_owner_id not in (current_refs or []):
+                    updated = list(current_refs or [])
+                    updated.append(reference_owner_id)
+                    citing.references = updated
+
+                if citing_id not in reference_pool:
+                    reference_pool[citing_id] = citing
+
     def _fetch_references_for_paper(
         self,
         paper: PaperMetadata,
@@ -420,7 +486,10 @@ class KnowledgeAgent(BaseAgent):
         if not self.reference_searcher:
             return []
 
-        pid = paper.primary_identifier
+        if paper.source != PaperSource.SEMANTIC_SCHOLAR:
+            return []
+
+        pid = (paper.raw_data or {}).get("paperId")
         if not pid:
             return []
 
@@ -435,6 +504,37 @@ class KnowledgeAgent(BaseAgent):
             self._reference_cache[pid] = []
 
         return self._reference_cache[pid]
+
+    def _fetch_citations_for_paper(
+        self,
+        paper: PaperMetadata,
+        max_citations: int
+    ) -> List[PaperMetadata]:
+        """Fetch citing papers for a given paper."""
+        if not self.reference_searcher:
+            return []
+
+        if paper.source != PaperSource.SEMANTIC_SCHOLAR:
+            return []
+
+        pid = (paper.raw_data or {}).get("paperId")
+        if not pid:
+            return []
+
+        if pid in self._citation_cache:
+            return self._citation_cache[pid]
+
+        try:
+            cites = self.reference_searcher.get_citations(
+                paper,
+                max_citations=max_citations
+            )
+            self._citation_cache[pid] = cites or []
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("Failed to fetch citations for %s: %s", pid, exc)
+            self._citation_cache[pid] = []
+
+        return self._citation_cache[pid]
 
     def _ingest_reference_only_papers(
         self,

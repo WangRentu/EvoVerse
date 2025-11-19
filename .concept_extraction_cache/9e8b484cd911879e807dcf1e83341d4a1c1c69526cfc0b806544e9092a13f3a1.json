@@ -1,0 +1,76 @@
+{
+  "paper_id": "10.70251/hyjr2348.35541548",
+  "concepts": [
+    {
+      "name": "Sleep Quality",
+      "description": "The subjective and objective assessment of restorative sleep, including factors like sleep continuity and depth. It significantly impacts cognitive functions critical for academic learning, such as information retention and focus during classroom activities.",
+      "domain": "medicine",
+      "relevance": 0.95
+    },
+    {
+      "name": "Sleep Duration",
+      "description": "The total time spent sleeping per 24-hour period, measured in hours. It demonstrates a strong positive correlation with GPA and overall academic performance, though its relationship with standardized test scores shows inconsistent findings across studies.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Daytime Sleepiness",
+      "description": "The propensity to fall asleep during waking hours, often measured via scales like the Epworth Sleepiness Scale. It negatively correlates with classroom attention and information processing efficiency, directly impairing academic engagement and learning outcomes.",
+      "domain": "medicine",
+      "relevance": 0.85
+    },
+    {
+      "name": "Memory Consolidation",
+      "description": "The neural process by which short-term memories are stabilized into long-term storage during sleep, particularly during slow-wave and REM stages. This mechanism is foundational for academic learning, enabling retention of classroom material and knowledge integration.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Attentional Focus",
+      "description": "The cognitive ability to maintain concentration on academic tasks during classroom instruction. Sleep deprivation directly impairs this function, leading to reduced information absorption and increased academic errors.",
+      "domain": "medicine",
+      "relevance": 0.85
+    },
+    {
+      "name": "GPA",
+      "description": "Grade Point Average, a standardized metric of academic performance calculated from course grades. It serves as a primary outcome variable in most studies, consistently showing positive correlation with adequate sleep duration and quality.",
+      "domain": "education",
+      "relevance": 0.9
+    },
+    {
+      "name": "Standardized Test Scores",
+      "description": "Quantitative assessments of academic knowledge using uniform testing protocols (e.g., SAT, state exams). The paper notes inconsistent correlations with sleep duration, suggesting potential confounding variables or measurement limitations.",
+      "domain": "education",
+      "relevance": 0.8
+    },
+    {
+      "name": "Sleep Intervention",
+      "description": "Strategies designed to modify sleep patterns, such as delayed school start times or sleep hygiene education. These interventions show promise for improving sleep metrics but require longitudinal validation for academic impact.",
+      "domain": "medicine",
+      "relevance": 0.85
+    },
+    {
+      "name": "Relative Contribution",
+      "description": "The distinct impact of individual sleep parameters (duration, quality, timing) on academic outcomes. The paper identifies this as an unresolved question due to insufficient methodological separation of these variables in existing research.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Delayed School Start Times",
+      "description": "A specific sleep intervention involving shifting school start hours later to align with adolescent circadian rhythms. It is proposed as a policy solution to improve sleep patterns but lacks long-term academic outcome data.",
+      "domain": "medicine",
+      "relevance": 0.75
+    }
+  ],
+  "methods": [
+    {
+      "name": "Systematic Literature Review",
+      "description": "A structured methodology for identifying, selecting, and synthesizing existing empirical studies through predefined criteria. The review analyzed 100+ studies on sleep parameters and academic metrics across diverse educational settings to establish evidence-based correlations.",
+      "category": "analytical",
+      "confidence": 1.0
+    }
+  ],
+  "relationships": [],
+  "extraction_time": 42.101043939590454,
+  "model_used": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+}

@@ -34,7 +34,7 @@ def run_cli() -> None:
 
     try:
         # question = input("> ").strip()
-        question = "早睡习惯与白天认知表现的关系"
+        question = "智能群体演化和基因科学的研究"
         print(f"> {question}")
     except EOFError:
         return

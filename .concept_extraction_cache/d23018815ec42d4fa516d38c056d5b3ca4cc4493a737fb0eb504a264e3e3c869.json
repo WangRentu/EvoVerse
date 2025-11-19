@@ -1,0 +1,395 @@
+{
+  "paper_id": "1911.04947",
+  "concepts": [
+    {
+      "name": "Imitation Learning",
+      "description": "A learning paradigm where agents learn policies by mimicking expert demonstrations. In this paper, it is used to pre-train agents on noisy expert strategies, enabling faster convergence in subsequent reinforcement learning stages.",
+      "domain": "computer_science",
+      "relevance": 0.98
+    },
+    {
+      "name": "Reinforcement Learning",
+      "description": "A machine learning approach where agents learn optimal behaviors through trial and error with rewards. Here, it is applied after imitation learning to refine policies in a partially observable, multi-agent environment.",
+      "domain": "computer_science",
+      "relevance": 0.97
+    },
+    {
+      "name": "Hybrid Learning Framework",
+      "description": "A two-stage training approach combining imitation and reinforcement learning. This framework enables efficient policy acquisition by leveraging expert knowledge early and allowing autonomous improvement later.",
+      "domain": "computer_science",
+      "relevance": 0.96
+    },
+    {
+      "name": "Noise Expert Strategy",
+      "description": "A suboptimal or imperfect expert policy used as a demonstration source. In this work, it is a simple heuristic provided by developers, introducing variability that helps prevent overfitting during imitation learning.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Proximal Policy Optimization",
+      "description": "A policy gradient method for reinforcement learning that uses clipped probability ratios to ensure stable updates. The paper employs an improved version to enhance training stability and performance.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "Reward Shaping",
+      "description": "A technique to modify the reward function to guide learning more effectively. Here, it is used to bridge the gap between imitation and reinforcement learning by providing intermediate feedback signals.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Action Filtering",
+      "description": "A mechanism that restricts the set of possible actions during training based on heuristic rules. It prevents unrealistic or harmful actions, improving training stability during the transition from imitation to RL.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Curriculum Learning",
+      "description": "A training strategy that gradually increases task difficulty. Applied here to smoothly transition from imitation learning to full reinforcement learning, reducing the risk of policy collapse.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Policy Continuity",
+      "description": "The preservation of learned behavior across training phases. The method ensures that knowledge from imitation learning is not lost during RL fine-tuning, preventing strategy degradation.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Sample Efficiency",
+      "description": "The ability to achieve high performance with minimal training data or episodes. This paper emphasizes improved sample efficiency through hybrid learning, crucial for real-world deployment.",
+      "domain": "computer_science",
+      "relevance": 0.89
+    },
+    {
+      "name": "Partially Observable Environment",
+      "description": "A setting where agents have incomplete information about the state. Pommerman's design, where agents cannot see the full map, makes this a key challenge addressed by the proposed method.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Multi-Agent System",
+      "description": "A system composed of multiple interacting agents. The study focuses on coordination and competition in 2v2 Pommerman, requiring strategies that account for non-stationarity and cooperation.",
+      "domain": "computer_science",
+      "relevance": 0.87
+    },
+    {
+      "name": "Non-Stationarity",
+      "description": "The changing behavior of other agents during learning, which complicates convergence. The paper acknowledges this challenge but does not fully address its long-term impact.",
+      "domain": "computer_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Sparse Rewards",
+      "description": "A scenario where reward signals are infrequent or delayed, making learning difficult. Pommerman's design features sparse rewards, which the hybrid method helps overcome.",
+      "domain": "computer_science",
+      "relevance": 0.84
+    },
+    {
+      "name": "Strategy Generalization",
+      "description": "The ability of a trained agent to perform well in unseen scenarios. The method demonstrates robustness across different game configurations, indicating strong generalization in complex environments.",
+      "domain": "computer_science",
+      "relevance": 0.83
+    },
+    {
+      "name": "Training Stability",
+      "description": "The consistency of learning progress without catastrophic failure or performance collapse. The paper emphasizes stability through reward shaping and action filtering.",
+      "domain": "computer_science",
+      "relevance": 0.82
+    },
+    {
+      "name": "Policy Gradient",
+      "description": "A class of reinforcement learning algorithms that optimize policies directly via gradient ascent. PPO, used in this work, is a prominent example of this approach.",
+      "domain": "computer_science",
+      "relevance": 0.81
+    },
+    {
+      "name": "Action Space Reduction",
+      "description": "Limiting the number of available actions to improve learning efficiency. Implemented via heuristic-based filtering to avoid suboptimal or dangerous moves.",
+      "domain": "computer_science",
+      "relevance": 0.8
+    },
+    {
+      "name": "Transfer Learning",
+      "description": "Leveraging knowledge from one task to improve performance on another. The imitation phase serves as a form of transfer learning from expert behavior to autonomous policy.",
+      "domain": "computer_science",
+      "relevance": 0.79
+    },
+    {
+      "name": "Strategic Behavior",
+      "description": "High-level decision-making patterns such as positioning, timing of bomb placement, and coordination. The method enables agents to learn such behaviors despite sparse rewards.",
+      "domain": "computer_science",
+      "relevance": 0.78
+    },
+    {
+      "name": "Exploration-Exploitation Trade-off",
+      "description": "Balancing the need to explore new actions versus exploiting known good ones. The hybrid method helps manage this trade-off by starting with expert guidance.",
+      "domain": "computer_science",
+      "relevance": 0.77
+    },
+    {
+      "name": "Model-Free Learning",
+      "description": "A learning approach that does not require a model of the environment dynamics. Both imitation and reinforcement learning stages in this work are model-free.",
+      "domain": "computer_science",
+      "relevance": 0.76
+    },
+    {
+      "name": "Stochastic Policy",
+      "description": "A policy that outputs a probability distribution over actions. Used in PPO to enable exploration while maintaining stability during training.",
+      "domain": "computer_science",
+      "relevance": 0.75
+    },
+    {
+      "name": "Clipped Probability Ratio",
+      "description": "A key component of PPO that limits the size of policy updates to prevent large, destabilizing changes. Ensures stable training during reinforcement learning.",
+      "domain": "computer_science",
+      "relevance": 0.74
+    },
+    {
+      "name": "Baseline Policy",
+      "description": "A reference policy used for comparison. The paper benchmarks against both heuristic and pure RL baselines to demonstrate superiority.",
+      "domain": "computer_science",
+      "relevance": 0.73
+    },
+    {
+      "name": "Sensitivity Analysis",
+      "description": "An evaluation of how changes in strategy or parameters affect performance. Used here to identify risky behaviors like aggressive bombing that lead to instability.",
+      "domain": "computer_science",
+      "relevance": 0.72
+    },
+    {
+      "name": "Performance Degradation",
+      "description": "A decline in agent performance during training, often due to overfitting or unstable updates. The paper identifies it as a risk when using certain aggressive strategies.",
+      "domain": "computer_science",
+      "relevance": 0.71
+    },
+    {
+      "name": "Multi-Agent Coordination",
+      "description": "The ability of agents to work together toward a common goal. The method enables effective coordination in 2v2 Pommerman without explicit communication.",
+      "domain": "computer_science",
+      "relevance": 0.7
+    },
+    {
+      "name": "Partial Observability",
+      "description": "A condition where agents cannot observe the full state of the environment. A core challenge in Pommerman, addressed through learned state representations and robust policies.",
+      "domain": "computer_science",
+      "relevance": 0.69
+    },
+    {
+      "name": "Scalability Limitation",
+      "description": "The inability to generalize to larger team sizes or different rules. The paper notes this as a limitation due to lack of testing beyond 2v2.",
+      "domain": "computer_science",
+      "relevance": 0.68
+    },
+    {
+      "name": "Computational Cost",
+      "description": "The resource demand of training, including time and hardware. Despite being lower than tree search, the method still requires significant parallel computation.",
+      "domain": "computer_science",
+      "relevance": 0.67
+    },
+    {
+      "name": "Expert Bias",
+      "description": "The presence of suboptimal or flawed behavior in expert demonstrations. The paper warns that poor-quality experts can degrade imitation learning performance.",
+      "domain": "computer_science",
+      "relevance": 0.66
+    },
+    {
+      "name": "Tactical Logic",
+      "description": "High-level reasoning patterns such as flanking, baiting, or timing. The method enables agents to learn such logic, though the paper lacks deep interpretability analysis.",
+      "domain": "computer_science",
+      "relevance": 0.65
+    },
+    {
+      "name": "Policy Collapse",
+      "description": "A failure mode where the policy loses diversity and performance drops sharply. The paper uses design choices to prevent this during the transition phase.",
+      "domain": "computer_science",
+      "relevance": 0.64
+    },
+    {
+      "name": "Heuristic Filtering",
+      "description": "A rule-based method to prune invalid or dangerous actions. Used to maintain safety and stability during training, especially in early imitation stages.",
+      "domain": "computer_science",
+      "relevance": 0.63
+    },
+    {
+      "name": "Training Phase Transition",
+      "description": "The shift from imitation to reinforcement learning. The paper carefully manages this transition using curriculum learning and reward shaping.",
+      "domain": "computer_science",
+      "relevance": 0.62
+    },
+    {
+      "name": "Non-Communicative Environment",
+      "description": "A setting where agents cannot exchange information. Pommerman's design enforces this, making coordination through learned behavior essential.",
+      "domain": "computer_science",
+      "relevance": 0.61
+    },
+    {
+      "name": "Episodic Training",
+      "description": "Training conducted over discrete game episodes. The paper uses 100k episodes to evaluate performance, with each episode representing a full match.",
+      "domain": "computer_science",
+      "relevance": 0.6
+    },
+    {
+      "name": "Performance Benchmarking",
+      "description": "Comparing agent performance against established baselines. The method is validated against both heuristic and RL-based baselines in 2v2 Pommerman.",
+      "domain": "computer_science",
+      "relevance": 0.59
+    }
+  ],
+  "methods": [
+    {
+      "name": "Two-Stage Training",
+      "description": "A framework where imitation learning is performed first to initialize the policy, followed by reinforcement learning to refine it. This enables faster convergence and improved stability.",
+      "category": "computational",
+      "confidence": 0.98
+    },
+    {
+      "name": "Imitation Learning with Noise",
+      "description": "Training a policy to mimic a noisy expert strategy, which introduces variability and prevents overfitting. The expert is a simple heuristic provided by developers.",
+      "category": "machine_learning",
+      "confidence": 0.97
+    },
+    {
+      "name": "Improved PPO",
+      "description": "An enhanced version of Proximal Policy Optimization incorporating reward shaping, action filtering, and curriculum learning to stabilize training and improve performance.",
+      "category": "machine_learning",
+      "confidence": 0.96
+    },
+    {
+      "name": "Reward Shaping",
+      "description": "Modifying the reward function to provide intermediate feedback during training, especially during the transition from imitation to reinforcement learning, to guide policy improvement.",
+      "category": "machine_learning",
+      "confidence": 0.95
+    },
+    {
+      "name": "Action Filtering",
+      "description": "Applying heuristic rules to restrict the action space during training, preventing unrealistic or harmful actions such as self-destructive bomb placement.",
+      "category": "machine_learning",
+      "confidence": 0.94
+    },
+    {
+      "name": "Curriculum Learning",
+      "description": "Gradually increasing the complexity of the training task by adjusting the training regime, such as reducing imitation guidance over time to simulate autonomous learning.",
+      "category": "machine_learning",
+      "confidence": 0.93
+    },
+    {
+      "name": "Sensitivity Analysis",
+      "description": "Systematically testing the impact of different strategies (e.g., aggressive bombing) on agent performance to identify unstable or harmful behaviors.",
+      "category": "analytical",
+      "confidence": 0.92
+    },
+    {
+      "name": "Policy Continuity Mechanism",
+      "description": "A design choice ensuring that the policy from imitation learning is preserved during RL fine-tuning, using techniques like gradual policy update and clipped ratios.",
+      "category": "computational",
+      "confidence": 0.91
+    },
+    {
+      "name": "Baseline Comparison",
+      "description": "Evaluating the proposed method against multiple baselines, including enhanced heuristic strategies and pure reinforcement learning models, to demonstrate superiority.",
+      "category": "experimental",
+      "confidence": 0.9
+    },
+    {
+      "name": "Simulation-Based Training",
+      "description": "Training agents in the Pommerman environment using simulated game episodes, allowing for large-scale, repeatable experiments without real-world deployment.",
+      "category": "simulation",
+      "confidence": 0.89
+    },
+    {
+      "name": "Multi-Agent Reinforcement Learning",
+      "description": "A reinforcement learning framework applied to multiple interacting agents, where each agent learns a policy while accounting for the non-stationarity of others.",
+      "category": "machine_learning",
+      "confidence": 0.88
+    },
+    {
+      "name": "Policy Gradient Optimization",
+      "description": "Using gradient ascent on the policy parameters to maximize expected reward, implemented via PPO with clipped objective functions.",
+      "category": "computational",
+      "confidence": 0.87
+    },
+    {
+      "name": "Clipped Objective Function",
+      "description": "A key component of PPO that limits the magnitude of policy updates by clipping the probability ratio, ensuring stable and incremental learning.",
+      "category": "machine_learning",
+      "confidence": 0.86
+    },
+    {
+      "name": "Heuristic-Based Action Pruning",
+      "description": "Removing actions that violate known game rules or lead to immediate failure, implemented as a pre-processing step before policy execution.",
+      "category": "machine_learning",
+      "confidence": 0.85
+    },
+    {
+      "name": "Episodic Evaluation",
+      "description": "Assessing agent performance at regular intervals over completed game episodes to track learning progress and convergence.",
+      "category": "experimental",
+      "confidence": 0.84
+    },
+    {
+      "name": "Training Stability Monitoring",
+      "description": "Tracking metrics such as reward variance and policy entropy during training to detect signs of instability or collapse.",
+      "category": "analytical",
+      "confidence": 0.83
+    },
+    {
+      "name": "Generalization Testing",
+      "description": "Evaluating agent performance in unseen scenarios or configurations to assess robustness, though limited to 2v2 in this study.",
+      "category": "experimental",
+      "confidence": 0.82
+    },
+    {
+      "name": "Hyperparameter Tuning",
+      "description": "Adjusting training parameters such as learning rate, clipping threshold, and reward weights to optimize performance, implied by the use of improved PPO.",
+      "category": "computational",
+      "confidence": 0.81
+    },
+    {
+      "name": "Parallel Training",
+      "description": "Running multiple game episodes simultaneously across different environments to accelerate training, a requirement for the method's efficiency.",
+      "category": "computational",
+      "confidence": 0.8
+    },
+    {
+      "name": "Policy Transfer",
+      "description": "Initializing a reinforcement learning policy with weights from an imitation learning model, enabling faster convergence and better initial performance.",
+      "category": "machine_learning",
+      "confidence": 0.79
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Hybrid Learning Framework",
+      "concept2": "Imitation Learning",
+      "relationship_type": "EXTENDS",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Hybrid Learning Framework",
+      "concept2": "Reinforcement Learning",
+      "relationship_type": "EXTENDS",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Imitation Learning",
+      "concept2": "Transfer Learning",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Noise Expert Strategy",
+      "concept2": "Imitation Learning",
+      "relationship_type": "PREREQUISITE_FOR",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Reward Shaping",
+      "concept2": "Training Phase Transition",
+      "relationship_type": "ENABLES",
+      "strength": 0.94
+    }
+  ],
+  "extraction_time": 28.44080376625061,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

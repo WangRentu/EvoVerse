@@ -46,8 +46,12 @@ class SemanticScholarClient(BaseLiteratureClient):
 
         # Initialize API client
         self.api_key = api_key or config.literature.semantic_scholar_api_key
-        self.api_url = config.literature.semantic_scholar_api_url
+        self.api_url = config.literature.semantic_scholar_api_url or "https://api.semanticscholar.org/graph/v1"
         self.client = SemanticScholar(api_key=self.api_key, api_url=self.api_url, timeout=30)
+
+        # Limit total number of remote search calls to protect upstream API
+        self._search_call_count: int = 0
+        self._max_search_calls: int = 10
 
         # Initialize cache if enabled
         self.cache = get_cache() if cache_enabled else None
@@ -109,6 +113,14 @@ class SemanticScholarClient(BaseLiteratureClient):
         if not self._validate_query(query):
             return []
 
+        # Enforce a hard cap on the number of remote search calls
+        if self._search_call_count >= self._max_search_calls:
+            self.logger.info(
+                f"SemanticScholar search call limit reached "
+                f"({self._search_call_count}/{self._max_search_calls}); skipping remote search"
+            )
+            return []
+
         # Check cache
         cache_params = {
             "query": query,
@@ -125,6 +137,7 @@ class SemanticScholarClient(BaseLiteratureClient):
                 return cached_result
 
         try:
+            self._search_call_count += 1
             # Perform search
             results = self.client.search_paper(
                 query=query,
@@ -333,9 +346,17 @@ class SemanticScholarClient(BaseLiteratureClient):
         pub_date = None
         if result.publicationDate:
             try:
-                pub_date = datetime.strptime(result.publicationDate, "%Y-%m-%d")
-            except ValueError:
-                pass
+                # 兼容 datetime / date / str 三种情况
+                value = result.publicationDate
+                if isinstance(value, datetime):
+                    pub_date = value
+                elif hasattr(value, "isoformat"):  # date 或类似对象
+                    pub_date = datetime.fromisoformat(value.isoformat())
+                else:
+                    # 假定是 "YYYY-MM-DD" 格式的字符串
+                    pub_date = datetime.strptime(str(value), "%Y-%m-%d")
+            except Exception:
+                pub_date = None
 
         # Get PDF URL from open access
         pdf_url = None
@@ -355,7 +376,7 @@ class SemanticScholarClient(BaseLiteratureClient):
             abstract=result.abstract or "",
             authors=authors,
             publication_date=pub_date,
-            journal=result.journal.get("name") if result.journal else None,
+            journal=result.journal.name if result.journal else None,
             venue=result.venue,
             year=result.year,
             url=result.url,

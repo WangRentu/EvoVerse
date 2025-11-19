@@ -550,8 +550,6 @@ If no meaningful relationships can be identified between these specific concepts
         """
         # Remove markdown code blocks if present
         text = response_text.strip()
-        if "</think>" in text:
-            text = text.split("</think>", 1)[1].strip()
 
         if text.startswith("```json"):
             text = text[7:]  # Remove ```json
@@ -563,7 +561,7 @@ If no meaningful relationships can be identified between these specific concepts
 
         text = text.strip()
 
-        print(f"Parsing JSON response: {text!r}")
+        # print(f"Parsing JSON response: {text!r}")
 
         # 1. 尝试整段直接解析
         try:
@@ -572,7 +570,7 @@ If no meaningful relationships can be identified between these specific concepts
         except json.JSONDecodeError:
             pass
 
-        # 2. 从中间截取第一个 '{' 到最后一个 '}' 再解析
+        # 2. 截取第一个 '{' 到最后一个 '}' 再解析
         start = text.find("{")
         end = text.rfind("}")
         if start != -1 and end != -1 and end > start:
@@ -585,7 +583,7 @@ If no meaningful relationships can be identified between these specific concepts
 
         # 3. 彻底失败：返回空结构，避免中断流程
         logger.error("Failed to parse JSON response after cleanup")
-        logger.debug(f"Raw response text: {response_text!r}")
+        logger.warning(f"Parsing Failed，Raw response text: {response_text!r}")
         return {"concepts": [], "methods": [], "relationships": []}
 
     def _rate_limit(self):

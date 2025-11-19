@@ -1,0 +1,383 @@
+{
+  "paper_id": "10.5281/zenodo.13899776",
+  "concepts": [
+    {
+      "name": "Maclaurin Expansion",
+      "description": "A Taylor series expansion centered at zero, used to approximate nonlinear functions as polynomials. In this paper, it is applied to the Gumbel loss function to reduce gradient instability by replacing exponential terms with polynomial approximations.",
+      "domain": "mathematics",
+      "relevance": 0.98
+    },
+    {
+      "name": "Extreme Q-learning",
+      "description": "A reinforcement learning method that models the soft optimal value function using Gumbel distribution-based max operations. It enables exploration through stochastic policy learning but suffers from gradient instability due to exponential terms.",
+      "domain": "computer_science",
+      "relevance": 0.97
+    },
+    {
+      "name": "Gumbel Loss Function",
+      "description": "A differentiable loss function derived from Gumbel distribution properties, used in XQL to approximate the maximum Q-value. Its exponential form contributes to gradient instability during training.",
+      "domain": "computer_science",
+      "relevance": 0.96
+    },
+    {
+      "name": "Gradient Instability",
+      "description": "A phenomenon where gradients grow unbounded (explosion) or vanish during backpropagation, leading to poor convergence. In XQL, this arises from the exponential terms in the Gumbel loss, which MXQL mitigates via polynomial approximation.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Soft Optimal Value Function",
+      "description": "A value function that incorporates entropy regularization, promoting exploration by modeling a stochastic policy. MXQL preserves this capability while improving stability through controlled nonlinearity.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "Stability-Optimality Trade-off",
+      "description": "A fundamental design choice in RL algorithms where increased stability often comes at the cost of reduced optimality. MXQL enables tunable control over this trade-off via the expansion order n.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Expanded Gumbel Loss",
+      "description": "A novel loss function derived by applying Maclaurin expansion to the original Gumbel loss. It replaces exponential terms with polynomial approximations, reducing gradient variance and improving training stability.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Expansion Order n",
+      "description": "A hyperparameter controlling the degree of Maclaurin series expansion. Higher n increases nonlinearity and approximates the original Gumbel loss more closely, while lower n enhances stability at the cost of optimality.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "SARSA-like Behavior",
+      "description": "A conservative policy learning behavior that updates Q-values based on actual actions taken, as opposed to greedy selection. Low-order MXQL approximates this behavior, favoring stability over aggressive exploration.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Soft Q-learning",
+      "description": "A value-based RL method that uses entropy-regularized Bellman updates to learn stochastic policies. High-order MXQL emulates this behavior by preserving soft-max-like dynamics.",
+      "domain": "computer_science",
+      "relevance": 0.89
+    },
+    {
+      "name": "Error Distribution Modeling",
+      "description": "The assumption about the statistical distribution of Bellman errors. MXQL allows transition from Gumbel to normal-like error distributions, improving robustness to distributional mismatch.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Bellman Error",
+      "description": "The difference between the current Q-value estimate and the target Q-value. Accurate modeling of its distribution is critical for stable value function learning, especially in off-policy settings.",
+      "domain": "computer_science",
+      "relevance": 0.87
+    },
+    {
+      "name": "Offline Reinforcement Learning",
+      "description": "A paradigm where policies are trained from fixed datasets without further environment interaction. MXQL demonstrates improved robustness on D4RL benchmarks, a standard for offline RL evaluation.",
+      "domain": "computer_science",
+      "relevance": 0.86
+    },
+    {
+      "name": "Online Reinforcement Learning",
+      "description": "A setting where agents interact with the environment in real time to learn policies. MXQL shows stable convergence on DM Control, a benchmark suite for continuous control tasks.",
+      "domain": "computer_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "DM Control Benchmark",
+      "description": "A suite of continuous control tasks used to evaluate online RL algorithms. MXQL achieves reliable learning on these tasks, resolving prior instability issues in XQL.",
+      "domain": "computer_science",
+      "relevance": 0.84
+    },
+    {
+      "name": "D4RL Benchmark",
+      "description": "A collection of offline RL environments with diverse data distributions. MXQL outperforms XQL on D4RL, demonstrating improved generalization and robustness to real-world data.",
+      "domain": "computer_science",
+      "relevance": 0.83
+    },
+    {
+      "name": "Double Q-learning",
+      "description": "A technique to reduce overestimation bias by using two Q-networks and decoupling action selection from value evaluation. MXQL incorporates this standard stabilizing method.",
+      "domain": "computer_science",
+      "relevance": 0.82
+    },
+    {
+      "name": "Target Network",
+      "description": "A frozen copy of the Q-network used to compute stable target values in Q-learning. MXQL retains this standard practice to improve training stability.",
+      "domain": "computer_science",
+      "relevance": 0.81
+    },
+    {
+      "name": "Loss Surface Visualization",
+      "description": "A technique to analyze the geometry of the loss function during training. Used in MXQL to demonstrate how expansion order affects the smoothness and stability of the optimization landscape.",
+      "domain": "computer_science",
+      "relevance": 0.8
+    },
+    {
+      "name": "Gradient Analysis",
+      "description": "A method to study the magnitude and direction of gradients during backpropagation. Applied in MXQL to explain how Maclaurin expansion reduces gradient explosion in Gumbel loss.",
+      "domain": "computer_science",
+      "relevance": 0.79
+    },
+    {
+      "name": "Polynomial Approximation",
+      "description": "A mathematical technique to represent nonlinear functions as finite-degree polynomials. Used in MXQL to replace exponential terms in the Gumbel loss with stable polynomial forms.",
+      "domain": "mathematics",
+      "relevance": 0.78
+    },
+    {
+      "name": "Nonlinearity Control",
+      "description": "The ability to tune the degree of nonlinearity in a loss function. In MXQL, this is achieved via the expansion order n, enabling adaptive trade-offs between stability and performance.",
+      "domain": "computer_science",
+      "relevance": 0.77
+    },
+    {
+      "name": "Gumbel Distribution",
+      "description": "A probability distribution used to model extreme values. In XQL, it underlies the soft-max approximation of the maximum Q-value, but its use introduces numerical instability.",
+      "domain": "statistics",
+      "relevance": 0.76
+    },
+    {
+      "name": "Entropy Regularization",
+      "description": "A technique that adds an entropy term to the objective to encourage exploration. Central to soft Q-learning and preserved in high-order MXQL.",
+      "domain": "computer_science",
+      "relevance": 0.75
+    },
+    {
+      "name": "Stochastic Policy",
+      "description": "A policy that outputs action probabilities rather than deterministic actions. MXQL supports such policies through its soft value function modeling.",
+      "domain": "computer_science",
+      "relevance": 0.74
+    },
+    {
+      "name": "Off-policy Learning",
+      "description": "A learning paradigm where the policy being evaluated differs from the behavior policy used to collect data. MXQL is designed to work effectively in off-policy settings.",
+      "domain": "computer_science",
+      "relevance": 0.73
+    },
+    {
+      "name": "Value Function Estimation",
+      "description": "The process of learning the expected return of state-action pairs. MXQL improves this estimation by stabilizing the loss function used in Q-learning.",
+      "domain": "computer_science",
+      "relevance": 0.72
+    },
+    {
+      "name": "Computational Overhead",
+      "description": "The increase in computation time or memory usage due to higher expansion orders. A practical limitation of MXQL, especially for high-n approximations.",
+      "domain": "computer_science",
+      "relevance": 0.71
+    },
+    {
+      "name": "Distributional Mismatch",
+      "description": "A scenario where the actual Bellman error distribution deviates from the assumed Gumbel distribution. MXQL improves robustness to such mismatches via flexible error modeling.",
+      "domain": "computer_science",
+      "relevance": 0.7
+    },
+    {
+      "name": "Hyperparameter Sensitivity",
+      "description": "The dependence of algorithm performance on specific parameter choices, such as expansion order n. MXQL's performance is sensitive to n, requiring manual tuning.",
+      "domain": "computer_science",
+      "relevance": 0.69
+    },
+    {
+      "name": "Extreme Value Theory",
+      "description": "A statistical framework for modeling rare or extreme events. MXQL leverages this theory through the Gumbel distribution, but improves its practical deployment via expansion.",
+      "domain": "statistics",
+      "relevance": 0.68
+    },
+    {
+      "name": "Anomaly Sensitivity",
+      "description": "The vulnerability of a model to extreme or outlier errors. MXQL may degrade in performance when faced with large errors due to limited Maclaurin approximation accuracy in tails.",
+      "domain": "computer_science",
+      "relevance": 0.67
+    },
+    {
+      "name": "Continuous Control",
+      "description": "A class of RL problems involving continuous action spaces, such as robotic manipulation. MXQL is evaluated on DM Control, a standard benchmark for such tasks.",
+      "domain": "computer_science",
+      "relevance": 0.66
+    },
+    {
+      "name": "Policy Conservatism",
+      "description": "A tendency to avoid high-risk actions, often resulting from conservative value estimation. Low-order MXQL exhibits this behavior, resembling SARSA-like learning.",
+      "domain": "computer_science",
+      "relevance": 0.65
+    },
+    {
+      "name": "Model Robustness",
+      "description": "The ability of a model to maintain performance under distributional shifts or noisy data. MXQL demonstrates improved robustness in D4RL, a key requirement for real-world deployment.",
+      "domain": "computer_science",
+      "relevance": 0.64
+    },
+    {
+      "name": "Convergence Stability",
+      "description": "The consistency and reliability of learning progress over time. MXQL achieves stable convergence in both online and offline settings, unlike unstable XQL.",
+      "domain": "computer_science",
+      "relevance": 0.63
+    },
+    {
+      "name": "Generalization Capability",
+      "description": "The ability of a model to perform well on unseen tasks or data distributions. MXQL's generalization is validated on D4RL but not yet tested on discrete or sparse-reward tasks.",
+      "domain": "computer_science",
+      "relevance": 0.62
+    }
+  ],
+  "methods": [
+    {
+      "name": "Maclaurin Series Expansion",
+      "description": "Applied to the Gumbel loss function to approximate exponential terms with polynomial expressions. The expansion is truncated at order n, allowing control over nonlinearity and gradient behavior.",
+      "category": "analytical",
+      "confidence": 0.98
+    },
+    {
+      "name": "Loss Function Substitution",
+      "description": "Replaces the original Gumbel loss in XQL with the Maclaurin-expanded version. The rest of the Q-learning framework (e.g., target networks, double Q-learning) remains unchanged.",
+      "category": "computational",
+      "confidence": 0.97
+    },
+    {
+      "name": "Gradient Analysis",
+      "description": "Used to examine the magnitude and variance of gradients during training. Demonstrates that higher-order expansions reduce gradient explosion compared to the original XQL.",
+      "category": "analytical",
+      "confidence": 0.96
+    },
+    {
+      "name": "Loss Surface Visualization",
+      "description": "Employs visualization techniques to plot the loss landscape across different expansion orders. Helps illustrate how polynomial approximation smooths the optimization surface.",
+      "category": "computational",
+      "confidence": 0.95
+    },
+    {
+      "name": "Hyperparameter Tuning",
+      "description": "Involves selecting the optimal expansion order n through manual search or grid evaluation. Used to balance stability and performance across tasks.",
+      "category": "experimental",
+      "confidence": 0.94
+    },
+    {
+      "name": "Benchmark Evaluation",
+      "description": "Employs standardized datasets (DM Control, D4RL) to compare MXQL against XQL, SARSA, and Soft Q-learning. Measures performance via return curves and final scores.",
+      "category": "experimental",
+      "confidence": 0.93
+    },
+    {
+      "name": "Learning Curve Comparison",
+      "description": "Plots training progress over time for different n values. Used to analyze the impact of expansion order on convergence speed and stability.",
+      "category": "statistical",
+      "confidence": 0.92
+    },
+    {
+      "name": "Double Q-learning",
+      "description": "Integrated into MXQL to reduce overestimation bias by using two Q-networks. One network selects actions, the other evaluates them, improving stability.",
+      "category": "computational",
+      "confidence": 0.91
+    },
+    {
+      "name": "Target Network Update",
+      "description": "Uses a slowly updated target network to compute stable target values. A standard technique retained in MXQL to prevent divergence.",
+      "category": "computational",
+      "confidence": 0.9
+    },
+    {
+      "name": "Statistical Comparison",
+      "description": "Performs significance testing (implied) on final performance metrics across methods and n values to validate improvements over baselines.",
+      "category": "statistical",
+      "confidence": 0.89
+    },
+    {
+      "name": "Polynomial Truncation",
+      "description": "Limits the Maclaurin series to a finite number of terms (n). This truncation is key to making the loss computationally feasible and stable.",
+      "category": "computational",
+      "confidence": 0.88
+    },
+    {
+      "name": "Distributional Transition Analysis",
+      "description": "Analyzes how the error distribution shifts from Gumbel-like to normal-like as n increases, supporting the claim of improved robustness.",
+      "category": "analytical",
+      "confidence": 0.87
+    },
+    {
+      "name": "Stability Assessment",
+      "description": "Evaluates training stability through metrics like variance in returns, convergence speed, and failure rate across multiple runs.",
+      "category": "experimental",
+      "confidence": 0.86
+    },
+    {
+      "name": "Performance Benchmarking",
+      "description": "Quantifies algorithm performance using standard metrics (e.g., average return) on DM Control and D4RL, enabling direct comparison with baselines.",
+      "category": "experimental",
+      "confidence": 0.85
+    },
+    {
+      "name": "Model Comparison",
+      "description": "Directly compares MXQL with XQL, SARSA, and Soft Q-learning across multiple tasks to demonstrate superiority in stability and performance.",
+      "category": "experimental",
+      "confidence": 0.84
+    },
+    {
+      "name": "Sensitivity Analysis",
+      "description": "Investigates how performance varies with different expansion orders n, revealing the trade-off between stability and optimality.",
+      "category": "statistical",
+      "confidence": 0.83
+    },
+    {
+      "name": "Error Distribution Fitting",
+      "description": "Implied method to assess how well the Bellman error fits Gumbel or normal distributions under different n values, supporting the flexibility claim.",
+      "category": "statistical",
+      "confidence": 0.82
+    },
+    {
+      "name": "Iterative Refinement",
+      "description": "Refines the algorithm through multiple rounds of testing and tuning, particularly for n selection, based on empirical results.",
+      "category": "experimental",
+      "confidence": 0.81
+    },
+    {
+      "name": "Code Implementation",
+      "description": "Involves coding the expanded loss function and integrating it into standard RL frameworks (e.g., PyTorch/TensorFlow), ensuring reproducibility.",
+      "category": "computational",
+      "confidence": 0.8
+    },
+    {
+      "name": "Reproducibility Protocol",
+      "description": "Follows standard practices (e.g., fixed seeds, documented hyperparameters) to ensure consistent and verifiable experimental results.",
+      "category": "experimental",
+      "confidence": 0.79
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Expanded Gumbel Loss",
+      "concept2": "Gumbel Loss Function",
+      "relationship_type": "EXTENDS",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Maclaurin Expansion",
+      "concept2": "Polynomial Approximation",
+      "relationship_type": "ENABLES",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Expanded Gumbel Loss",
+      "concept2": "Gradient Instability",
+      "relationship_type": "REDUCES",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Expansion Order n",
+      "concept2": "Nonlinearity Control",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.95
+    },
+    {
+      "concept1": "MXQL",
+      "concept2": "Extreme Q-learning",
+      "relationship_type": "EXTENDS",
+      "strength": 0.94
+    }
+  ],
+  "extraction_time": 28.813902139663696,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

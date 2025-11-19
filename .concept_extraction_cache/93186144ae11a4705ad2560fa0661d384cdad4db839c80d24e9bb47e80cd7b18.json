@@ -1,0 +1,395 @@
+{
+  "paper_id": "10.12732/ijam.v38i8s.572",
+  "concepts": [
+    {
+      "name": "Multi-Agent Systems",
+      "description": "A framework where multiple autonomous agents interact to achieve collective goals. In this paper, MAS enables decentralized coordination in robotics and automation, enhancing scalability and robustness in dynamic environments.",
+      "domain": "computer_science",
+      "relevance": 0.98
+    },
+    {
+      "name": "Control Engineering",
+      "description": "The discipline focused on designing systems that maintain desired behaviors through feedback. Here, it provides the foundational architecture for stability, trajectory tracking, and real-time control in robotic systems.",
+      "domain": "engineering",
+      "relevance": 0.95
+    },
+    {
+      "name": "Mathematical Deep Learning",
+      "description": "A formal integration of deep learning with mathematical modeling, emphasizing theoretical rigor and convergence guarantees. This paper uses it to bridge control theory and neural networks for improved system predictability.",
+      "domain": "mathematics",
+      "relevance": 0.92
+    },
+    {
+      "name": "Model Predictive Control",
+      "description": "A control strategy that optimizes future system behavior over a finite horizon using a dynamic model. In this work, MPC enables real-time trajectory planning with error minimization and constraint handling.",
+      "domain": "engineering",
+      "relevance": 0.97
+    },
+    {
+      "name": "Deep Neural Network Estimator",
+      "description": "A neural network used to estimate system states and external disturbances in real time. It enhances the system's ability to handle unknown dynamics, improving robustness in uncertain environments.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "Multi-Agent Reinforcement Learning",
+      "description": "A distributed learning paradigm where multiple agents learn optimal policies through interaction. In this study, MARL enables adaptive, cooperative decision-making under uncertainty.",
+      "domain": "computer_science",
+      "relevance": 0.96
+    },
+    {
+      "name": "Dynamic Environment Adaptation",
+      "description": "The capability of a system to adjust its behavior in response to changing external conditions. This paper demonstrates enhanced adaptation via MARL and neural estimation, critical for real-world deployment.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Trajectory Planning Error",
+      "description": "The deviation between desired and actual system paths. The proposed framework reduces this error through MPC and deep estimation, improving path accuracy and convergence speed.",
+      "domain": "engineering",
+      "relevance": 0.93
+    },
+    {
+      "name": "Distributed Decision-Making",
+      "description": "A control architecture where decisions are made locally by individual agents without central coordination. This enables scalability and fault tolerance in robotic networks.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Robustness in Uncertainty",
+      "description": "The ability of a system to maintain performance under unknown or varying conditions. The framework achieves this through combined MPC, neural estimation, and MARL.",
+      "domain": "engineering",
+      "relevance": 0.95
+    },
+    {
+      "name": "Convergence Speed",
+      "description": "The rate at which a control system reaches its target state. The hybrid approach significantly improves convergence by leveraging predictive and adaptive components.",
+      "domain": "engineering",
+      "relevance": 0.9
+    },
+    {
+      "name": "Communication Delay",
+      "description": "Latency in information exchange between agents. The framework is designed to mitigate its impact, making it suitable for real-time distributed robotics.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Energy Efficiency",
+      "description": "The optimization of power consumption in robotic systems. The proposed method demonstrates improved energy efficiency, crucial for battery-powered autonomous agents.",
+      "domain": "engineering",
+      "relevance": 0.87
+    },
+    {
+      "name": "Nonlinear Differential Equations",
+      "description": "Mathematical models describing continuous-time dynamics of agents. Used here to represent the physical behavior of robotic systems in the MAS framework.",
+      "domain": "mathematics",
+      "relevance": 0.89
+    },
+    {
+      "name": "Task Coordination",
+      "description": "The synchronization of actions among multiple agents to achieve a shared objective. MARL enables efficient coordination in complex, multi-agent tasks.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Real-Time Decision Optimization",
+      "description": "The process of making control decisions on-the-fly with minimal latency. Achieved via MARL and MPC integration, critical for dynamic environments.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "System Stability",
+      "description": "The property of a system to maintain bounded outputs under disturbances. The framework ensures stability through MPC and adaptive learning mechanisms.",
+      "domain": "engineering",
+      "relevance": 0.93
+    },
+    {
+      "name": "Scalability",
+      "description": "The ability of a system to maintain performance as the number of agents increases. The framework demonstrates scalability in both simulation scenarios.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Dimensionality Curse",
+      "description": "The exponential increase in complexity with agent count in MARL. The paper acknowledges this challenge, particularly in large-scale systems.",
+      "domain": "computer_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Hyperparameter Sensitivity",
+      "description": "The dependence of model performance on initial settings such as learning rate and network depth. The framework is noted to be sensitive, requiring extensive tuning.",
+      "domain": "computer_science",
+      "relevance": 0.86
+    },
+    {
+      "name": "Model-Driven Learning",
+      "description": "A hybrid approach combining physical models with data-driven learning. This paper uses it to improve generalization and reduce data requirements.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "State Estimation",
+      "description": "The process of inferring internal system states from noisy or partial observations. A deep neural network is used to enhance accuracy in the presence of disturbances.",
+      "domain": "engineering",
+      "relevance": 0.93
+    },
+    {
+      "name": "Disturbance Estimation",
+      "description": "The identification of external perturbations affecting system dynamics. The deep estimator in this work improves resilience by predicting and compensating for such effects.",
+      "domain": "engineering",
+      "relevance": 0.92
+    },
+    {
+      "name": "Autonomous Ground Vehicles",
+      "description": "Self-driving robotic platforms operating in unstructured environments. Used as a testbed to validate the framework\u2019s performance in real-world-like scenarios.",
+      "domain": "engineering",
+      "relevance": 0.88
+    },
+    {
+      "name": "Collaborative Manipulation",
+      "description": "The coordinated movement of multiple robotic arms to perform a task. Demonstrated in simulation to show the framework\u2019s effectiveness in precision tasks.",
+      "domain": "engineering",
+      "relevance": 0.89
+    },
+    {
+      "name": "Simulation-Based Validation",
+      "description": "The use of virtual environments to test system performance before real-world deployment. The study relies entirely on simulation for evaluation.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Safety-Critical Systems",
+      "description": "Applications where failure can lead to harm or loss. The low interpretability of deep models raises concerns about trust in such contexts.",
+      "domain": "engineering",
+      "relevance": 0.84
+    },
+    {
+      "name": "Interpretability Challenge",
+      "description": "The difficulty in understanding how deep learning models make decisions. This limits deployment in high-stakes environments despite performance gains.",
+      "domain": "computer_science",
+      "relevance": 0.83
+    },
+    {
+      "name": "Communication Topology",
+      "description": "The structure of information flow among agents. The paper notes insufficient analysis of how dynamic topologies affect performance.",
+      "domain": "computer_science",
+      "relevance": 0.8
+    },
+    {
+      "name": "Hybrid Control Strategy",
+      "description": "A combination of model-based and data-driven control methods. This paper\u2019s core innovation lies in integrating MPC, neural estimation, and MARL into a unified framework.",
+      "domain": "engineering",
+      "relevance": 0.97
+    },
+    {
+      "name": "Predictive Control",
+      "description": "A control method that uses a model to predict future states and optimize control inputs. Central to MPC\u2019s role in trajectory planning and error reduction.",
+      "domain": "engineering",
+      "relevance": 0.95
+    },
+    {
+      "name": "Adaptive Learning",
+      "description": "The ability of a system to modify its behavior based on experience. MARL and neural estimation enable continuous adaptation to changing environments.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Decentralized Architecture",
+      "description": "A system design where no single agent controls the entire network. This enhances fault tolerance and scalability in robotic swarms.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Real-Time Optimization",
+      "description": "The execution of optimization algorithms within strict time constraints. Achieved via efficient MPC and lightweight neural inference.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Convergence Guarantees",
+      "description": "Mathematical assurances that a system will reach a stable or optimal state. The paper implies improved convergence through integrated control and learning.",
+      "domain": "mathematics",
+      "relevance": 0.88
+    },
+    {
+      "name": "Robust Trajectory Tracking",
+      "description": "The ability to follow a desired path despite disturbances. Achieved through MPC and neural estimation, critical for precision robotics.",
+      "domain": "engineering",
+      "relevance": 0.94
+    },
+    {
+      "name": "Resource-Constrained Networks",
+      "description": "Distributed systems with limited computational, energy, or bandwidth resources. The framework is designed to operate efficiently under such constraints.",
+      "domain": "computer_science",
+      "relevance": 0.89
+    },
+    {
+      "name": "Dynamic Task Allocation",
+      "description": "The reallocation of tasks among agents based on current conditions. Enabled by MARL, allowing efficient response to changing mission demands.",
+      "domain": "computer_science",
+      "relevance": 0.87
+    },
+    {
+      "name": "Error Minimization",
+      "description": "The reduction of deviation from desired system behavior. Central to MPC\u2019s objective function and key to achieving high precision.",
+      "domain": "engineering",
+      "relevance": 0.93
+    }
+  ],
+  "methods": [
+    {
+      "name": "Model Predictive Control",
+      "description": "A receding-horizon optimization technique that computes control inputs by solving a constrained optimization problem at each time step. Used here for trajectory planning and error minimization in robotic systems.",
+      "category": "computational",
+      "confidence": 0.98
+    },
+    {
+      "name": "Deep Neural Network Estimation",
+      "description": "A supervised learning approach where a deep neural network is trained to estimate system states and disturbances from sensor data. Integrated with MPC to improve robustness.",
+      "category": "machine_learning",
+      "confidence": 0.97
+    },
+    {
+      "name": "Multi-Agent Reinforcement Learning",
+      "description": "A distributed learning framework where multiple agents learn policies through trial-and-error interactions in a shared environment. Used for decentralized decision-making under uncertainty.",
+      "category": "machine_learning",
+      "confidence": 0.96
+    },
+    {
+      "name": "Hybrid Modeling",
+      "description": "A method combining physics-based models (e.g., nonlinear differential equations) with data-driven components (e.g., neural networks). Used to represent the dynamics of multi-agent systems.",
+      "category": "computational",
+      "confidence": 0.95
+    },
+    {
+      "name": "Simulation Testing",
+      "description": "The use of virtual environments to evaluate system performance under various conditions. Applied to test collaboration in robotic arms and autonomous vehicles.",
+      "category": "simulation",
+      "confidence": 0.98
+    },
+    {
+      "name": "Trajectory Optimization",
+      "description": "An algorithmic process to compute optimal paths that minimize cost functions (e.g., error, energy). Implemented via MPC with dynamic constraints.",
+      "category": "computational",
+      "confidence": 0.94
+    },
+    {
+      "name": "Distributed Learning",
+      "description": "A training paradigm where agents learn independently but share information to improve global performance. Applied in MARL to enable cooperative behavior.",
+      "category": "machine_learning",
+      "confidence": 0.93
+    },
+    {
+      "name": "Real-Time Control",
+      "description": "A control strategy executed within strict timing constraints. Achieved through efficient MPC and neural inference pipelines in simulation.",
+      "category": "computational",
+      "confidence": 0.92
+    },
+    {
+      "name": "Nonlinear System Modeling",
+      "description": "The representation of dynamic systems using nonlinear differential equations. Used to describe the physical behavior of robotic agents in the MAS framework.",
+      "category": "analytical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Error Feedback Control",
+      "description": "A control mechanism that adjusts inputs based on the difference between desired and actual outputs. Integrated into MPC for continuous correction.",
+      "category": "computational",
+      "confidence": 0.91
+    },
+    {
+      "name": "Policy Gradient Methods",
+      "description": "A class of reinforcement learning algorithms that optimize policies by estimating gradients of expected rewards. Likely used in MARL for agent decision-making.",
+      "category": "machine_learning",
+      "confidence": 0.88
+    },
+    {
+      "name": "Neural Network Training",
+      "description": "The process of adjusting weights in a deep network using backpropagation and optimization algorithms. Applied to train the state and disturbance estimator.",
+      "category": "machine_learning",
+      "confidence": 0.93
+    },
+    {
+      "name": "Constraint Handling",
+      "description": "The incorporation of physical or operational limits (e.g., joint angles, velocity bounds) into optimization problems. Implemented in MPC to ensure safe and feasible trajectories.",
+      "category": "computational",
+      "confidence": 0.94
+    },
+    {
+      "name": "Receding Horizon Optimization",
+      "description": "A technique where optimization is performed over a finite time window that continuously updates. Core to MPC\u2019s real-time adaptability.",
+      "category": "computational",
+      "confidence": 0.96
+    },
+    {
+      "name": "Multi-Agent Coordination",
+      "description": "A method for synchronizing actions across agents using shared objectives and communication. Implemented via MARL and shared reward functions.",
+      "category": "computational",
+      "confidence": 0.92
+    },
+    {
+      "name": "Task Efficiency Evaluation",
+      "description": "A metric-based assessment of how quickly and effectively tasks are completed. Used in simulation to compare the proposed method with PID and rule-based controllers.",
+      "category": "simulation",
+      "confidence": 0.9
+    },
+    {
+      "name": "Stability Analysis",
+      "description": "A mathematical evaluation of whether system states remain bounded over time. Implicitly performed via MPC and Lyapunov-based reasoning.",
+      "category": "analytical",
+      "confidence": 0.87
+    },
+    {
+      "name": "Convergence Monitoring",
+      "description": "The tracking of system progress toward a target state during operation. Used to assess performance and robustness in simulation.",
+      "category": "simulation",
+      "confidence": 0.89
+    },
+    {
+      "name": "Hyperparameter Tuning",
+      "description": "The process of adjusting model parameters (e.g., learning rate, batch size) to optimize performance. Noted as a significant challenge in the framework.",
+      "category": "computational",
+      "confidence": 0.91
+    },
+    {
+      "name": "Communication Latency Modeling",
+      "description": "The simulation of delays in agent-to-agent information exchange. Used to evaluate system resilience in distributed settings.",
+      "category": "simulation",
+      "confidence": 0.88
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Model Predictive Control",
+      "concept2": "Predictive Control",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Deep Neural Network Estimator",
+      "concept2": "State Estimation",
+      "relationship_type": "ENABLES",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Deep Neural Network Estimator",
+      "concept2": "Disturbance Estimation",
+      "relationship_type": "ENABLES",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Multi-Agent Reinforcement Learning",
+      "concept2": "Distributed Decision-Making",
+      "relationship_type": "ENABLES",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Hybrid Control Strategy",
+      "concept2": "Model-Driven Learning",
+      "relationship_type": "EXTENDS",
+      "strength": 0.94
+    }
+  ],
+  "extraction_time": 27.62908911705017,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

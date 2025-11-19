@@ -1,0 +1,461 @@
+{
+  "paper_id": "10.1007/s10994-023-06454-2",
+  "concepts": [
+    {
+      "name": "Stream-based active learning",
+      "description": "A paradigm in online machine learning where data arrives continuously and the system selects the most informative samples for labeling in real time. It is designed to reduce annotation costs while maintaining model performance in dynamic environments.",
+      "domain": "computer_science",
+      "relevance": 0.98
+    },
+    {
+      "name": "Concept drift",
+      "description": "The phenomenon where the statistical properties of the target variable change over time in data streams, challenging model accuracy and requiring adaptive learning mechanisms. It is a core challenge in stream-based active learning.",
+      "domain": "computer_science",
+      "relevance": 0.97
+    },
+    {
+      "name": "Uncertainty sampling",
+      "description": "A query strategy that selects data points where the model is most uncertain about its prediction, typically measured by prediction entropy or margin. It is widely used in active learning to prioritize informative samples.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Diversity sampling",
+      "description": "A strategy that selects samples to maximize the coverage of the input space, ensuring the labeled set is representative. It complements uncertainty sampling by reducing redundancy in the training data.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Bayesian optimization",
+      "description": "A sequential optimization technique that uses probabilistic models to find the optimal query strategy in high-dimensional or expensive-to-evaluate spaces. Applied in context-aware active learning for adaptive sampling.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Multi-armed bandit",
+      "description": "A reinforcement learning framework used to balance exploration and exploitation in online decision-making. In stream-based active learning, it guides the selection of query strategies under uncertainty.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Adaptive mechanisms",
+      "description": "Techniques that detect and respond to concept drift by updating model parameters or query strategies dynamically. Essential for maintaining long-term model performance in non-stationary data streams.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Labeling cost reduction",
+      "description": "A primary objective of active learning, achieved by minimizing the number of samples requiring human annotation. Critical in real-world applications with limited annotation resources.",
+      "domain": "computer_science",
+      "relevance": 0.89
+    },
+    {
+      "name": "Online learning",
+      "description": "A learning paradigm where models are updated incrementally as new data arrives, without retraining from scratch. Fundamental to stream-based active learning systems.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Query strategy",
+      "description": "A rule or algorithm that determines which data points to request labels for in active learning. Central to the effectiveness of stream-based active learning systems.",
+      "domain": "computer_science",
+      "relevance": 0.87
+    },
+    {
+      "name": "Real-time processing",
+      "description": "The ability to process and act on data as it arrives, with minimal latency. A key requirement for deploying active learning in streaming applications like IoT and financial monitoring.",
+      "domain": "computer_science",
+      "relevance": 0.86
+    },
+    {
+      "name": "Model robustness",
+      "description": "The ability of a machine learning model to maintain performance under distributional shifts, noise, or adversarial inputs. A critical but under-explored aspect in current stream-based active learning research.",
+      "domain": "computer_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Fairness in ML",
+      "description": "The principle that machine learning models should not systematically favor or disadvantage certain groups. Identified as a research gap in evaluation criteria for active learning systems.",
+      "domain": "computer_science",
+      "relevance": 0.84
+    },
+    {
+      "name": "Interpretability",
+      "description": "The degree to which a model's decisions can be understood and explained by humans. Highlighted as an under-researched dimension in stream-based active learning evaluation.",
+      "domain": "computer_science",
+      "relevance": 0.83
+    },
+    {
+      "name": "Benchmarking framework",
+      "description": "A standardized set of datasets, evaluation metrics, and protocols for comparing active learning methods. Identified as missing in current research, limiting reproducibility and progress.",
+      "domain": "computer_science",
+      "relevance": 0.82
+    },
+    {
+      "name": "Dynamic environment",
+      "description": "A data stream setting where the underlying data distribution evolves over time. Requires adaptive learning strategies to maintain model relevance and accuracy.",
+      "domain": "computer_science",
+      "relevance": 0.81
+    },
+    {
+      "name": "Self-adaptive learning",
+      "description": "A learning approach where the system autonomously adjusts its behavior based on feedback from the environment, such as detecting concept drift and updating models.",
+      "domain": "computer_science",
+      "relevance": 0.8
+    },
+    {
+      "name": "Information gain",
+      "description": "A measure of how much a new label reduces uncertainty in the model. Used in some query strategies to prioritize samples that maximize learning efficiency.",
+      "domain": "computer_science",
+      "relevance": 0.79
+    },
+    {
+      "name": "Streaming data",
+      "description": "Continuous, high-volume data that arrives in real time, requiring incremental processing. The primary data type in stream-based active learning applications.",
+      "domain": "computer_science",
+      "relevance": 0.78
+    },
+    {
+      "name": "Label scarcity",
+      "description": "A condition where labeled data is limited or expensive to obtain, motivating the use of active learning to maximize information from each labeled example.",
+      "domain": "computer_science",
+      "relevance": 0.77
+    },
+    {
+      "name": "Reinforcement learning integration",
+      "description": "The fusion of active learning with reinforcement learning techniques, such as multi-armed bandits, to optimize long-term learning performance in dynamic settings.",
+      "domain": "computer_science",
+      "relevance": 0.76
+    },
+    {
+      "name": "Concept drift detection",
+      "description": "Techniques to identify when the data distribution has changed significantly, enabling timely model updates. A key component of adaptive stream-based active learning.",
+      "domain": "computer_science",
+      "relevance": 0.75
+    },
+    {
+      "name": "Scalability",
+      "description": "The ability of a system to handle increasing data volume and complexity without performance degradation. A critical concern for real-world deployment of active learning in data streams.",
+      "domain": "computer_science",
+      "relevance": 0.74
+    },
+    {
+      "name": "Edge computing",
+      "description": "Distributed computing paradigm where data processing occurs near the data source, reducing latency and bandwidth use. A relevant but underexplored context for active learning.",
+      "domain": "computer_science",
+      "relevance": 0.73
+    },
+    {
+      "name": "Federated active learning",
+      "description": "A privacy-preserving approach where models are trained across decentralized devices without sharing raw data, combined with active learning to reduce communication cost.",
+      "domain": "computer_science",
+      "relevance": 0.72
+    },
+    {
+      "name": "Accuracy-efficiency trade-off",
+      "description": "The balance between model performance (accuracy) and resource usage (e.g., number of labels, computation time). A central design consideration in active learning systems.",
+      "domain": "computer_science",
+      "relevance": 0.71
+    },
+    {
+      "name": "Preprint literature",
+      "description": "Research papers shared publicly before peer review, such as on arXiv. A source of emerging work that may be missed in traditional literature reviews.",
+      "domain": "computer_science",
+      "relevance": 0.7
+    },
+    {
+      "name": "Systematic literature review",
+      "description": "A structured method for identifying, evaluating, and synthesizing existing research on a topic. Used in this paper to ensure comprehensive and reproducible analysis.",
+      "domain": "computer_science",
+      "relevance": 0.69
+    },
+    {
+      "name": "Cross-dataset evaluation",
+      "description": "Assessing model performance across multiple datasets to ensure generalizability. Not commonly practiced in current stream-based active learning research.",
+      "domain": "computer_science",
+      "relevance": 0.68
+    },
+    {
+      "name": "Temporal consistency",
+      "description": "The stability of model predictions over time, especially important in data streams where concept drift can disrupt performance. A subtle but important evaluation criterion.",
+      "domain": "computer_science",
+      "relevance": 0.67
+    },
+    {
+      "name": "Human-in-the-loop",
+      "description": "A system design where human experts provide labels or feedback during the learning process. Central to the practical implementation of active learning.",
+      "domain": "computer_science",
+      "relevance": 0.66
+    },
+    {
+      "name": "Online model updating",
+      "description": "The process of incrementally refining a model as new labeled data becomes available, without retraining from scratch. Core to stream-based active learning.",
+      "domain": "computer_science",
+      "relevance": 0.65
+    },
+    {
+      "name": "Data distribution shift",
+      "description": "A change in the underlying probability distribution of input data over time, a key manifestation of concept drift in data streams.",
+      "domain": "computer_science",
+      "relevance": 0.64
+    },
+    {
+      "name": "Model calibration",
+      "description": "The process of ensuring that predicted probabilities reflect true likelihoods. Important for uncertainty-based query strategies but often overlooked.",
+      "domain": "computer_science",
+      "relevance": 0.63
+    },
+    {
+      "name": "Computational overhead",
+      "description": "The resource cost (time, memory) of running active learning algorithms in real time. A practical concern for deployment in resource-constrained environments.",
+      "domain": "computer_science",
+      "relevance": 0.62
+    },
+    {
+      "name": "Evaluation metric standardization",
+      "description": "The use of consistent metrics (e.g., F1-score, AUC, labeling efficiency) across studies to enable fair comparison. Currently lacking in the field.",
+      "domain": "computer_science",
+      "relevance": 0.61
+    },
+    {
+      "name": "Non-stationary data",
+      "description": "Data whose statistical properties change over time, requiring adaptive learning models. A defining characteristic of data stream environments.",
+      "domain": "computer_science",
+      "relevance": 0.6
+    },
+    {
+      "name": "Information-theoretic sampling",
+      "description": "Sampling strategies based on information theory principles, such as entropy or mutual information, to select samples that maximize knowledge gain.",
+      "domain": "computer_science",
+      "relevance": 0.59
+    },
+    {
+      "name": "Label budget",
+      "description": "The maximum number of labels that can be acquired, a key constraint in active learning. Influences the design of query strategies and system efficiency.",
+      "domain": "computer_science",
+      "relevance": 0.58
+    },
+    {
+      "name": "Real-world deployment",
+      "description": "The practical implementation of active learning systems in industrial or operational settings, involving integration with existing infrastructure and workflows.",
+      "domain": "computer_science",
+      "relevance": 0.57
+    }
+  ],
+  "methods": [
+    {
+      "name": "Systematic literature review",
+      "description": "A structured approach to identify, select, and synthesize relevant research by applying predefined inclusion criteria across multiple databases. Used to ensure comprehensive and reproducible coverage of stream-based active learning literature.",
+      "category": "analytical",
+      "confidence": 0.98
+    },
+    {
+      "name": "Thematic classification",
+      "description": "A method of organizing research findings into categories such as query strategy, adaptation mechanism, and evaluation method. Used to structure the synthesis of diverse approaches in the survey.",
+      "category": "analytical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Comparative analysis",
+      "description": "A technique for evaluating and contrasting different active learning methods based on their strategies, performance, and applicability. Applied to highlight strengths and limitations across studies.",
+      "category": "analytical",
+      "confidence": 0.94
+    },
+    {
+      "name": "Inclusion criteria definition",
+      "description": "A formal process of specifying eligibility conditions for papers, such as publication date, language, and focus on query strategies. Ensures methodological rigor in the literature selection.",
+      "category": "analytical",
+      "confidence": 0.93
+    },
+    {
+      "name": "Database querying",
+      "description": "The use of academic databases (e.g., IEEE Xplore, Google Scholar, arXiv) to retrieve relevant papers. Combined with keyword searches to identify studies on stream-based active learning.",
+      "category": "observational",
+      "confidence": 0.92
+    },
+    {
+      "name": "Topic modeling",
+      "description": "An unsupervised technique to discover underlying themes in a corpus of papers. Implicitly used in categorizing research into domains like uncertainty sampling and reinforcement learning integration.",
+      "category": "computational",
+      "confidence": 0.88
+    },
+    {
+      "name": "Synthesis of findings",
+      "description": "A method of integrating results from multiple studies into a coherent narrative, identifying trends, gaps, and future directions. Central to the paper\u2019s contribution as a survey.",
+      "category": "analytical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Critical evaluation",
+      "description": "A process of assessing the strengths, weaknesses, and limitations of existing methods, such as lack of benchmarking or fairness evaluation. Used to highlight research gaps.",
+      "category": "analytical",
+      "confidence": 0.91
+    },
+    {
+      "name": "Domain-specific filtering",
+      "description": "The application of domain constraints (e.g., data stream, online learning) to narrow down the literature to relevant studies. Ensures focus on stream-based active learning.",
+      "category": "analytical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Temporal filtering",
+      "description": "A method of restricting literature to a specific time window (e.g., 2015 onward) to ensure relevance to recent advancements in the field.",
+      "category": "analytical",
+      "confidence": 0.89
+    },
+    {
+      "name": "Language filtering",
+      "description": "The exclusion of non-English papers to maintain consistency and accessibility in the review process. A limitation noted in the paper\u2019s own discussion.",
+      "category": "analytical",
+      "confidence": 0.88
+    },
+    {
+      "name": "Reference tracing",
+      "description": "The practice of following citations from key papers to identify additional relevant works. Used to supplement database searches and improve coverage.",
+      "category": "observational",
+      "confidence": 0.87
+    },
+    {
+      "name": "Meta-analysis of performance",
+      "description": "An indirect method of comparing results across studies by analyzing reported metrics (e.g., accuracy, labeling efficiency), despite the lack of direct quantitative comparison.",
+      "category": "statistical",
+      "confidence": 0.85
+    },
+    {
+      "name": "Gap identification",
+      "description": "A method of detecting under-researched areas (e.g., fairness, interpretability) by analyzing the frequency and depth of coverage in existing literature.",
+      "category": "analytical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Narrative synthesis",
+      "description": "A qualitative method of presenting findings through a structured story that connects themes, challenges, and future directions, used to guide researchers and practitioners.",
+      "category": "analytical",
+      "confidence": 0.89
+    },
+    {
+      "name": "Data source triangulation",
+      "description": "The use of multiple databases (Springer, arXiv, IEEE Xplore, Google Scholar) to cross-validate and enhance the comprehensiveness of the literature search.",
+      "category": "observational",
+      "confidence": 0.91
+    },
+    {
+      "name": "Concept mapping",
+      "description": "A technique to visualize relationships between key concepts (e.g., concept drift \u2194 adaptive mechanisms) to clarify the structure of the field.",
+      "category": "analytical",
+      "confidence": 0.86
+    },
+    {
+      "name": "Method categorization",
+      "description": "A classification of active learning methods into groups (e.g., uncertainty, diversity, RL-based) to enable systematic comparison and understanding.",
+      "category": "analytical",
+      "confidence": 0.92
+    },
+    {
+      "name": "Limitation analysis",
+      "description": "A structured assessment of the paper\u2019s own methodological constraints, such as reliance on published work and lack of quantitative comparison, to ensure transparency.",
+      "category": "analytical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Application context analysis",
+      "description": "A method of linking research methods to real-world domains (e.g., IoT, finance) to highlight practical relevance and deployment challenges.",
+      "category": "analytical",
+      "confidence": 0.88
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Stream-based active learning",
+      "concept2": "Online learning",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Concept drift",
+      "concept2": "Non-stationary data",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Uncertainty sampling",
+      "concept2": "Query strategy",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Diversity sampling",
+      "concept2": "Query strategy",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Bayesian optimization",
+      "concept2": "Reinforcement learning integration",
+      "relationship_type": "EXTENDS",
+      "strength": 0.94
+    },
+    {
+      "concept1": "Multi-armed bandit",
+      "concept2": "Reinforcement learning integration",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Adaptive mechanisms",
+      "concept2": "Concept drift detection",
+      "relationship_type": "ENABLES",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Labeling cost reduction",
+      "concept2": "Stream-based active learning",
+      "relationship_type": "PREREQUISITE_FOR",
+      "strength": 0.93
+    },
+    {
+      "concept1": "Real-time processing",
+      "concept2": "Stream-based active learning",
+      "relationship_type": "ENABLES",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Online model updating",
+      "concept2": "Online learning",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Information gain",
+      "concept2": "Information-theoretic sampling",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.94
+    },
+    {
+      "concept1": "Federated active learning",
+      "concept2": "Active learning",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Edge computing",
+      "concept2": "Real-time processing",
+      "relationship_type": "ENABLES",
+      "strength": 0.93
+    },
+    {
+      "concept1": "Scalability",
+      "concept2": "Real-world deployment",
+      "relationship_type": "PREREQUISITE_FOR",
+      "strength": 0.92
+    },
+    {
+      "concept1": "Benchmarking framework",
+      "concept2": "Cross-dataset evaluation",
+      "relationship_type": "ENABLES",
+      "strength": 0.91
+    }
+  ],
+  "extraction_time": 32.25991463661194,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

@@ -1,0 +1,401 @@
+{
+  "paper_id": "10.3390/math12132102",
+  "concepts": [
+    {
+      "name": "Cooperative MARL",
+      "description": "A multi-agent reinforcement learning framework where agents collaborate to achieve a shared goal, such as optimizing data gathering in energy-harvesting networks. This approach enables decentralized decision-making with coordinated behavior despite limited communication.",
+      "domain": "computer_science",
+      "relevance": 0.98
+    },
+    {
+      "name": "Energy-Harvesting WSNs",
+      "description": "Wireless sensor networks that operate using energy harvested from the environment (e.g., solar, thermal), making them suitable for long-term deployment in remote or inaccessible areas. These networks face dynamic energy constraints that affect data transmission decisions.",
+      "domain": "engineering",
+      "relevance": 0.97
+    },
+    {
+      "name": "Decentralized Control",
+      "description": "A system architecture where each node (sensor) makes decisions independently based on local information, without relying on a central coordinator. This enhances scalability and fault tolerance in large-scale sensor networks.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Non-Stationarity in MARL",
+      "description": "A challenge in multi-agent systems where the environment appears non-stationary to individual agents due to other agents' changing policies, complicating convergence. This paper addresses it through cooperative learning mechanisms.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "Q-Learning Extension",
+      "description": "An adaptation of classical Q-learning to multi-agent settings, allowing agents to learn optimal policies through trial-and-error while handling partial observability and policy interactions.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "\u03f5-p-greedy Exploration",
+      "description": "A novel exploration strategy that combines epsilon-greedy with a probabilistic decay mechanism (p-greedy) to balance exploration and exploitation more effectively in dynamic environments, improving convergence and stability.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Dynamic Adaptation",
+      "description": "The ability of the system to adjust its behavior in real-time in response to environmental changes such as energy fluctuations, node failures, or new node additions, ensuring sustained performance.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Continuous Learning",
+      "description": "A capability enabling the system to update its policies over time without retraining from scratch, crucial for long-term operation in unpredictable environments like EH-WSNs.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Report Flow Optimization",
+      "description": "A performance metric measuring the volume and timeliness of data successfully transmitted to the sink, serving as a key objective in data gathering strategies for sensor networks.",
+      "domain": "engineering",
+      "relevance": 0.89
+    },
+    {
+      "name": "Energy Utilization Efficiency",
+      "description": "A measure of how effectively harvested energy is used for data transmission, reflecting the system\u2019s ability to balance energy consumption with communication needs.",
+      "domain": "engineering",
+      "relevance": 0.88
+    },
+    {
+      "name": "Data Delivery Rate",
+      "description": "The ratio of successfully delivered data packets to total generated packets, used to evaluate the reliability and effectiveness of the data gathering protocol.",
+      "domain": "engineering",
+      "relevance": 0.87
+    },
+    {
+      "name": "Policy Coupling",
+      "description": "The interdependence of agents' policies in MARL, where one agent\u2019s optimal action depends on others\u2019 actions. This can lead to instability if not managed through cooperation.",
+      "domain": "computer_science",
+      "relevance": 0.86
+    },
+    {
+      "name": "Pathological Convergence",
+      "description": "A failure mode in MARL where learning diverges or oscillates due to non-stationarity and policy interference, often leading to suboptimal or unstable behavior.",
+      "domain": "computer_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Heterogeneous Node Capabilities",
+      "description": "Variations in processing power, energy storage, and communication range among sensor nodes, which must be accounted for in adaptive data gathering strategies.",
+      "domain": "engineering",
+      "relevance": 0.84
+    },
+    {
+      "name": "Limited Communication Range",
+      "description": "A physical constraint in WSNs where nodes can only communicate with neighbors within a certain distance, influencing routing and data aggregation decisions.",
+      "domain": "engineering",
+      "relevance": 0.83
+    },
+    {
+      "name": "Random Energy Harvesting",
+      "description": "A stochastic model of energy acquisition where energy arrival is unpredictable and time-varying, reflecting real-world conditions like variable sunlight or vibration.",
+      "domain": "engineering",
+      "relevance": 0.82
+    },
+    {
+      "name": "Node Failure Resilience",
+      "description": "The system\u2019s ability to maintain performance despite the loss of individual sensor nodes, achieved through decentralized learning and adaptive reconfiguration.",
+      "domain": "engineering",
+      "relevance": 0.81
+    },
+    {
+      "name": "Scalability Challenge",
+      "description": "The difficulty in maintaining performance as the number of agents increases, due to growing state-action space and coordination complexity in MARL.",
+      "domain": "computer_science",
+      "relevance": 0.8
+    },
+    {
+      "name": "Idealized Energy Model",
+      "description": "A simplified assumption about energy harvesting that ignores real-world variability and uncertainty, potentially limiting the generalizability of simulation results.",
+      "domain": "engineering",
+      "relevance": 0.79
+    },
+    {
+      "name": "Self-Organizing Network",
+      "description": "A network that autonomously adapts its structure and behavior based on local interactions and environmental feedback, a key feature of the proposed framework.",
+      "domain": "computer_science",
+      "relevance": 0.78
+    },
+    {
+      "name": "Local Observations",
+      "description": "The information available to each agent based only on its immediate environment, which is critical in decentralized systems where global state is inaccessible.",
+      "domain": "computer_science",
+      "relevance": 0.77
+    },
+    {
+      "name": "Adaptive Strategy Learning",
+      "description": "The process by which agents continuously refine their policies based on feedback from the environment, enabling long-term optimization in dynamic settings.",
+      "domain": "computer_science",
+      "relevance": 0.76
+    },
+    {
+      "name": "Robustness to Topology Change",
+      "description": "The system\u2019s ability to maintain performance under varying network structures, such as node mobility or link failures, essential for real-world deployment.",
+      "domain": "engineering",
+      "relevance": 0.75
+    },
+    {
+      "name": "Convergence Stability",
+      "description": "The property of a learning algorithm to reach and maintain a consistent policy over time, despite environmental and agent-level dynamics.",
+      "domain": "computer_science",
+      "relevance": 0.74
+    },
+    {
+      "name": "Multi-Agent Coordination",
+      "description": "The process by which multiple agents align their actions to achieve a collective objective, enabled here through cooperative MARL and shared reward structures.",
+      "domain": "computer_science",
+      "relevance": 0.73
+    },
+    {
+      "name": "Partial Observability",
+      "description": "A condition where agents cannot observe the full state of the environment, requiring them to make decisions based on limited, local information.",
+      "domain": "computer_science",
+      "relevance": 0.72
+    },
+    {
+      "name": "Reward Shaping",
+      "description": "The design of reward functions to guide agents toward desired behaviors, such as timely data reporting or energy conservation, crucial in MARL for effective learning.",
+      "domain": "computer_science",
+      "relevance": 0.71
+    },
+    {
+      "name": "Simulation-Based Evaluation",
+      "description": "The use of virtual environments to test and validate system performance under controlled and repeatable conditions, common in network and MARL research.",
+      "domain": "computer_science",
+      "relevance": 0.7
+    },
+    {
+      "name": "Benchmark Comparison",
+      "description": "A method of evaluating performance by comparing against established baselines, used here to demonstrate superiority over traditional or non-cooperative approaches.",
+      "domain": "computer_science",
+      "relevance": 0.69
+    },
+    {
+      "name": "Policy Gradient Methods",
+      "description": "A class of reinforcement learning algorithms that optimize policies directly via gradient ascent; referenced in the limitations as a potential alternative for comparison.",
+      "domain": "computer_science",
+      "relevance": 0.68
+    },
+    {
+      "name": "QMIX Algorithm",
+      "description": "A value-based multi-agent reinforcement learning method that uses a mixing network to combine individual Q-values into a global Q-function, mentioned in limitations as a missing comparison.",
+      "domain": "computer_science",
+      "relevance": 0.67
+    },
+    {
+      "name": "MADDPG",
+      "description": "A multi-agent deep deterministic policy gradient algorithm that uses centralized training with decentralized execution, cited in limitations as an untested advanced MARL baseline.",
+      "domain": "computer_science",
+      "relevance": 0.66
+    },
+    {
+      "name": "Hardware-Software Gap",
+      "description": "The discrepancy between simulated performance and real-world deployment due to unmodeled factors like communication delay, noise, and hardware variability.",
+      "domain": "engineering",
+      "relevance": 0.65
+    },
+    {
+      "name": "Intermittent Energy Sources",
+      "description": "Energy harvesting sources that are not continuously available (e.g., solar during night), introducing unpredictability in node operation and data transmission scheduling.",
+      "domain": "engineering",
+      "relevance": 0.64
+    },
+    {
+      "name": "Stochastic Environment",
+      "description": "An environment with uncertain and probabilistic dynamics, such as random energy arrivals and node failures, requiring robust learning strategies.",
+      "domain": "computer_science",
+      "relevance": 0.63
+    },
+    {
+      "name": "Long-Term Performance",
+      "description": "The ability of a system to maintain high efficiency and reliability over extended periods, a key goal in autonomous sensor networks.",
+      "domain": "engineering",
+      "relevance": 0.62
+    },
+    {
+      "name": "Autonomous Operation",
+      "description": "The capability of a system to function without human intervention, enabled by self-learning and adaptive mechanisms in the proposed framework.",
+      "domain": "computer_science",
+      "relevance": 0.61
+    },
+    {
+      "name": "Distributed Decision-Making",
+      "description": "A paradigm where decisions are made by multiple agents across a network, each using local information, enhancing resilience and scalability.",
+      "domain": "computer_science",
+      "relevance": 0.6
+    },
+    {
+      "name": "State Space Explosion",
+      "description": "A challenge in MARL where the joint state space grows exponentially with the number of agents, increasing computational complexity and hindering scalability.",
+      "domain": "computer_science",
+      "relevance": 0.59
+    },
+    {
+      "name": "Reward Sharing",
+      "description": "A cooperative mechanism where agents receive shared rewards based on collective performance, promoting collaboration in MARL.",
+      "domain": "computer_science",
+      "relevance": 0.58
+    }
+  ],
+  "methods": [
+    {
+      "name": "Decentralized MARL Framework",
+      "description": "Each sensor node operates as an independent agent that learns a policy based on local observations and rewards, without relying on a central controller. This enables scalability and fault tolerance in large-scale EH-WSNs.",
+      "category": "computational",
+      "confidence": 0.98
+    },
+    {
+      "name": "Extended Q-Learning",
+      "description": "An adaptation of classical Q-learning to multi-agent settings, where each agent updates its Q-values based on local rewards and observations, with modifications to handle non-stationarity and policy coupling.",
+      "category": "machine_learning",
+      "confidence": 0.97
+    },
+    {
+      "name": "\u03f5-p-greedy Exploration",
+      "description": "A modified exploration strategy where the probability of exploration decays over time (p-greedy) while maintaining a base epsilon-greedy behavior, improving convergence and stability in dynamic environments.",
+      "category": "machine_learning",
+      "confidence": 0.96
+    },
+    {
+      "name": "Simulation-Based Training",
+      "description": "The system is trained in a simulated EH-WSN environment that includes energy fluctuations, node failures, and topology changes, allowing for repeated testing under diverse conditions.",
+      "category": "simulation",
+      "confidence": 0.95
+    },
+    {
+      "name": "Performance Evaluation Metrics",
+      "description": "Quantitative assessment using metrics such as report flow, data delivery rate, and energy utilization to compare the proposed method against baselines and validate its effectiveness.",
+      "category": "computational",
+      "confidence": 0.94
+    },
+    {
+      "name": "Dynamic Scenario Simulation",
+      "description": "Training and testing conducted across multiple dynamic scenarios including energy variation, node addition/removal, and network topology changes to assess robustness and adaptability.",
+      "category": "simulation",
+      "confidence": 0.93
+    },
+    {
+      "name": "Baseline Comparison",
+      "description": "The proposed method is evaluated against standard or non-cooperative data gathering approaches to demonstrate its superiority in performance and adaptability.",
+      "category": "computational",
+      "confidence": 0.92
+    },
+    {
+      "name": "Local Observation Processing",
+      "description": "Each agent processes only its immediate environment (e.g., neighboring nodes, local energy level) to make decisions, enabling scalability and privacy in decentralized systems.",
+      "category": "computational",
+      "confidence": 0.91
+    },
+    {
+      "name": "Reward Function Design",
+      "description": "Custom reward functions are defined to incentivize timely data reporting and energy-efficient transmission, guiding agents toward optimal collective behavior.",
+      "category": "machine_learning",
+      "confidence": 0.9
+    },
+    {
+      "name": "Policy Update Mechanism",
+      "description": "Agents update their action-value functions (Q-tables) iteratively using the Bellman equation, with adjustments to account for multi-agent interactions and environmental dynamics.",
+      "category": "machine_learning",
+      "confidence": 0.89
+    },
+    {
+      "name": "Adaptive Learning Rate",
+      "description": "Although not explicitly stated, the use of a decaying exploration strategy implies an adaptive learning rate mechanism to balance exploration and exploitation over time.",
+      "category": "machine_learning",
+      "confidence": 0.88
+    },
+    {
+      "name": "State Representation Encoding",
+      "description": "Local environmental states (e.g., energy level, queue size, neighbor status) are encoded into discrete or continuous input vectors for use in Q-learning.",
+      "category": "computational",
+      "confidence": 0.87
+    },
+    {
+      "name": "Episode-Based Training",
+      "description": "Learning is conducted over episodes where each episode simulates a complete data gathering cycle, allowing for episodic reward accumulation and policy evaluation.",
+      "category": "simulation",
+      "confidence": 0.86
+    },
+    {
+      "name": "Multi-Agent Environment Modeling",
+      "description": "The simulation environment is modeled to include stochastic energy harvesting, limited communication range, and heterogeneous node capabilities to reflect real-world constraints.",
+      "category": "simulation",
+      "confidence": 0.85
+    },
+    {
+      "name": "Fault Tolerance Testing",
+      "description": "The system is tested under scenarios involving sudden node failures to evaluate its ability to maintain performance and reconfigure autonomously.",
+      "category": "simulation",
+      "confidence": 0.84
+    },
+    {
+      "name": "Scalability Assessment",
+      "description": "Performance is evaluated across varying numbers of agents to assess how well the method scales, though a formal analysis is noted as missing in limitations.",
+      "category": "computational",
+      "confidence": 0.83
+    },
+    {
+      "name": "Long-Term Stability Monitoring",
+      "description": "The system\u2019s performance is monitored over extended simulation periods to verify sustained learning and avoidance of policy degradation.",
+      "category": "simulation",
+      "confidence": 0.82
+    },
+    {
+      "name": "Parameter Sensitivity Analysis",
+      "description": "The impact of key parameters (e.g., epsilon decay rate, learning rate) on performance is likely assessed during training, though not explicitly detailed.",
+      "category": "computational",
+      "confidence": 0.81
+    },
+    {
+      "name": "Centralized Training with Decentralized Execution",
+      "description": "Although not explicitly used, the framework\u2019s design aligns with this paradigm, where agents learn cooperatively in simulation but act independently in deployment.",
+      "category": "machine_learning",
+      "confidence": 0.8
+    },
+    {
+      "name": "Q-Table Update Rule",
+      "description": "The core update rule of Q-learning is applied per agent, using the formula Q(s,a) \u2190 Q(s,a) + \u03b1[r + \u03b3 max Q(s',a') \u2212 Q(s,a)], adapted for multi-agent context.",
+      "category": "computational",
+      "confidence": 0.99
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Cooperative MARL",
+      "concept2": "Multi-Agent Coordination",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Energy-Harvesting WSNs",
+      "concept2": "Stochastic Environment",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Decentralized Control",
+      "concept2": "Distributed Decision-Making",
+      "relationship_type": "RELATED_TO",
+      "strength": 0.94
+    },
+    {
+      "concept1": "\u03f5-p-greedy Exploration",
+      "concept2": "Continuous Learning",
+      "relationship_type": "ENABLES",
+      "strength": 0.93
+    },
+    {
+      "concept1": "Non-Stationarity in MARL",
+      "concept2": "Pathological Convergence",
+      "relationship_type": "PREREQUISITE_FOR",
+      "strength": 0.97
+    }
+  ],
+  "extraction_time": 29.331110954284668,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

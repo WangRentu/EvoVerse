@@ -1,0 +1,395 @@
+{
+  "paper_id": "10.60087/jaigs.v4i1.397",
+  "concepts": [
+    {
+      "name": "Multi-Agent Reinforcement Learning",
+      "description": "A framework where multiple autonomous agents learn optimal policies through interaction with a shared environment, enabling decentralized decision-making. In this paper, it forms the core learning mechanism for coordinated AI agent behavior.",
+      "domain": "computer_science",
+      "relevance": 0.98
+    },
+    {
+      "name": "Secure Communication Protocols",
+      "description": "Mechanisms that ensure confidentiality, integrity, and authenticity of data exchanged between agents. Integrated with MARL, they protect against eavesdropping, tampering, and spoofing in agent interactions.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "End-to-End Encryption",
+      "description": "A cryptographic method that encrypts data at the source and decrypts it only at the intended recipient, preventing unauthorized access during transmission. Used here to secure inter-agent communication in MARL systems.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Secure Key Exchange",
+      "description": "A protocol enabling two parties to establish a shared secret key over an insecure channel. The paper employs Diffie-Hellman-based mechanisms to securely initialize encryption keys between agents.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Lightweight Identity Authentication",
+      "description": "A minimal-overhead mechanism to verify the identity of agents before communication. Ensures only authorized agents participate in the MARL coordination process, reducing impersonation risks.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Adversarial Robustness",
+      "description": "The ability of a system to maintain performance under malicious attacks such as message injection or policy manipulation. Evaluated in the paper through simulated attack scenarios.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "Decentralized Training",
+      "description": "A training paradigm where agents learn independently without a central controller, enhancing scalability and fault tolerance. Central to the proposed framework\u2019s applicability in distributed systems.",
+      "domain": "computer_science",
+      "relevance": 0.96
+    },
+    {
+      "name": "Trustworthy AI",
+      "description": "AI systems designed to be reliable, secure, and ethically aligned. The paper contributes to this domain by embedding security into the learning process, enabling safer multi-agent collaboration.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Cryptography Integration",
+      "description": "The embedding of cryptographic primitives into machine learning workflows. Here, it enables secure exchange of policy updates and coordination signals in MARL.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Policy Coordination",
+      "description": "The process by which agents align their behaviors to achieve collective goals. In this work, it is facilitated through encrypted, secure communication channels during MARL training.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Model Poisoning Defense",
+      "description": "Protection against malicious manipulation of shared model parameters. The secure communication layer mitigates risks of adversarial policy updates in collaborative learning.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Zero-Knowledge Proofs",
+      "description": "Cryptographic techniques allowing one party to prove knowledge of a value without revealing the value itself. Implied in identity authentication and secure coordination, though not explicitly detailed.",
+      "domain": "computer_science",
+      "relevance": 0.75
+    },
+    {
+      "name": "Distributed IoT Systems",
+      "description": "Networks of interconnected devices operating in a decentralized manner. The framework is designed for scalability in such environments, particularly for autonomous agents in smart infrastructure.",
+      "domain": "engineering",
+      "relevance": 0.89
+    },
+    {
+      "name": "Autonomous Robotics Coordination",
+      "description": "The collaborative operation of multiple robots to achieve shared objectives. The paper\u2019s framework supports secure, scalable coordination in robotic swarms.",
+      "domain": "engineering",
+      "relevance": 0.9
+    },
+    {
+      "name": "Adversarial Testing",
+      "description": "A method of evaluating system resilience by simulating attacks such as man-in-the-middle or message tampering. Used in the paper to benchmark security under realistic threat models.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "Communication Overhead",
+      "description": "The computational and bandwidth cost of transmitting encrypted data. A key concern in real-time systems, especially on resource-constrained devices.",
+      "domain": "computer_science",
+      "relevance": 0.87
+    },
+    {
+      "name": "Convergence Stability",
+      "description": "The property of a learning algorithm to reach and maintain a stable solution over time. The paper notes a lack of long-term analysis on how security mechanisms affect MARL convergence.",
+      "domain": "computer_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Edge Computing Constraints",
+      "description": "Resource limitations (e.g., memory, processing power) in edge devices. The paper acknowledges that encryption may impact real-time performance in such environments.",
+      "domain": "engineering",
+      "relevance": 0.86
+    },
+    {
+      "name": "Sybil Attack Resistance",
+      "description": "Defense against a single entity creating multiple fake identities to disrupt coordination. Implied in the identity authentication mechanism, though not explicitly tested.",
+      "domain": "computer_science",
+      "relevance": 0.78
+    },
+    {
+      "name": "Privacy-Preserving Learning",
+      "description": "A paradigm where agents learn without exposing sensitive data. Achieved here through encrypted communication of policy updates and state information.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Attack Surface Reduction",
+      "description": "Minimizing the number of potential entry points for adversaries. The integration of security into the MARL pipeline reduces the attack surface of agent interactions.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Dynamic Environment Adaptation",
+      "description": "The ability of agents to adjust strategies in response to changing conditions. The framework supports this through continuous, secure policy updates.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Cryptographic Non-Repudiation",
+      "description": "Ensuring that an agent cannot deny having sent a message. Supported by authentication and encryption mechanisms, enhancing accountability in agent interactions.",
+      "domain": "computer_science",
+      "relevance": 0.76
+    },
+    {
+      "name": "Secure Policy Sharing",
+      "description": "The process of exchanging learned policies between agents in a way that prevents interception or modification. Enabled via encrypted channels in the proposed framework.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Simulation-Based Evaluation",
+      "description": "Assessment of system performance in virtual environments before real-world deployment. Used extensively in the paper to test security and task performance.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Task Performance Parity",
+      "description": "The condition where a secure system achieves performance comparable to an insecure baseline. Demonstrated in the paper as a key success metric.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "Inter-Agent Trust",
+      "description": "The confidence agents have in each other\u2019s reliability and honesty. The framework assumes trustworthiness, limiting defense against internal malicious agents.",
+      "domain": "computer_science",
+      "relevance": 0.84
+    },
+    {
+      "name": "Model Inversion Attack",
+      "description": "An attack where an adversary infers sensitive training data from model outputs. The paper notes this threat is not fully evaluated in the current work.",
+      "domain": "computer_science",
+      "relevance": 0.82
+    },
+    {
+      "name": "Strategy Manipulation",
+      "description": "An adversarial technique where an agent alters its policy to mislead others. The framework is tested against such attacks to validate robustness.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Scalable Multi-Agent Systems",
+      "description": "Systems capable of supporting large numbers of agents without performance degradation. The proposed framework supports this through decentralized training and secure coordination.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Real-Time System Constraints",
+      "description": "Performance requirements for systems that must respond within strict time limits. The paper identifies encryption overhead as a potential bottleneck in such systems.",
+      "domain": "engineering",
+      "relevance": 0.87
+    },
+    {
+      "name": "Security-Efficiency Trade-off",
+      "description": "The balance between implementing strong security measures and maintaining system performance. The paper emphasizes achieving this balance through integrated design.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Collaborative Learning Security",
+      "description": "The protection of shared learning processes from malicious interference. A central theme of the paper, addressed via secure communication and authentication.",
+      "domain": "computer_science",
+      "relevance": 0.96
+    },
+    {
+      "name": "Adaptive Security Framework",
+      "description": "A security system that evolves with changing threats and environments. The proposed framework is designed to be self-adaptive through integrated learning and security mechanisms.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Trust Model Assumptions",
+      "description": "The foundational belief that agents follow protocols and are not malicious. The paper acknowledges this as a limitation, as internal threats are not modeled.",
+      "domain": "computer_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "End-to-End Secure Coordination",
+      "description": "A holistic approach where all communication and coordination steps are secured from origin to destination. Core to the paper\u2019s contribution in enabling secure MARL.",
+      "domain": "computer_science",
+      "relevance": 0.97
+    },
+    {
+      "name": "Cryptographic Policy Integrity",
+      "description": "Ensuring that shared policies are not altered during transmission. Achieved via encryption and authentication, critical for maintaining learning consistency.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Distributed Consensus Security",
+      "description": "The secure agreement among agents on shared states or actions. Supported by authenticated, encrypted communication in the framework.",
+      "domain": "computer_science",
+      "relevance": 0.89
+    },
+    {
+      "name": "Attack Resilience Metrics",
+      "description": "Quantitative measures of system performance under adversarial conditions. Used in the paper to compare secure vs. non-secure MARL systems.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    }
+  ],
+  "methods": [
+    {
+      "name": "Multi-Agent Reinforcement Learning",
+      "description": "A decentralized learning framework where multiple agents learn optimal policies through interaction with a shared environment. In this study, it is used to train agents to coordinate tasks while sharing encrypted policy updates.",
+      "category": "machine_learning",
+      "confidence": 1.0
+    },
+    {
+      "name": "End-to-End Encryption",
+      "description": "Data is encrypted at the sender\u2019s end and decrypted only at the receiver\u2019s end, ensuring confidentiality. Applied to all inter-agent communication during MARL training and policy updates.",
+      "category": "computational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Diffie-Hellman Key Exchange",
+      "description": "A cryptographic protocol enabling two agents to securely establish a shared secret key over an insecure channel. Used in the paper to initialize secure communication sessions between agents.",
+      "category": "computational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Lightweight Identity Authentication",
+      "description": "A minimal-cost method to verify agent identities using digital signatures or tokens. Implemented to prevent unauthorized agents from joining the coordination process.",
+      "category": "computational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Adversarial Simulation",
+      "description": "A method of testing system robustness by simulating attacks such as man-in-the-middle, message injection, and policy spoofing. Used to evaluate the framework\u2019s resilience under active threats.",
+      "category": "simulation",
+      "confidence": 1.0
+    },
+    {
+      "name": "Simulation Platform Evaluation",
+      "description": "Performance assessment using established MARL simulation environments like MADRL and PyMARL. Used to compare secure and non-secure MARL systems across multiple metrics.",
+      "category": "simulation",
+      "confidence": 1.0
+    },
+    {
+      "name": "Task Success Rate Measurement",
+      "description": "A metric quantifying the percentage of episodes in which agents successfully complete a given task. Used to evaluate whether security mechanisms affect performance.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Security Metric Benchmarking",
+      "description": "Quantitative evaluation of communication security using metrics such as message integrity failure rate and encryption overhead. Used to compare secure vs. baseline systems.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Decentralized Training",
+      "description": "A training approach where each agent learns independently using local observations and shared policy updates. Enables scalability and fault tolerance in large agent networks.",
+      "category": "machine_learning",
+      "confidence": 1.0
+    },
+    {
+      "name": "Policy Update Encryption",
+      "description": "The process of encrypting learned policy parameters before transmission between agents. Ensures that policy sharing remains secure and tamper-proof.",
+      "category": "computational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Secure Communication Channel Setup",
+      "description": "A procedure involving key exchange, authentication, and encryption initialization to establish a trusted link between agents. Implemented prior to any policy coordination.",
+      "category": "computational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Robustness Testing",
+      "description": "An experimental method to assess system behavior under adversarial conditions. In this paper, it involves injecting malicious messages and observing system response.",
+      "category": "experimental",
+      "confidence": 1.0
+    },
+    {
+      "name": "Comparative Analysis",
+      "description": "A method of evaluating performance by comparing two or more systems (e.g., secure vs. non-secure MARL). Used to demonstrate the trade-off between security and efficiency.",
+      "category": "analytical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Cryptographic Protocol Integration",
+      "description": "The embedding of cryptographic protocols (e.g., encryption, key exchange) directly into the MARL training loop. Enables real-time secure coordination during learning.",
+      "category": "computational",
+      "confidence": 1.0
+    },
+    {
+      "name": "End-to-End Secure Coordination",
+      "description": "A method where all coordination steps\u2014from policy sharing to action execution\u2014are secured using encryption and authentication. Central to the framework\u2019s design.",
+      "category": "computational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Attack Vector Simulation",
+      "description": "A simulation-based method to model specific attack types (e.g., message tampering, strategy deception) and measure their impact on system performance.",
+      "category": "simulation",
+      "confidence": 1.0
+    },
+    {
+      "name": "Convergence Monitoring",
+      "description": "A technique to track the learning progress of agents over time, assessing whether security mechanisms affect the stability or speed of convergence.",
+      "category": "analytical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Overhead Measurement",
+      "description": "A method to quantify computational and communication costs introduced by security mechanisms, particularly relevant for edge deployment.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Trust Assumption Analysis",
+      "description": "A method to evaluate the impact of assuming agent trustworthiness on system security, used to identify limitations in the current framework.",
+      "category": "analytical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Security-Performance Trade-off Analysis",
+      "description": "A method to balance security enhancements with system efficiency, using metrics like task success rate and encryption latency to guide design decisions.",
+      "category": "analytical",
+      "confidence": 1.0
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "End-to-End Encryption",
+      "concept2": "Secure Communication Protocols",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Secure Key Exchange",
+      "concept2": "End-to-End Encryption",
+      "relationship_type": "PREREQUISITE_FOR",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Cryptography Integration",
+      "concept2": "Multi-Agent Reinforcement Learning",
+      "relationship_type": "ENABLES",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Secure Policy Sharing",
+      "concept2": "Policy Coordination",
+      "relationship_type": "ENABLES",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Adversarial Robustness",
+      "concept2": "Collaborative Learning Security",
+      "relationship_type": "EXTENDS",
+      "strength": 0.94
+    }
+  ],
+  "extraction_time": 28.623835802078247,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

@@ -1,0 +1,407 @@
+{
+  "paper_id": "10.3390/engproc2022017013",
+  "concepts": [
+    {
+      "name": "Multi-Agent DRL",
+      "description": "A framework where multiple autonomous agents learn cooperative behaviors through deep reinforcement learning. In this paper, it enables UAVs and ground robots to jointly optimize task allocation, path planning, and information sharing in dynamic environments.",
+      "domain": "computer_science",
+      "relevance": 0.98
+    },
+    {
+      "name": "Distributed Execution",
+      "description": "Agents execute learned policies independently in real time without centralized control. This allows for scalable, resilient coordination in heterogeneous robotic systems, critical for real-world deployment of UAV-ground robot teams.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Centralized Training",
+      "description": "All agents are trained together using global information in a centralized manner to learn coordinated policies. This approach improves convergence and cooperation during training while enabling decentralized execution.",
+      "domain": "computer_science",
+      "relevance": 0.97
+    },
+    {
+      "name": "Heterogeneous Systems",
+      "description": "Robotic systems with different capabilities, such as UAVs (aerial perception) and ground robots (mobility and manipulation). The framework leverages their complementary strengths for enhanced mission performance in civil applications.",
+      "domain": "engineering",
+      "relevance": 0.96
+    },
+    {
+      "name": "Dynamic Environment",
+      "description": "Scenarios where obstacles, targets, or communication conditions change over time. The framework is designed to adapt in real time, making it suitable for unpredictable civil missions like search and rescue.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "Information Sharing",
+      "description": "Mechanism by which agents exchange sensory or task-related data to improve collective decision-making. In this work, UAVs share wide-area perception data with ground robots to overcome visual limitations.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Task Allocation",
+      "description": "The process of assigning specific subtasks to individual agents based on capability and current state. The framework uses learned policies to dynamically assign roles such as surveillance or object retrieval.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Path Planning",
+      "description": "Computation of optimal or safe trajectories for robots to reach goals while avoiding obstacles. Integrated into the DRL framework, it enables adaptive navigation in complex, changing environments.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Deep Q-Network",
+      "description": "A reinforcement learning algorithm using deep neural networks to approximate Q-values. In this study, DQN agents learn control policies for coordination tasks in a multi-agent setting.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Robustness",
+      "description": "The ability of a system to maintain performance under uncertainty or disturbances. The framework demonstrates robustness in real-world deployment despite sensor noise and communication delays.",
+      "domain": "engineering",
+      "relevance": 0.89
+    },
+    {
+      "name": "Policy Transferability",
+      "description": "The capacity of a learned policy to perform well in real-world systems after training in simulation. The paper shows that DQN policies generalize effectively from simulation to physical robots.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Real-Time Response",
+      "description": "The ability to make decisions and act within strict time constraints. The distributed execution model enables low-latency responses essential for dynamic civil operations.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Sensor Fusion",
+      "description": "Integration of data from multiple sensors (e.g., cameras, LiDAR) to improve environmental perception. Though not explicitly named, it underpins the UAV\u2019s ability to provide rich situational awareness.",
+      "domain": "engineering",
+      "relevance": 0.85
+    },
+    {
+      "name": "Scalability",
+      "description": "The capacity of the framework to handle increasing numbers of agents or complexity without performance degradation. The distributed nature supports scalability in large robotic swarms.",
+      "domain": "computer_science",
+      "relevance": 0.87
+    },
+    {
+      "name": "Simulation-to-Reality Gap",
+      "description": "The challenge of transferring policies trained in simulation to real-world environments. The study addresses this by validating performance on physical robots, demonstrating mitigation of the gap.",
+      "domain": "computer_science",
+      "relevance": 0.86
+    },
+    {
+      "name": "Communication Latency",
+      "description": "Delay in data transmission between agents, which can affect coordination. The framework\u2019s performance is sensitive to this factor, highlighting its importance in real deployments.",
+      "domain": "computer_science",
+      "relevance": 0.84
+    },
+    {
+      "name": "Resource Utilization",
+      "description": "Efficient use of system resources such as energy, bandwidth, and time. The framework improves this by optimizing task distribution and minimizing redundant actions.",
+      "domain": "engineering",
+      "relevance": 0.83
+    },
+    {
+      "name": "Mission Success Rate",
+      "description": "A metric measuring the percentage of tasks completed successfully. The framework significantly improves this rate compared to baseline methods in both simulation and real-world tests.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Adaptive Coordination",
+      "description": "Dynamic adjustment of roles and behaviors based on environmental changes. The framework enables agents to reassign tasks and re-plan paths in response to new information.",
+      "domain": "computer_science",
+      "relevance": 0.89
+    },
+    {
+      "name": "Perception-Action Loop",
+      "description": "The cycle of sensing the environment, processing information, and executing actions. The framework closes this loop efficiently across heterogeneous agents for continuous operation.",
+      "domain": "computer_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Decentralized Control",
+      "description": "Control architecture where each agent makes decisions independently based on local information. This enhances fault tolerance and scalability in multi-robot systems.",
+      "domain": "engineering",
+      "relevance": 0.92
+    },
+    {
+      "name": "Civil Applications",
+      "description": "Real-world use cases such as search and rescue, environmental monitoring, and agricultural surveillance. The framework is specifically designed for these high-impact, safety-critical domains.",
+      "domain": "engineering",
+      "relevance": 0.91
+    },
+    {
+      "name": "Dynamic Task Reassignment",
+      "description": "The ability to reassign tasks during execution due to changing conditions. The framework supports this through real-time policy updates and communication.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Multi-Robot Coordination",
+      "description": "Synchronization of actions among multiple robots to achieve a common goal. The paper focuses on achieving this in heterogeneous teams with complementary capabilities.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "Learning from Simulation",
+      "description": "Training policies in virtual environments before deployment. The study uses this to reduce real-world risks and accelerate training, with subsequent validation on physical systems.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Real-World Validation",
+      "description": "Testing of algorithms on physical hardware to assess practical performance. The paper includes experiments on real UAVs and ground robots to confirm feasibility.",
+      "domain": "engineering",
+      "relevance": 0.92
+    },
+    {
+      "name": "Bandwidth Constraints",
+      "description": "Limitations on data transmission capacity between agents. The framework\u2019s performance may degrade under low-bandwidth conditions, a key challenge in field deployments.",
+      "domain": "computer_science",
+      "relevance": 0.86
+    },
+    {
+      "name": "Computational Cost",
+      "description": "Resource demands of training, especially in centralized settings. The paper notes high computational requirements for large-scale training, limiting real-time adaptability.",
+      "domain": "computer_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Fault Tolerance",
+      "description": "System resilience to individual agent failures. The distributed execution model inherently supports this by allowing remaining agents to continue operations.",
+      "domain": "engineering",
+      "relevance": 0.84
+    },
+    {
+      "name": "Environmental Monitoring",
+      "description": "Application of robotic systems to collect data on natural or urban environments. The framework is validated in this context, demonstrating utility in ecological and urban planning tasks.",
+      "domain": "engineering",
+      "relevance": 0.87
+    },
+    {
+      "name": "Search and Rescue",
+      "description": "High-stakes civil operation involving locating and assisting victims. The framework is tested in this scenario, showing improved efficiency and coverage through UAV-ground robot synergy.",
+      "domain": "engineering",
+      "relevance": 0.95
+    },
+    {
+      "name": "Autonomous Decision-Making",
+      "description": "The ability of systems to make choices without human intervention. The framework enables this at both individual and team levels through learned policies.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Agent Heterogeneity",
+      "description": "Differences in capabilities, sensors, and mobility between agents. The framework explicitly accounts for this by tailoring roles and strategies to each agent\u2019s strengths.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Real-Time Adaptation",
+      "description": "Adjustment of behavior in response to new inputs or environmental changes during execution. The framework supports this through reactive DQN policies and distributed inference.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Policy Generalization",
+      "description": "The ability of a trained policy to perform well across diverse scenarios. The study shows strong generalization from simulation to real-world tasks with varying conditions.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Mission Efficiency",
+      "description": "Optimization of time, energy, and coverage during task execution. The framework enhances this by minimizing redundant movements and improving task distribution.",
+      "domain": "engineering",
+      "relevance": 0.86
+    },
+    {
+      "name": "Dynamic Obstacle Avoidance",
+      "description": "Real-time detection and navigation around moving or unpredictable obstacles. Integrated into the path planning module, it ensures safe operation in complex environments.",
+      "domain": "computer_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Synergistic Collaboration",
+      "description": "Cooperation where the combined performance exceeds the sum of individual contributions. The framework enables this by leveraging UAVs\u2019 aerial view and ground robots\u2019 manipulation ability.",
+      "domain": "engineering",
+      "relevance": 0.94
+    },
+    {
+      "name": "Learning-Based Control",
+      "description": "Control strategies derived from data-driven learning rather than hand-coded rules. The DQN-based approach allows the system to learn optimal behaviors through interaction.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Multi-Modal Sensing",
+      "description": "Use of multiple sensing modalities (e.g., visual, thermal, GPS) to enhance situational awareness. The framework integrates data from diverse sensors across agents for robust perception.",
+      "domain": "engineering",
+      "relevance": 0.83
+    },
+    {
+      "name": "Scalable Architecture",
+      "description": "Design that supports growth in the number of agents or complexity of tasks. The distributed execution model enables this scalability without central bottlenecks.",
+      "domain": "computer_science",
+      "relevance": 0.87
+    }
+  ],
+  "methods": [
+    {
+      "name": "Multi-Agent DRL",
+      "description": "A deep reinforcement learning framework where multiple agents learn cooperative policies through shared experience. In this work, it is used to train UAVs and ground robots to coordinate tasks like path planning and information sharing.",
+      "category": "machine_learning",
+      "confidence": 0.98
+    },
+    {
+      "name": "Centralized Training",
+      "description": "All agents are trained simultaneously using global state information and shared rewards. This allows the system to learn complex coordination strategies before being deployed in a decentralized manner.",
+      "category": "computational",
+      "confidence": 0.97
+    },
+    {
+      "name": "Distributed Execution",
+      "description": "After training, each agent executes its policy independently using only local observations. This enables real-time responsiveness and fault tolerance in physical deployments.",
+      "category": "computational",
+      "confidence": 0.96
+    },
+    {
+      "name": "Deep Q-Network (DQN)",
+      "description": "A reinforcement learning algorithm that uses a deep neural network to approximate the Q-function. Here, it serves as the core learning mechanism for each agent to learn optimal actions in a multi-agent environment.",
+      "category": "machine_learning",
+      "confidence": 0.98
+    },
+    {
+      "name": "Simulation-Based Training",
+      "description": "Training of agents in a virtual environment that mimics real-world dynamics. This reduces risk and cost while enabling rapid iteration and large-scale experimentation.",
+      "category": "simulation",
+      "confidence": 0.97
+    },
+    {
+      "name": "Real-Robot Validation",
+      "description": "Testing of trained policies on physical UAVs and ground robots to evaluate real-world performance. This step confirms the feasibility and robustness of the framework.",
+      "category": "experimental",
+      "confidence": 0.95
+    },
+    {
+      "name": "Task Assignment Learning",
+      "description": "A learning process where agents autonomously assign tasks based on capability, location, and current state. Implemented via DQN, it enables dynamic and adaptive role allocation.",
+      "category": "machine_learning",
+      "confidence": 0.94
+    },
+    {
+      "name": "Path Planning via DRL",
+      "description": "Integration of deep reinforcement learning into trajectory generation, allowing agents to learn safe and efficient paths in dynamic environments without explicit programming.",
+      "category": "computational",
+      "confidence": 0.93
+    },
+    {
+      "name": "Information Sharing Protocol",
+      "description": "A mechanism for agents to exchange state or sensory data. The framework uses this to enable UAVs to relay wide-area observations to ground robots, improving situational awareness.",
+      "category": "computational",
+      "confidence": 0.92
+    },
+    {
+      "name": "Policy Transfer",
+      "description": "The process of deploying a policy trained in simulation to real-world hardware. The study demonstrates successful transfer with minimal retraining, validating the simulation-to-reality approach.",
+      "category": "computational",
+      "confidence": 0.96
+    },
+    {
+      "name": "Performance Evaluation",
+      "description": "Quantitative assessment of the framework using metrics like task completion rate, resource utilization, and response time. Conducted in both simulation and real-world settings.",
+      "category": "analytical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Dynamic Environment Simulation",
+      "description": "Simulation of changing conditions such as moving obstacles and evolving task demands. Used to test the adaptability and robustness of the framework.",
+      "category": "simulation",
+      "confidence": 0.94
+    },
+    {
+      "name": "Multi-Agent Reward Shaping",
+      "description": "Design of reward functions that encourage cooperation among agents. Used during training to guide the system toward coordinated behavior.",
+      "category": "machine_learning",
+      "confidence": 0.93
+    },
+    {
+      "name": "Real-Time Inference",
+      "description": "Execution of learned policies on embedded systems with low latency. Achieved through lightweight DQN models deployed on robot hardware.",
+      "category": "computational",
+      "confidence": 0.92
+    },
+    {
+      "name": "Cross-Platform Deployment",
+      "description": "Implementation of the same policy across different robot platforms (UAVs and ground robots). Demonstrates the framework\u2019s compatibility with heterogeneous hardware.",
+      "category": "experimental",
+      "confidence": 0.91
+    },
+    {
+      "name": "Scalability Testing",
+      "description": "Evaluation of system performance with increasing numbers of agents. Conducted in simulation to assess the framework\u2019s ability to scale beyond small teams.",
+      "category": "experimental",
+      "confidence": 0.9
+    },
+    {
+      "name": "Robustness Analysis",
+      "description": "Assessment of system performance under noise, delay, and failure conditions. Used to evaluate the framework\u2019s resilience in real-world scenarios.",
+      "category": "analytical",
+      "confidence": 0.89
+    },
+    {
+      "name": "Bandwidth Modeling",
+      "description": "Simulation of communication constraints such as limited data rate and latency. Used to study their impact on coordination and inform system design.",
+      "category": "simulation",
+      "confidence": 0.88
+    },
+    {
+      "name": "Computational Load Measurement",
+      "description": "Quantification of training and inference resource usage. Used to highlight the high cost of centralized training and inform future optimizations.",
+      "category": "analytical",
+      "confidence": 0.87
+    },
+    {
+      "name": "Failure Mode Testing",
+      "description": "Evaluation of system behavior when individual agents fail or communication is lost. Demonstrates the framework\u2019s fault tolerance through continued operation.",
+      "category": "experimental",
+      "confidence": 0.86
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Multi-Agent DRL",
+      "concept2": "Learning-Based Control",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Centralized Training",
+      "concept2": "Multi-Agent DRL",
+      "relationship_type": "ENABLES",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Distributed Execution",
+      "concept2": "Decentralized Control",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Information Sharing",
+      "concept2": "Adaptive Coordination",
+      "relationship_type": "ENABLES",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Real-Time Response",
+      "concept2": "Dynamic Task Reassignment",
+      "relationship_type": "ENABLES",
+      "strength": 0.94
+    }
+  ],
+  "extraction_time": 29.8285129070282,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

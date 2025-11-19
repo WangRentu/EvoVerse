@@ -1,0 +1,395 @@
+{
+  "paper_id": "10.3389/fcogn.2025.1683207",
+  "concepts": [
+    {
+      "name": "Chronotype",
+      "description": "A person's natural tendency to sleep at a particular time, categorized as morning (morning-type) or evening (evening-type). In this study, it is a key biological variable influencing sleep-wake patterns and memory performance.",
+      "domain": "biology",
+      "relevance": 0.98
+    },
+    {
+      "name": "Sleep-Wake Cycle",
+      "description": "The daily pattern of sleep and wakefulness regulated by circadian rhythms. The study links disruptions in this cycle\u2014particularly in night types\u2014to impaired memory function.",
+      "domain": "biology",
+      "relevance": 0.96
+    },
+    {
+      "name": "Subjective Time Experience",
+      "description": "An individual's personal perception of time, including feelings of time pressure, time dilation, or boredom. This study identifies it as a critical psychological mediator in memory performance.",
+      "domain": "psychology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Retrospective Memory",
+      "description": "The ability to recall past events or information. The study assesses this using self-report questionnaires to evaluate memory accuracy and failure rates.",
+      "domain": "cognitive_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "Prospective Memory",
+      "description": "The ability to remember to perform a planned action in the future. Measured via the PRMQ, it is a core outcome variable in the study's analysis.",
+      "domain": "cognitive_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "Memory Failure",
+      "description": "The occurrence of errors in recalling past events (retrospective) or executing future intentions (prospective). The study identifies it as the primary dependent variable linked to chronotype and time perception.",
+      "domain": "cognitive_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Time Pressure",
+      "description": "A subjective feeling of having insufficient time to complete tasks. The study shows it negatively correlates with memory performance and mediates the effect of chronotype.",
+      "domain": "psychology",
+      "relevance": 0.92
+    },
+    {
+      "name": "Time Expansion",
+      "description": "The perceptual distortion where time feels longer than it objectively is, often associated with boredom or monotony. This study links it to poorer memory outcomes.",
+      "domain": "psychology",
+      "relevance": 0.91
+    },
+    {
+      "name": "Sleep Quality",
+      "description": "A multidimensional construct reflecting the depth, continuity, and restfulness of sleep. Assessed via the MSQ, it is a key predictor of memory function in night types.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Circadian Disruption",
+      "description": "Misalignment between internal biological rhythms and external environmental cues, particularly sleep timing. The study links it to increased memory errors in night types.",
+      "domain": "biology",
+      "relevance": 0.89
+    },
+    {
+      "name": "Attentional Resources",
+      "description": "Cognitive capacity available for processing information. The proposed model suggests that chronotype and time perception affect memory via attentional depletion.",
+      "domain": "cognitive_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Arousal State",
+      "description": "Level of physiological and mental alertness. The study posits that arousal mediates the relationship between chronotype and memory, especially during non-optimal times of day.",
+      "domain": "neuroscience",
+      "relevance": 0.87
+    },
+    {
+      "name": "Mediation Model",
+      "description": "A statistical framework used to test whether an intermediate variable (e.g., time perception) explains the relationship between an independent variable (chronotype) and a dependent variable (memory). Central to the study's theoretical contribution.",
+      "domain": "statistics",
+      "relevance": 0.95
+    },
+    {
+      "name": "Integrated Biopsychological Model",
+      "description": "A novel theoretical framework proposed by the authors that integrates biological (chronotype), physiological (arousal), and psychological (time perception) factors in memory functioning.",
+      "domain": "psychology",
+      "relevance": 0.97
+    },
+    {
+      "name": "Self-Report Bias",
+      "description": "Systematic error in data due to subjective interpretation or recall limitations in questionnaire responses. A key limitation acknowledged in the study.",
+      "domain": "methodology",
+      "relevance": 0.85
+    },
+    {
+      "name": "Cross-Sectional Design",
+      "description": "A research design that collects data at a single point in time, limiting causal inference. The study's design is explicitly described as cross-sectional.",
+      "domain": "epidemiology",
+      "relevance": 0.9
+    },
+    {
+      "name": "Sleep-Wake Misalignment",
+      "description": "A condition where sleep timing is inconsistent with social or biological demands, common in night types. The study links it to memory deficits via arousal and time perception.",
+      "domain": "biology",
+      "relevance": 0.86
+    },
+    {
+      "name": "Boredom Perception",
+      "description": "A subjective state of disengagement or lack of stimulation, measured as part of time experience. The study finds it correlates with memory failure in night types.",
+      "domain": "psychology",
+      "relevance": 0.84
+    },
+    {
+      "name": "Chronotype-Performance Link",
+      "description": "The relationship between individual differences in circadian preference and cognitive performance. The study provides empirical evidence for this link via memory outcomes.",
+      "domain": "cognitive_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Objective vs Subjective Sleep",
+      "description": "The distinction between measured (e.g., polysomnography) and self-reported sleep quality. The study relies solely on subjective measures, a noted limitation.",
+      "domain": "medicine",
+      "relevance": 0.83
+    },
+    {
+      "name": "Non-Cognitive Factors in Memory",
+      "description": "Psychological and physiological variables unrelated to core cognitive processes that influence memory. The study emphasizes these as underappreciated contributors.",
+      "domain": "cognitive_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Temporal Distortion",
+      "description": "A perceptual phenomenon where time is experienced inaccurately, such as feeling time drags. The study identifies it as a mediator in memory failure.",
+      "domain": "psychology",
+      "relevance": 0.89
+    },
+    {
+      "name": "Workday-Weekend Sleep Pattern",
+      "description": "Differences in sleep timing between weekdays and weekends, a common behavior in night types. The study collects this via self-report to assess sleep regularity.",
+      "domain": "behavioral_science",
+      "relevance": 0.82
+    },
+    {
+      "name": "Predictive Validity",
+      "description": "The extent to which a measure (e.g., rMEQ) can predict an outcome (e.g., memory errors). The study evaluates this through regression and mediation models.",
+      "domain": "statistics",
+      "relevance": 0.8
+    },
+    {
+      "name": "Psychological Mediation",
+      "description": "The process by which a psychological variable (e.g., time pressure) explains the relationship between two other variables (e.g., chronotype and memory). Core to the study's model.",
+      "domain": "psychology",
+      "relevance": 0.94
+    },
+    {
+      "name": "Biological Rhythms",
+      "description": "Endogenous cycles (e.g., circadian rhythms) that regulate physiological and behavioral processes. The study centers on their role in memory via sleep and arousal.",
+      "domain": "biology",
+      "relevance": 0.92
+    },
+    {
+      "name": "Cognitive Load",
+      "description": "The amount of mental effort required to perform a task. Though not directly measured, the study implies that time pressure increases cognitive load, impairing memory.",
+      "domain": "cognitive_science",
+      "relevance": 0.78
+    },
+    {
+      "name": "Memory Monitoring",
+      "description": "The ability to track and evaluate one\u2019s own memory performance. The study\u2019s self-report measures may reflect this, though it is not explicitly tested.",
+      "domain": "cognitive_science",
+      "relevance": 0.75
+    },
+    {
+      "name": "Daytime Sleepiness",
+      "description": "A state of drowsiness during waking hours, often linked to poor sleep quality. The study implies it as a potential mechanism via arousal disruption.",
+      "domain": "medicine",
+      "relevance": 0.77
+    },
+    {
+      "name": "Temporal Awareness",
+      "description": "The conscious perception of the passage of time, a component of subjective time experience. The study uses it to explain memory variability.",
+      "domain": "psychology",
+      "relevance": 0.81
+    },
+    {
+      "name": "Behavioral Consistency",
+      "description": "The regularity of sleep-wake patterns across days. The study notes irregularity in night types as a predictor of memory issues.",
+      "domain": "behavioral_science",
+      "relevance": 0.79
+    },
+    {
+      "name": "Self-Regulation Failure",
+      "description": "Inability to manage time, attention, or behavior effectively. The study suggests this may underlie memory errors in night types with poor time perception.",
+      "domain": "psychology",
+      "relevance": 0.76
+    },
+    {
+      "name": "Causal Inference Limitation",
+      "description": "The inability to establish cause-and-effect relationships from cross-sectional data. A key methodological constraint acknowledged by the authors.",
+      "domain": "methodology",
+      "relevance": 0.88
+    },
+    {
+      "name": "Gender Imbalance",
+      "description": "Overrepresentation of females in the sample (73%), which may affect generalizability of findings to male populations.",
+      "domain": "epidemiology",
+      "relevance": 0.85
+    },
+    {
+      "name": "Psychosocial Confounders",
+      "description": "Unmeasured variables such as stress, depression, or medication use that may influence both sleep and memory. The study admits these were not controlled.",
+      "domain": "medicine",
+      "relevance": 0.83
+    },
+    {
+      "name": "Subjective Sleep Quality",
+      "description": "An individual\u2019s personal evaluation of their sleep, assessed via the MSQ. A key predictor in the regression models.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Time Perception Distortion",
+      "description": "A misjudgment of time duration or flow, linked to attentional lapses. The study treats it as a mediator in the chronotype-memory pathway.",
+      "domain": "psychology",
+      "relevance": 0.92
+    },
+    {
+      "name": "Arousal-Attention Mechanism",
+      "description": "A proposed neurocognitive pathway where biological rhythms affect alertness, which in turn influences attention and memory. Central to the integrated model.",
+      "domain": "neuroscience",
+      "relevance": 0.96
+    },
+    {
+      "name": "Prospective Memory Deficit",
+      "description": "Failure to execute intended actions in the future, a key outcome in the study. Linked to chronotype and time perception.",
+      "domain": "cognitive_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Retrospective Memory Deficit",
+      "description": "Impaired recall of past events, measured via self-report. Found to be more prevalent in night types with poor sleep-wake alignment.",
+      "domain": "cognitive_science",
+      "relevance": 0.92
+    }
+  ],
+  "methods": [
+    {
+      "name": "Cross-Sectional Survey",
+      "description": "A study design collecting data from participants at a single time point to examine associations between variables. Used here to assess relationships among chronotype, sleep, time perception, and memory.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "rMEQ Assessment",
+      "description": "The reduced Morningness-Eveningness Questionnaire (rMEQ) is used to classify participants' chronotype. It consists of 5 items measuring preference for morning or evening activity.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "MSQ Measurement",
+      "description": "The Mini Sleep Questionnaire (MSQ) evaluates sleep-wake quality through self-reported items on sleep duration, latency, and disturbances. Used to assess sleep quality and arousal issues.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "PRMQ Evaluation",
+      "description": "The Prospective and Retrospective Memory Questionnaire (PRMQ) measures self-reported memory performance across both domains. Used as the primary outcome variable.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "STQ Instrument",
+      "description": "The Subjective Time Questionnaire (STQ) assesses dimensions of time perception, including time pressure, time expansion, and boredom. Used to capture subjective time experience.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Pearson Correlation",
+      "description": "A statistical method used to measure the linear relationship between two continuous variables. Applied to examine associations between chronotype, sleep quality, time perception, and memory.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Multiple Linear Regression",
+      "description": "A statistical technique used to model the relationship between one dependent variable and multiple independent variables. Used to identify predictors of memory performance.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Structural Equation Modeling",
+      "description": "A multivariate statistical method used to test complex causal models, including direct and indirect effects. Applied here to test the mediation model linking chronotype to memory via arousal and time perception.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Mediation Analysis",
+      "description": "A statistical approach to determine whether an intermediate variable explains the relationship between an independent and dependent variable. Used to test the proposed pathway from chronotype to memory via time perception.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Self-Report Data Collection",
+      "description": "A method relying on participants' personal accounts of behavior, experiences, and perceptions. Used for all measures in the study, including sleep habits and time experience.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Demographic Questionnaire",
+      "description": "A tool used to collect basic participant information such as age, gender, and work schedule. Used to describe the sample and assess potential confounders.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Variable Standardization",
+      "description": "A preprocessing step where variables are transformed to have a mean of 0 and standard deviation of 1. Likely applied to ensure comparability in regression and SEM models.",
+      "category": "analytical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Model Fit Assessment",
+      "description": "Evaluation of how well a structural equation model fits the observed data using indices like CFI, TLI, RMSEA. Used to validate the proposed mediation model.",
+      "category": "statistical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Path Coefficient Estimation",
+      "description": "A technique in SEM to estimate the strength and direction of relationships between latent and observed variables. Used to quantify the indirect effects in the mediation model.",
+      "category": "statistical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Confidence Interval Estimation",
+      "description": "A method to estimate the range within which a population parameter lies, used to assess the significance of indirect effects in mediation analysis.",
+      "category": "statistical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Data Screening",
+      "description": "A preliminary step to check for missing values, outliers, and normality assumptions before analysis. Likely performed to ensure data quality.",
+      "category": "analytical",
+      "confidence": 0.85
+    },
+    {
+      "name": "Variable Selection",
+      "description": "The process of choosing which predictors to include in regression models based on theoretical relevance and statistical significance.",
+      "category": "analytical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Descriptive Statistics",
+      "description": "Summarization of sample characteristics (e.g., mean age, gender distribution) and variable distributions. Used to characterize the participant sample.",
+      "category": "analytical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Internal Consistency Check",
+      "description": "Assessment of reliability (e.g., Cronbach\u2019s alpha) for multi-item scales like PRMQ and STQ to ensure measurement consistency.",
+      "category": "analytical",
+      "confidence": 0.8
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Chronotype",
+      "concept2": "Biological Rhythms",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Sleep-Wake Cycle",
+      "concept2": "Biological Rhythms",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Circadian Disruption",
+      "concept2": "Sleep-Wake Misalignment",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Time Perception Distortion",
+      "concept2": "Temporal Distortion",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Arousal-Attention Mechanism",
+      "concept2": "Attentional Resources",
+      "relationship_type": "EXTENDS",
+      "strength": 0.94
+    }
+  ],
+  "extraction_time": 29.43722891807556,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

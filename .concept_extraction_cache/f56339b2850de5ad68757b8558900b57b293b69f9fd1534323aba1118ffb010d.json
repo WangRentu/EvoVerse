@@ -1,0 +1,76 @@
+{
+  "paper_id": "10.1093/sleep/zsaf090.0966",
+  "concepts": [
+    {
+      "name": "Cognitive frailty",
+      "description": "A multidimensional geriatric syndrome characterized by combined physical and cognitive decline, measured through cognitive tests like MMSE and working memory tasks. Central to the study's focus on age-related functional deterioration in immigrant populations.",
+      "domain": "medicine",
+      "relevance": 1.0
+    },
+    {
+      "name": "Circadian rhythm disruption",
+      "description": "Abnormalities in the 24-hour biological sleep-wake cycle, assessed via actigraphy and sleep diaries. Key predictor of cognitive and physical decline in the study's mediation model for zero-generation immigrants.",
+      "domain": "biology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Cultural adaptation stress",
+      "description": "Psychosocial burden from navigating cultural differences in a new country, measured through multidimensional questionnaires. Identified as the critical mediator linking sleep/circadian issues to frailty outcomes.",
+      "domain": "psychology",
+      "relevance": 0.95
+    },
+    {
+      "name": "Zero-generation immigrants",
+      "description": "First-generation Chinese immigrants (parents of U.S.-born children) who migrated as adults. Defined as the primary study population experiencing heightened health disparities compared to first-generation descendants.",
+      "domain": "public_health",
+      "relevance": 0.9
+    },
+    {
+      "name": "Physical frailty",
+      "description": "Age-related decline in physiological reserve, quantified through grip strength and gait speed assessments. Directly correlated with sleep disruption and cultural stress in the study's outcomes.",
+      "domain": "medicine",
+      "relevance": 0.85
+    }
+  ],
+  "methods": [
+    {
+      "name": "Actigraphy monitoring",
+      "description": "Objective sleep assessment using wearable activity trackers recording movement patterns over 10 days to quantify sleep duration, fragmentation, and circadian rhythm stability.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "10-day sleep diaries",
+      "description": "Self-reported sleep logs documenting bedtime, wake time, and daytime sleepiness, used alongside actigraphy to validate subjective sleep experiences and identify circadian misalignment.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "MMSE cognitive assessment",
+      "description": "Standardized Mini-Mental State Examination administered to measure global cognitive function, serving as the primary outcome for cognitive frailty evaluation in the study.",
+      "category": "analytical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Frailty assessment protocol",
+      "description": "Multidimensional frailty evaluation using grip strength (handheld dynamometer) and gait speed (4-meter walk test) to quantify physical decline, aligned with Fried frailty criteria.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Mediation analysis",
+      "description": "Statistical technique (e.g., PROCESS macro) testing cultural adaptation stress as a mediator between sleep/circadian variables and frailty outcomes, using path coefficients to quantify indirect effects.",
+      "category": "statistical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Observational cohort design",
+      "description": "Cross-sectional study recruiting 200 participants stratified by immigration generation and sex, collecting data through standardized instruments without intervention to establish associations.",
+      "category": "observational",
+      "confidence": 1.0
+    }
+  ],
+  "relationships": [],
+  "extraction_time": 38.91199088096619,
+  "model_used": "Qwen/Qwen3-30B-A3B-Thinking-2507"
+}

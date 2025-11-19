@@ -1,0 +1,389 @@
+{
+  "paper_id": "10.1093/sleep/zsad077.0301",
+  "concepts": [
+    {
+      "name": "Neuro-PASC",
+      "description": "Neurological post-acute sequelae of SARS-CoV-2 infection refers to persistent neurological symptoms following acute COVID-19, including cognitive dysfunction, fatigue, and mood disturbances. This concept is central to the study's focus on long-term neurological consequences of SARS-CoV-2.",
+      "domain": "medicine",
+      "relevance": 1.0
+    },
+    {
+      "name": "Sleep Efficiency",
+      "description": "A measure of the proportion of time spent asleep relative to time in bed, used to assess sleep quality. In this study, reduced sleep efficiency was objectively measured and linked to cognitive deficits in Neuro-PASC patients.",
+      "domain": "medicine",
+      "relevance": 0.95
+    },
+    {
+      "name": "Sleep Onset Latency",
+      "description": "The time taken to fall asleep after lights out, a key indicator of sleep initiation difficulty. Prolonged sleep onset latency was observed in Neuro-PASC patients and correlated with impaired attention and executive function.",
+      "domain": "medicine",
+      "relevance": 0.95
+    },
+    {
+      "name": "Cognitive Function",
+      "description": "A broad term encompassing mental processes such as attention, memory, processing speed, and executive function. In this study, cognitive performance was assessed using standardized tools and linked to objective sleep metrics.",
+      "domain": "medicine",
+      "relevance": 0.95
+    },
+    {
+      "name": "Executive Function",
+      "description": "Higher-order cognitive processes involved in planning, decision-making, and cognitive flexibility. Deficits in this domain were significantly associated with objective sleep abnormalities in Neuro-PASC patients.",
+      "domain": "medicine",
+      "relevance": 0.95
+    },
+    {
+      "name": "Attention Deficits",
+      "description": "Impairments in sustaining or shifting focus, measured via NIH Toolbox. These deficits were found to correlate with poor sleep quality, highlighting a key cognitive domain affected in Neuro-PASC.",
+      "domain": "medicine",
+      "relevance": 0.95
+    },
+    {
+      "name": "Actigraphy",
+      "description": "Objective measurement of sleep-wake patterns using wrist-worn devices that record movement. Used in this study to quantify sleep efficiency and sleep onset latency in real-world settings.",
+      "domain": "medicine",
+      "relevance": 0.95
+    },
+    {
+      "name": "Sleep Log",
+      "description": "Patient-reported records of bedtime, wake time, and sleep quality, used to validate and contextualize actigraphy data. Combined with actigraphy, it enhances sleep assessment accuracy.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "PROMIS Scale",
+      "description": "Patient-Reported Outcomes Measurement Information System, a validated tool for assessing health-related quality of life. Used here to evaluate self-reported cognitive function, fatigue, sleep, anxiety, and depression.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "NIH Toolbox",
+      "description": "A comprehensive battery of neurocognitive assessments designed to measure cognitive function across domains. Used in this study to evaluate processing speed, attention, executive function, and working memory.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Subjective-Objective Concordance",
+      "description": "The degree of agreement between patient-reported symptoms and objective measurements. The study used Pearson correlation to assess this, revealing discrepancies between self-report and actigraphy.",
+      "domain": "medicine",
+      "relevance": 0.85
+    },
+    {
+      "name": "Causal Inference Limitation",
+      "description": "The inability to determine directionality in associations due to cross-sectional design. This limitation is critical in interpreting whether sleep issues cause cognitive decline or vice versa.",
+      "domain": "medicine",
+      "relevance": 0.85
+    },
+    {
+      "name": "Cross-Sectional Design",
+      "description": "A study design that collects data at a single point in time. Used in this research, it limits the ability to infer causality between sleep and cognitive outcomes.",
+      "domain": "medicine",
+      "relevance": 0.85
+    },
+    {
+      "name": "Population Norms",
+      "description": "Reference data from healthy populations used to compare patient outcomes. The study compared actigraphy results to population norms, though this may introduce bias without matched controls.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Fatigue Symptoms",
+      "description": "Persistent physical and mental exhaustion reported by Neuro-PASC patients. A key symptom in the study, often co-occurring with sleep and cognitive impairments.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Emotional Symptoms",
+      "description": "Mood disturbances such as anxiety and depression, assessed via PROMIS. These were prevalent in the cohort and may confound cognitive and sleep outcomes.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Sleep Architecture",
+      "description": "The structure of sleep stages (e.g., NREM, REM) as assessed by polysomnography. Not directly measured here, but acknowledged as a limitation due to lack of PSG data.",
+      "domain": "medicine",
+      "relevance": 0.75
+    },
+    {
+      "name": "Multimodal Assessment",
+      "description": "The integration of subjective (self-report) and objective (actigraphy) data to provide a comprehensive evaluation of sleep and cognition. A key strength emphasized in the study.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Cognitive Reserve",
+      "description": "The brain's ability to compensate for pathology. Though not directly measured, the concept underlies the interpretation of cognitive resilience in Neuro-PASC patients.",
+      "domain": "medicine",
+      "relevance": 0.7
+    },
+    {
+      "name": "Post-COVID Cognitive Dysfunction",
+      "description": "Persistent cognitive impairments following SARS-CoV-2 infection, a core focus of the study. Linked to sleep disruption and neuroinflammation in proposed mechanisms.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Sleep-Cognition Axis",
+      "description": "The bidirectional relationship between sleep quality and cognitive performance. The study provides empirical support for this axis in Neuro-PASC, suggesting therapeutic implications.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Neuroinflammation",
+      "description": "Inflammatory processes in the central nervous system hypothesized to underlie both sleep and cognitive disturbances in Neuro-PASC. A proposed mechanism not directly tested but contextually relevant.",
+      "domain": "biology",
+      "relevance": 0.7
+    },
+    {
+      "name": "Fatigue-Cognition Link",
+      "description": "The association between persistent fatigue and impaired cognitive performance, observed in this cohort and potentially mediated by sleep disruption.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Psychosocial Factors",
+      "description": "Non-biological influences such as stress, anxiety, and lifestyle that may affect sleep and cognition. Acknowledged as uncontrolled confounders in the study.",
+      "domain": "medicine",
+      "relevance": 0.7
+    },
+    {
+      "name": "Clinical Heterogeneity",
+      "description": "Variability in symptom presentation among Neuro-PASC patients, which complicates diagnosis and treatment. The study highlights this through diverse symptom profiles.",
+      "domain": "medicine",
+      "relevance": 0.7
+    },
+    {
+      "name": "Longitudinal Trajectory",
+      "description": "The progression of symptoms over time, which cannot be assessed in a cross-sectional study. A key gap in understanding Neuro-PASC natural history.",
+      "domain": "medicine",
+      "relevance": 0.65
+    },
+    {
+      "name": "Sleep Fragmentation",
+      "description": "Disruptions in sleep continuity, often indicated by frequent awakenings. Implied by low sleep efficiency, though not directly quantified in this study.",
+      "domain": "medicine",
+      "relevance": 0.6
+    },
+    {
+      "name": "Working Memory",
+      "description": "The ability to temporarily hold and manipulate information, assessed via NIH Toolbox. Impaired in Neuro-PASC patients and linked to sleep quality.",
+      "domain": "medicine",
+      "relevance": 0.85
+    },
+    {
+      "name": "Processing Speed",
+      "description": "The rate at which an individual performs cognitive tasks, a core domain measured in the NIH Toolbox. Slowed processing speed was associated with sleep abnormalities.",
+      "domain": "medicine",
+      "relevance": 0.85
+    },
+    {
+      "name": "Patient-Reported Outcomes",
+      "description": "Self-assessments of health status, used here to capture symptoms like fatigue and mood. Provide insight into patient experience but may be biased.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Actigraphy Validation",
+      "description": "The process of confirming actigraphy data with sleep logs to improve accuracy. Used in this study to enhance the reliability of sleep measurements.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Statistical Correlation",
+      "description": "A measure of the linear relationship between two variables. Used to assess associations between sleep metrics and cognitive test scores.",
+      "domain": "mathematics",
+      "relevance": 0.9
+    },
+    {
+      "name": "T-Test Comparison",
+      "description": "A statistical test used to compare mean differences between groups. Applied here to compare patient cognitive and sleep outcomes against population norms.",
+      "domain": "mathematics",
+      "relevance": 0.9
+    },
+    {
+      "name": "Confounding Variables",
+      "description": "Factors that influence both exposure and outcome, potentially distorting associations. Not controlled in this study, limiting causal interpretation.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Sample Size Limitation",
+      "description": "The small number of participants (n=39) reduces statistical power and generalizability, a key limitation noted in the paper.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Lack of Healthy Controls",
+      "description": "Absence of a matched control group with actigraphy data introduces potential bias in interpreting sleep abnormalities.",
+      "domain": "medicine",
+      "relevance": 0.8
+    },
+    {
+      "name": "Treatment Implication",
+      "description": "The potential for sleep interventions (e.g., CBT-I) to improve cognitive symptoms in Neuro-PASC, a key takeaway from the findings.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Mechanistic Insight",
+      "description": "The study provides empirical support for biological pathways linking sleep disruption to cognitive decline in post-acute COVID-19, advancing understanding of Neuro-PASC pathophysiology.",
+      "domain": "biology",
+      "relevance": 0.9
+    }
+  ],
+  "methods": [
+    {
+      "name": "Cross-Sectional Study",
+      "description": "A study design that collects data from participants at a single time point to examine associations between variables. Used here to assess relationships between sleep and cognition in Neuro-PASC patients.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Actigraphy",
+      "description": "Objective sleep monitoring using a wrist-worn device that records movement to infer sleep-wake cycles over 7 days. Used to quantify sleep efficiency and sleep onset latency.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Sleep Log",
+      "description": "Patient-reported daily records of bedtime, wake time, and perceived sleep quality, used to validate and supplement actigraphy data.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "PROMIS Scale",
+      "description": "Standardized patient-reported outcome instrument used to assess cognitive function, fatigue, sleep, anxiety, and depression via validated questionnaires.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "NIH Toolbox",
+      "description": "A battery of brief, standardized cognitive assessments measuring processing speed, attention, executive function, and working memory using computerized tasks.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Pearson Correlation",
+      "description": "A statistical method used to assess the linear relationship between two continuous variables. Applied to evaluate associations between subjective and objective sleep measures and cognitive performance.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Student's t-Test",
+      "description": "A parametric test used to compare the mean of a sample to a known population mean. Used here to compare patient cognitive and sleep outcomes against established population norms.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Clinical Assessment",
+      "description": "Structured review of medical history and clinical symptoms conducted by clinicians to characterize patient profiles and identify relevant variables.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Data Integration",
+      "description": "The process of combining subjective (PROMIS, sleep logs) and objective (actigraphy) data to form a comprehensive assessment of sleep and cognition.",
+      "category": "analytical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Multidimensional Evaluation",
+      "description": "The use of multiple assessment tools across domains (cognitive, sleep, mood, fatigue) to capture the complexity of Neuro-PASC symptoms.",
+      "category": "observational",
+      "confidence": 0.95
+    },
+    {
+      "name": "Objective Sleep Measurement",
+      "description": "The use of actigraphy to obtain quantifiable, real-world data on sleep patterns, reducing reliance on self-report alone.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Cognitive Testing",
+      "description": "Administration of standardized neuropsychological tasks to assess specific cognitive domains, implemented via the NIH Toolbox platform.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Symptom Reporting",
+      "description": "Collection of patient self-reports on fatigue, mood, and sleep quality using validated scales, forming the basis of subjective symptom assessment.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Statistical Comparison",
+      "description": "Use of inferential statistics to compare patient data with normative data, enabling identification of significant deviations from typical performance.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Data Validation",
+      "description": "Cross-checking actigraphy data with sleep logs to improve accuracy and detect discrepancies in self-reported versus objective sleep.",
+      "category": "analytical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Outcome Measurement",
+      "description": "Systematic quantification of cognitive and sleep outcomes using validated instruments to ensure reliability and comparability.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Descriptive Statistics",
+      "description": "Summarization of sample characteristics (e.g., age, sex, hospitalization history) and outcome variables using means, standard deviations, and frequencies.",
+      "category": "statistical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Variable Correlation",
+      "description": "Assessment of relationships between sleep parameters (e.g., sleep efficiency) and cognitive test scores using Pearson correlation coefficients.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Normative Comparison",
+      "description": "Benchmarking patient performance against established population norms to identify clinically significant deviations.",
+      "category": "analytical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Data Collection Protocol",
+      "description": "Standardized procedures for gathering clinical, self-report, and objective data across all participants to ensure consistency and reliability.",
+      "category": "observational",
+      "confidence": 0.9
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Neuro-PASC",
+      "concept2": "Post-COVID Cognitive Dysfunction",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Sleep Efficiency",
+      "concept2": "Sleep Onset Latency",
+      "relationship_type": "RELATED_TO",
+      "strength": 0.9
+    },
+    {
+      "concept1": "Actigraphy",
+      "concept2": "Sleep Efficiency",
+      "relationship_type": "ENABLES",
+      "strength": 0.95
+    },
+    {
+      "concept1": "NIH Toolbox",
+      "concept2": "Cognitive Function",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Multimodal Assessment",
+      "concept2": "Subjective-Objective Concordance",
+      "relationship_type": "EXTENDS",
+      "strength": 0.92
+    }
+  ],
+  "extraction_time": 27.514070987701416,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

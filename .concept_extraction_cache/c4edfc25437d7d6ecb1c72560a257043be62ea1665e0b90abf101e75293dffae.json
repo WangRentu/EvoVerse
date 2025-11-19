@@ -1,0 +1,395 @@
+{
+  "paper_id": "10.1017/S1355617723003533",
+  "concepts": [
+    {
+      "name": "Sleep Fragmentation",
+      "description": "The degree of disruption in sleep continuity, measured by nighttime awakenings and variability in sleep-wake cycles. In this study, it was associated with differential effects on memory and language, indicating domain-specific cognitive impacts.",
+      "domain": "medicine",
+      "relevance": 0.98
+    },
+    {
+      "name": "Cognitive Heterogeneity",
+      "description": "The observation that different cognitive domains (e.g., memory, language, processing speed) respond differently to the same sleep variable. This concept underscores the non-uniform nature of sleep-cognition relationships.",
+      "domain": "neuroscience",
+      "relevance": 0.95
+    },
+    {
+      "name": "Daytime Activity Variability",
+      "description": "The fluctuation in daily physical activity patterns, used as a proxy for behavioral regularity. High variability was linked to poorer visual-spatial and processing speed performance, suggesting rhythm stability supports cognition.",
+      "domain": "medicine",
+      "relevance": 0.93
+    },
+    {
+      "name": "Objective Sleep Measurement",
+      "description": "Use of wearable devices (e.g., actigraphy) to collect quantifiable, real-world sleep data. This method provides more reliable data than self-reports and was central to the study's validity.",
+      "domain": "medicine",
+      "relevance": 0.97
+    },
+    {
+      "name": "Actigraphy",
+      "description": "A non-invasive method using wrist-worn accelerometers to monitor movement and infer sleep-wake patterns. Used here to assess sleep duration, fragmentation, and light exposure over 8 weeks.",
+      "domain": "medicine",
+      "relevance": 0.96
+    },
+    {
+      "name": "Longitudinal Monitoring Framework",
+      "description": "A proposed research design for tracking sleep and cognition over time to detect early signs of decline. The study advocates for its use in preclinical Alzheimer\u2019s detection.",
+      "domain": "medicine",
+      "relevance": 0.92
+    },
+    {
+      "name": "Cognitive Reserve",
+      "description": "The brain's ability to compensate for pathology through efficient neural networks. While not directly measured, the findings imply that stable sleep and activity patterns may support reserve maintenance.",
+      "domain": "neuroscience",
+      "relevance": 0.88
+    },
+    {
+      "name": "Sleep Duration Paradox",
+      "description": "The counterintuitive finding that longer sleep duration correlates with poorer language performance, suggesting excessive sleep may reflect underlying pathology or poor quality.",
+      "domain": "medicine",
+      "relevance": 0.94
+    },
+    {
+      "name": "Neurocognitive Domains",
+      "description": "Specific functional areas of cognition including memory, language, visual-spatial ability, and information processing speed. The study evaluated these domains to map sleep effects across cognitive systems.",
+      "domain": "neuroscience",
+      "relevance": 0.95
+    },
+    {
+      "name": "Biological Marker",
+      "description": "A measurable indicator of biological state or disease risk. The study proposes objective sleep and activity metrics as potential biomarkers for early cognitive decline.",
+      "domain": "medicine",
+      "relevance": 0.93
+    },
+    {
+      "name": "Cross-Sectional Design",
+      "description": "A study type that collects data at a single time point, limiting causal inference. This study used it due to baseline data from a clinical trial, but acknowledges its limitations.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Statistical Correlation",
+      "description": "A measure of the linear relationship between two variables. Used here to assess associations between sleep parameters and cognitive scores after controlling for confounders.",
+      "domain": "statistics",
+      "relevance": 0.96
+    },
+    {
+      "name": "Partial Correlation",
+      "description": "A statistical technique that controls for the influence of one or more confounding variables. Applied to isolate the relationship between sleep and cognition while adjusting for covariates.",
+      "domain": "statistics",
+      "relevance": 0.97
+    },
+    {
+      "name": "Pearson Correlation",
+      "description": "A parametric test measuring linear correlation between two continuous variables. Used in the study to assess relationships between objective sleep metrics and cognitive scores.",
+      "domain": "statistics",
+      "relevance": 0.95
+    },
+    {
+      "name": "Spearman Correlation",
+      "description": "A non-parametric test assessing monotonic relationships between ranked variables. Applied when data did not meet normality assumptions, enhancing robustness of findings.",
+      "domain": "statistics",
+      "relevance": 0.94
+    },
+    {
+      "name": "Confounding Variables",
+      "description": "Factors that distort the apparent relationship between exposure and outcome. The study acknowledges uncontrolled variables like medication, diet, and comorbidities as key limitations.",
+      "domain": "medicine",
+      "relevance": 0.91
+    },
+    {
+      "name": "Alzheimer\u2019s Preclinical Stage",
+      "description": "The phase before clinical symptoms of Alzheimer\u2019s disease appear, where biomarkers may detect early neurodegeneration. The study positions sleep metrics as potential early indicators.",
+      "domain": "medicine",
+      "relevance": 0.96
+    },
+    {
+      "name": "Non-Invasive Monitoring",
+      "description": "Techniques that collect data without surgical or invasive procedures. Actigraphy exemplifies this, enabling long-term, real-world cognitive-sleep tracking in aging populations.",
+      "domain": "medicine",
+      "relevance": 0.93
+    },
+    {
+      "name": "Sleep-Wake Cycle Stability",
+      "description": "Consistency in timing and duration of sleep and wake periods. High variability was linked to cognitive decline, suggesting circadian regularity supports brain health.",
+      "domain": "neuroscience",
+      "relevance": 0.92
+    },
+    {
+      "name": "Cognitive Decline Risk",
+      "description": "The likelihood of developing measurable cognitive impairment over time. The study identifies sleep and activity patterns as modifiable risk factors for early detection.",
+      "domain": "medicine",
+      "relevance": 0.94
+    },
+    {
+      "name": "REM/NREM Sleep Separation",
+      "description": "The distinction between rapid eye movement and non-rapid eye movement sleep stages. The actigraphy device used could not differentiate these, limiting insight into stage-specific effects.",
+      "domain": "neuroscience",
+      "relevance": 0.89
+    },
+    {
+      "name": "Neurodegenerative Prevention",
+      "description": "Strategies aimed at delaying or halting the progression of diseases like Alzheimer\u2019s. The study suggests sleep regulation as a potential preventive intervention.",
+      "domain": "medicine",
+      "relevance": 0.95
+    },
+    {
+      "name": "Wearable Sensor Technology",
+      "description": "Devices like actigraphy watches that collect physiological and behavioral data continuously. Used here to enable long-term, objective monitoring of sleep and activity.",
+      "domain": "engineering",
+      "relevance": 0.93
+    },
+    {
+      "name": "Causal Inference Limitation",
+      "description": "The inability to determine whether sleep patterns cause cognitive changes due to the cross-sectional design. A key methodological constraint acknowledged by the authors.",
+      "domain": "statistics",
+      "relevance": 0.9
+    },
+    {
+      "name": "Statistical Power",
+      "description": "The probability of detecting a true effect if it exists. The small sample size (n=17) severely limits power, increasing risk of Type II errors.",
+      "domain": "statistics",
+      "relevance": 0.92
+    },
+    {
+      "name": "External Validity",
+      "description": "The extent to which findings can be generalized to broader populations. The small, homogeneous sample limits generalizability beyond the studied cohort.",
+      "domain": "medicine",
+      "relevance": 0.91
+    },
+    {
+      "name": "Cognitive Assessment Battery",
+      "description": "A set of standardized tests measuring multiple cognitive domains. Used in the study to evaluate memory, language, visual-spatial ability, and processing speed.",
+      "domain": "neuroscience",
+      "relevance": 0.94
+    },
+    {
+      "name": "Light Exposure Monitoring",
+      "description": "Tracking ambient light levels via actigraphy to assess circadian entrainment. Included in data collection to explore light\u2019s role in sleep-cognition dynamics.",
+      "domain": "medicine",
+      "relevance": 0.88
+    },
+    {
+      "name": "Behavioral Regularity",
+      "description": "Consistency in daily routines, including sleep and activity. High variability was associated with poorer cognition, highlighting its protective role.",
+      "domain": "neuroscience",
+      "relevance": 0.93
+    },
+    {
+      "name": "Sleep Quality Index",
+      "description": "A composite measure derived from actigraphy data reflecting sleep efficiency, duration, and fragmentation. Used as a key predictor in cognitive models.",
+      "domain": "medicine",
+      "relevance": 0.92
+    },
+    {
+      "name": "Objective Biomarker Development",
+      "description": "The process of identifying and validating measurable physiological indicators for disease risk. The study contributes to developing sleep-based biomarkers for cognitive health.",
+      "domain": "medicine",
+      "relevance": 0.95
+    },
+    {
+      "name": "Clinical Trial Baseline Data",
+      "description": "Data collected before intervention in a clinical study. This research used such data to conduct a secondary analysis on sleep-cognition links.",
+      "domain": "medicine",
+      "relevance": 0.9
+    },
+    {
+      "name": "Information Processing Speed",
+      "description": "The rate at which an individual can perform cognitive tasks. A key domain linked to activity variability and sleep quality in this study.",
+      "domain": "neuroscience",
+      "relevance": 0.94
+    },
+    {
+      "name": "Visual-Spatial Ability",
+      "description": "The capacity to perceive, analyze, and manipulate spatial relationships. Impaired performance was associated with irregular daily activity patterns.",
+      "domain": "neuroscience",
+      "relevance": 0.93
+    },
+    {
+      "name": "Language Functioning",
+      "description": "Cognitive processes involved in comprehension and production of language. Found to be negatively affected by longer sleep duration, suggesting a complex relationship.",
+      "domain": "neuroscience",
+      "relevance": 0.92
+    },
+    {
+      "name": "Memory Performance",
+      "description": "The ability to encode, store, and retrieve information. Positively correlated with sleep fragmentation, indicating a paradoxical relationship requiring further study.",
+      "domain": "neuroscience",
+      "relevance": 0.95
+    },
+    {
+      "name": "Sleep-Wake Transition Variability",
+      "description": "Fluctuations in the timing and stability of sleep onset and offset. A component of sleep fragmentation linked to cognitive outcomes in this study.",
+      "domain": "medicine",
+      "relevance": 0.91
+    },
+    {
+      "name": "Circadian Rhythm Regulation",
+      "description": "The biological process governing daily physiological cycles. Light exposure and activity patterns are key modulators, with implications for cognitive health in aging.",
+      "domain": "biology",
+      "relevance": 0.89
+    },
+    {
+      "name": "Modifiable Risk Factor",
+      "description": "A characteristic that can be altered to reduce disease risk. Sleep and activity patterns are proposed as such factors for cognitive decline prevention.",
+      "domain": "medicine",
+      "relevance": 0.94
+    },
+    {
+      "name": "Neurocognitive Assessment",
+      "description": "Standardized evaluation of cognitive functions using validated tools. Used here to quantify performance across multiple domains in older adults.",
+      "domain": "neuroscience",
+      "relevance": 0.93
+    }
+  ],
+  "methods": [
+    {
+      "name": "Actigraphy Monitoring",
+      "description": "Continuous measurement of movement and light exposure using a Philips Actiwatch Spectrum Pro device worn on the wrist for 8 weeks. Data were used to derive objective sleep parameters such as duration, fragmentation, and activity variability.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Neurocognitive Battery Assessment",
+      "description": "A comprehensive set of standardized tests administered at baseline to evaluate memory, language, visual-spatial ability, and information processing speed. Scores were used as outcome variables in correlation analyses.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Pearson Correlation",
+      "description": "A parametric statistical method used to assess linear relationships between continuous variables (e.g., sleep duration and language score), with adjustments for confounders via partial correlation.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Spearman Partial Correlation",
+      "description": "A non-parametric approach used to assess monotonic relationships while controlling for covariates, particularly when data distributions were non-normal or ordinal.",
+      "category": "statistical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Cross-Sectional Analysis",
+      "description": "A study design analyzing data collected at a single time point to identify associations between variables (e.g., sleep and cognition), without tracking changes over time.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Confounding Control",
+      "description": "Statistical adjustment using partial correlation to account for potential confounders such as age, sex, or comorbidities, though the study notes these were not fully measured.",
+      "category": "analytical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Data Collection Protocol",
+      "description": "Standardized procedures for wearing the actigraph and completing cognitive assessments, ensuring consistency in data acquisition across participants over the 8-week monitoring period.",
+      "category": "experimental",
+      "confidence": 1.0
+    },
+    {
+      "name": "Objective Sleep Parameter Extraction",
+      "description": "Computation of sleep metrics (e.g., sleep efficiency, fragmentation index, duration) from raw actigraphy data using validated algorithms provided by the device manufacturer.",
+      "category": "computational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Statistical Significance Testing",
+      "description": "Application of p-value thresholds to determine whether observed correlations were unlikely due to chance, supporting claims of meaningful associations.",
+      "category": "statistical",
+      "confidence": 0.95
+    },
+    {
+      "name": "Baseline Data Utilization",
+      "description": "Use of pre-intervention data from an ongoing clinical trial to conduct a secondary analysis on sleep-cognition relationships without altering the original study design.",
+      "category": "observational",
+      "confidence": 1.0
+    },
+    {
+      "name": "Longitudinal Framework Proposal",
+      "description": "A methodological suggestion for future research involving repeated measurements over time to assess dynamic changes in sleep and cognition, enabling causal inference.",
+      "category": "theoretical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Wearable Device Calibration",
+      "description": "Procedures to ensure accurate actigraphy readings, including proper device placement and adherence checks, though specific protocols were not detailed in the text.",
+      "category": "experimental",
+      "confidence": 0.85
+    },
+    {
+      "name": "Cognitive Domain Scoring",
+      "description": "Standardized scoring of test results across memory, language, visual-spatial, and processing speed domains to generate composite scores for statistical analysis.",
+      "category": "analytical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Variable Transformation",
+      "description": "Application of rank-based or logarithmic transformations to normalize data distributions prior to correlation analysis, particularly for non-normally distributed variables.",
+      "category": "analytical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Data Integration",
+      "description": "Combining actigraphy-derived sleep and activity data with cognitive test scores to create a multimodal dataset for cross-domain analysis.",
+      "category": "computational",
+      "confidence": 0.95
+    },
+    {
+      "name": "Sample Size Justification",
+      "description": "Acknowledgment of the small sample size (n=17) and its implications for statistical power and generalizability, though no formal power analysis was reported.",
+      "category": "analytical",
+      "confidence": 0.9
+    },
+    {
+      "name": "Causal Inference Limitation",
+      "description": "Explicit recognition that the cross-sectional design precludes causal conclusions, a methodological constraint highlighted in the discussion section.",
+      "category": "theoretical",
+      "confidence": 1.0
+    },
+    {
+      "name": "Biomarker Feasibility Assessment",
+      "description": "Evaluation of actigraphy metrics as potential non-invasive biomarkers for cognitive health, based on observed statistical associations.",
+      "category": "observational",
+      "confidence": 0.9
+    },
+    {
+      "name": "Domain-Specific Analysis",
+      "description": "Separate evaluation of sleep-cognition relationships within each cognitive domain (e.g., memory vs. language) to detect differential effects.",
+      "category": "analytical",
+      "confidence": 1.0
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Actigraphy",
+      "concept2": "Objective Sleep Measurement",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Sleep Fragmentation",
+      "concept2": "Sleep-Wake Cycle Stability",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Daytime Activity Variability",
+      "concept2": "Behavioral Regularity",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.94
+    },
+    {
+      "concept1": "Objective Sleep Measurement",
+      "concept2": "Non-Invasive Monitoring",
+      "relationship_type": "INSTANTIATES",
+      "strength": 0.96
+    },
+    {
+      "concept1": "Longitudinal Monitoring Framework",
+      "concept2": "Cross-Sectional Design",
+      "relationship_type": "EXTENDS",
+      "strength": 0.9
+    }
+  ],
+  "extraction_time": 28.636639833450317,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}

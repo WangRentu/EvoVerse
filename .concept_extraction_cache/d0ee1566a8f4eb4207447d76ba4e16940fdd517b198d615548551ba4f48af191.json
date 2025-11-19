@@ -1,0 +1,407 @@
+{
+  "paper_id": "1706.03235",
+  "concepts": [
+    {
+      "name": "Deep MARL",
+      "description": "A framework combining deep learning with multi-agent reinforcement learning to enable complex decision-making in large-scale, distributed environments. It allows agents to learn policies through interaction with dynamic environments using neural networks for function approximation.",
+      "domain": "computer_science",
+      "relevance": 0.98
+    },
+    {
+      "name": "Dec-POMDP-Com",
+      "description": "A formalism for decentralized partially observable Markov decision processes with communication, modeling cooperative multi-agent systems where agents have limited observations and must exchange information to achieve shared goals.",
+      "domain": "computer_science",
+      "relevance": 0.97
+    },
+    {
+      "name": "Actor-Critic",
+      "description": "A reinforcement learning architecture that uses two neural networks: an actor to select actions and a critic to evaluate the value of states or state-action pairs, enabling more stable and efficient policy optimization.",
+      "domain": "computer_science",
+      "relevance": 0.96
+    },
+    {
+      "name": "Coordinator Mechanism",
+      "description": "A novel component in ACCNet that regulates communication between agents, enabling coordination of information exchange to reduce frequency and bandwidth usage while preserving task-relevant communication.",
+      "domain": "computer_science",
+      "relevance": 0.95
+    },
+    {
+      "name": "Communication Decoupling",
+      "description": "The separation of communication behavior from decision-making processes, allowing agents to decide when and what to communicate independently of their action selection, improving efficiency and modularity.",
+      "domain": "computer_science",
+      "relevance": 0.94
+    },
+    {
+      "name": "Low-Bandwidth Communication",
+      "description": "A design principle in ACCNet that minimizes data transmission between agents through compressed representations and infrequent exchange, crucial for scalable and real-world deployable multi-agent systems.",
+      "domain": "computer_science",
+      "relevance": 0.93
+    },
+    {
+      "name": "Task-Related Communication",
+      "description": "A learned communication pattern where messages are only exchanged when relevant to the current task, reflecting semantic efficiency and adaptability in dynamic environments.",
+      "domain": "computer_science",
+      "relevance": 0.92
+    },
+    {
+      "name": "Intermittent Communication",
+      "description": "A communication strategy where agents exchange information sporadically rather than continuously, reducing overhead and mimicking efficient human-like coordination.",
+      "domain": "computer_science",
+      "relevance": 0.91
+    },
+    {
+      "name": "Autonomous Protocol Learning",
+      "description": "The ability of agents to discover and evolve communication protocols from scratch without predefined rules, enabling adaptation to diverse and complex environments.",
+      "domain": "computer_science",
+      "relevance": 0.9
+    },
+    {
+      "name": "Policy Optimization",
+      "description": "The process of improving agent strategies through gradient-based updates using the critic\u2019s value estimates, central to training the actor network in ACCNet.",
+      "domain": "computer_science",
+      "relevance": 0.89
+    },
+    {
+      "name": "Shared Reward Mechanism",
+      "description": "A cooperative learning setup where all agents receive the same global reward, aligning their objectives and enabling joint policy learning in multi-agent systems.",
+      "domain": "computer_science",
+      "relevance": 0.88
+    },
+    {
+      "name": "Action Space Flexibility",
+      "description": "The capability of ACCNet to operate in both continuous and discrete action spaces, demonstrating robustness across different types of control tasks in multi-agent environments.",
+      "domain": "computer_science",
+      "relevance": 0.87
+    },
+    {
+      "name": "Neural Compression",
+      "description": "The use of deep neural networks to compress communication messages into low-dimensional representations, reducing bandwidth while preserving essential information.",
+      "domain": "computer_science",
+      "relevance": 0.86
+    },
+    {
+      "name": "Gating Mechanism",
+      "description": "A component (implied but not fully detailed) that controls whether communication should occur, likely using a learned binary switch to regulate message transmission.",
+      "domain": "computer_science",
+      "relevance": 0.85
+    },
+    {
+      "name": "Token Mechanism",
+      "description": "A method (not fully specified) for structuring or encoding communication content into discrete units, possibly enabling symbolic or semantic representation in learned protocols.",
+      "domain": "computer_science",
+      "relevance": 0.84
+    },
+    {
+      "name": "Communication Efficiency",
+      "description": "A performance metric measuring the ratio of task success to communication cost, central to evaluating the practicality of multi-agent communication protocols.",
+      "domain": "computer_science",
+      "relevance": 0.83
+    },
+    {
+      "name": "Generalization Ability",
+      "description": "The capacity of trained agents to perform well in unseen environments or with varying numbers of agents, indicating robustness and transferability of learned policies.",
+      "domain": "computer_science",
+      "relevance": 0.82
+    },
+    {
+      "name": "Scalability",
+      "description": "The ability of the framework to maintain performance as the number of agents increases, a key challenge in real-world multi-agent applications.",
+      "domain": "computer_science",
+      "relevance": 0.81
+    },
+    {
+      "name": "Partial Observability",
+      "description": "A condition in which agents have incomplete information about the global state, requiring communication to achieve coordinated behavior in Dec-POMDP-Com settings.",
+      "domain": "computer_science",
+      "relevance": 0.8
+    },
+    {
+      "name": "Gradient Update",
+      "description": "The method used to adjust network weights during training by computing gradients of the loss function with respect to parameters, enabling end-to-end learning in ACCNet.",
+      "domain": "computer_science",
+      "relevance": 0.79
+    },
+    {
+      "name": "Value Network",
+      "description": "A neural network in the critic component that estimates the expected cumulative reward, used to guide policy updates in actor-critic frameworks.",
+      "domain": "computer_science",
+      "relevance": 0.78
+    },
+    {
+      "name": "Policy Network",
+      "description": "A neural network in the actor component that maps observations to action probabilities or values, directly determining agent behavior.",
+      "domain": "computer_science",
+      "relevance": 0.77
+    },
+    {
+      "name": "Simulation Environment",
+      "description": "A controlled, synthetic setting used to train and evaluate multi-agent systems, allowing reproducible testing of communication and coordination strategies.",
+      "domain": "computer_science",
+      "relevance": 0.76
+    },
+    {
+      "name": "Baseline Comparison",
+      "description": "A method of evaluating performance against established approaches (e.g., table-based RL, evolutionary algorithms) to demonstrate superiority of the proposed method.",
+      "domain": "computer_science",
+      "relevance": 0.75
+    },
+    {
+      "name": "Task Completion Rate",
+      "description": "A key performance metric measuring the percentage of episodes in which the multi-agent system achieves the desired goal, used to assess overall effectiveness.",
+      "domain": "computer_science",
+      "relevance": 0.74
+    },
+    {
+      "name": "Bandwidth Limitation",
+      "description": "A constraint modeled in the framework to simulate real-world communication constraints, driving the need for efficient and compressed message exchange.",
+      "domain": "computer_science",
+      "relevance": 0.73
+    },
+    {
+      "name": "Asynchronous Communication",
+      "description": "A communication model where agents do not synchronize their message exchanges, introducing complexity in coordination and timing not fully addressed in the current work.",
+      "domain": "computer_science",
+      "relevance": 0.72
+    },
+    {
+      "name": "Message Compression",
+      "description": "The process of reducing the size of transmitted data through encoding or dimensionality reduction, critical for minimizing communication overhead in distributed systems.",
+      "domain": "computer_science",
+      "relevance": 0.71
+    },
+    {
+      "name": "Learned Semantics",
+      "description": "The emergence of meaningful, context-dependent message content during training, indicating that communication protocols develop functional meaning over time.",
+      "domain": "computer_science",
+      "relevance": 0.7
+    },
+    {
+      "name": "Distributed Coordination",
+      "description": "The process by which multiple agents synchronize their actions without centralized control, enabled by decentralized communication and learning in ACCNet.",
+      "domain": "computer_science",
+      "relevance": 0.69
+    },
+    {
+      "name": "Multi-Agent System",
+      "description": "A system composed of multiple interacting agents that collaborate to achieve common goals, serving as the primary application domain for ACCNet.",
+      "domain": "computer_science",
+      "relevance": 0.68
+    },
+    {
+      "name": "Real-World Applicability",
+      "description": "The potential of ACCNet to be deployed in practical domains such as smart grids, autonomous vehicles, and sensor networks due to its low communication cost and scalability.",
+      "domain": "engineering",
+      "relevance": 0.67
+    },
+    {
+      "name": "Communication Overhead",
+      "description": "The computational and bandwidth cost associated with message transmission, a key factor in determining the efficiency of multi-agent systems.",
+      "domain": "computer_science",
+      "relevance": 0.66
+    },
+    {
+      "name": "Adaptive Communication",
+      "description": "A dynamic communication strategy where agents adjust transmission frequency and content based on environmental demands and task progress.",
+      "domain": "computer_science",
+      "relevance": 0.65
+    },
+    {
+      "name": "End-to-End Learning",
+      "description": "A training paradigm where the entire system, including communication and action policies, is optimized jointly through backpropagation, enabling holistic performance improvement.",
+      "domain": "computer_science",
+      "relevance": 0.64
+    },
+    {
+      "name": "Modular Architecture",
+      "description": "A design principle in ACCNet where actor, coordinator, and critic components are separated, allowing for independent development and analysis of communication and decision-making.",
+      "domain": "computer_science",
+      "relevance": 0.63
+    },
+    {
+      "name": "Synthetic Communication",
+      "description": "The generation of communication signals through learning rather than predefined syntax, enabling emergent, task-specific language-like behavior.",
+      "domain": "computer_science",
+      "relevance": 0.62
+    },
+    {
+      "name": "Agent Heterogeneity",
+      "description": "The presence of agents with different capabilities or roles, a factor not fully explored in the current experiments but relevant for future extensions.",
+      "domain": "computer_science",
+      "relevance": 0.61
+    },
+    {
+      "name": "Temporal Sparsity",
+      "description": "A property of communication where messages are sent infrequently over time, reducing resource usage and aligning with efficient real-world communication patterns.",
+      "domain": "computer_science",
+      "relevance": 0.6
+    },
+    {
+      "name": "Information Bottleneck",
+      "description": "A principle where agents compress information to retain only what is necessary for task success, reflected in the neural compression and gating mechanisms.",
+      "domain": "computer_science",
+      "relevance": 0.59
+    },
+    {
+      "name": "Emergent Communication",
+      "description": "The spontaneous development of shared signaling systems between agents during training, a hallmark of learning-to-communicate frameworks like ACCNet.",
+      "domain": "computer_science",
+      "relevance": 0.58
+    }
+  ],
+  "methods": [
+    {
+      "name": "Deep MARL Framework",
+      "description": "A computational approach that integrates deep neural networks with multi-agent reinforcement learning to solve complex cooperative tasks in partially observable environments, using shared rewards and policy gradient methods.",
+      "category": "machine_learning",
+      "confidence": 0.98
+    },
+    {
+      "name": "Actor-Critic Training",
+      "description": "A machine learning technique where the actor network is updated using gradients from the critic\u2019s value estimation, enabling stable and efficient policy optimization in ACCNet.",
+      "category": "machine_learning",
+      "confidence": 0.97
+    },
+    {
+      "name": "Gradient-Based Optimization",
+      "description": "A computational method used to update the parameters of the actor and critic networks by computing gradients of the loss function with respect to network weights, enabling end-to-end learning.",
+      "category": "machine_learning",
+      "confidence": 0.96
+    },
+    {
+      "name": "Neural Network Compression",
+      "description": "A computational technique that reduces the dimensionality of communication messages using deep neural networks, minimizing bandwidth while preserving task-relevant information.",
+      "category": "machine_learning",
+      "confidence": 0.95
+    },
+    {
+      "name": "Shared Reward Mechanism",
+      "description": "A method where all agents receive the same global reward signal, aligning their objectives and enabling cooperative learning in decentralized environments.",
+      "category": "machine_learning",
+      "confidence": 0.94
+    },
+    {
+      "name": "Simulation-Based Evaluation",
+      "description": "An experimental method using synthetic environments to train and test multi-agent systems under controlled conditions, allowing for reproducible performance assessment.",
+      "category": "simulation",
+      "confidence": 0.93
+    },
+    {
+      "name": "Baseline Comparison",
+      "description": "A methodological approach involving direct performance comparison with established techniques such as table-based RL and evolutionary algorithms to validate the superiority of ACCNet.",
+      "category": "experimental",
+      "confidence": 0.92
+    },
+    {
+      "name": "Policy Network Training",
+      "description": "A machine learning technique where the actor network is trained to map observations to actions using policy gradients derived from the critic\u2019s value estimates.",
+      "category": "machine_learning",
+      "confidence": 0.91
+    },
+    {
+      "name": "Value Network Training",
+      "description": "A method where the critic network is trained to predict the expected return from a given state, used to guide policy updates in the actor-critic framework.",
+      "category": "machine_learning",
+      "confidence": 0.9
+    },
+    {
+      "name": "Continuous Action Space Handling",
+      "description": "A computational method enabling ACCNet to operate in environments where actions are real-valued, using stochastic policy networks with Gaussian distributions.",
+      "category": "machine_learning",
+      "confidence": 0.89
+    },
+    {
+      "name": "Discrete Action Space Handling",
+      "description": "A method allowing ACCNet to function in environments with finite action sets, using categorical policy networks to select actions probabilistically.",
+      "category": "machine_learning",
+      "confidence": 0.88
+    },
+    {
+      "name": "Communication Frequency Control",
+      "description": "A technique implemented via the coordinator to regulate how often agents send messages, reducing bandwidth usage while maintaining task performance.",
+      "category": "computational",
+      "confidence": 0.87
+    },
+    {
+      "name": "End-to-End Training",
+      "description": "A method where the entire ACCNet architecture, including communication and decision-making components, is trained jointly using backpropagation through time.",
+      "category": "machine_learning",
+      "confidence": 0.86
+    },
+    {
+      "name": "Gating Mechanism Implementation",
+      "description": "A computational method (implied) using a learned binary gate to determine whether a message should be transmitted, likely implemented via a sigmoid activation function.",
+      "category": "machine_learning",
+      "confidence": 0.85
+    },
+    {
+      "name": "Tokenization of Messages",
+      "description": "A method (implied) for structuring communication into discrete units, possibly using embedding layers or discrete latent variables to represent semantic content.",
+      "category": "machine_learning",
+      "confidence": 0.84
+    },
+    {
+      "name": "Bandwidth-Constrained Training",
+      "description": "A simulation setup where communication is penalized or limited by design, forcing the system to learn efficient, low-bandwidth protocols.",
+      "category": "simulation",
+      "confidence": 0.83
+    },
+    {
+      "name": "Generalization Testing",
+      "description": "An experimental method evaluating model performance on unseen environments or agent counts to assess robustness and transferability.",
+      "category": "experimental",
+      "confidence": 0.82
+    },
+    {
+      "name": "Task Completion Rate Measurement",
+      "description": "A statistical method used to quantify success by computing the percentage of episodes in which the multi-agent system achieves the goal, serving as a primary evaluation metric.",
+      "category": "statistical",
+      "confidence": 0.81
+    },
+    {
+      "name": "Communication Efficiency Metric",
+      "description": "A computational method that quantifies the ratio of task success to communication cost, used to compare different communication strategies objectively.",
+      "category": "statistical",
+      "confidence": 0.8
+    },
+    {
+      "name": "Modular Architecture Design",
+      "description": "A computational design approach that separates the actor, coordinator, and critic into distinct components, enabling independent analysis and optimization.",
+      "category": "computational",
+      "confidence": 0.79
+    }
+  ],
+  "relationships": [
+    {
+      "concept1": "Deep MARL",
+      "concept2": "Multi-Agent System",
+      "relationship_type": "ENABLES",
+      "strength": 0.98
+    },
+    {
+      "concept1": "Dec-POMDP-Com",
+      "concept2": "Partial Observability",
+      "relationship_type": "SUBTOPIC_OF",
+      "strength": 0.95
+    },
+    {
+      "concept1": "Actor-Critic",
+      "concept2": "Policy Optimization",
+      "relationship_type": "ENABLES",
+      "strength": 0.97
+    },
+    {
+      "concept1": "Communication Decoupling",
+      "concept2": "Actor-Critic",
+      "relationship_type": "EXTENDS",
+      "strength": 0.93
+    },
+    {
+      "concept1": "Neural Compression",
+      "concept2": "Low-Bandwidth Communication",
+      "relationship_type": "ENABLES",
+      "strength": 0.96
+    }
+  ],
+  "extraction_time": 28.64220404624939,
+  "model_used": "Qwen/Qwen3-30B-A3B-Instruct-2507"
+}
